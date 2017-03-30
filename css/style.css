@@ -38,7 +38,7 @@ main {
 .text_h {
     padding: 0 0;
     font-size: 2rem;
-    font-weight: 100;
+    font-weight: 200;
     color: #FFFBED !important;
     margin-top: 20%;
 }
@@ -280,7 +280,7 @@ nav ul a {
 @media only screen and (min-width: 1000px) {
     .text_h {
         padding: 4% 0;
-        font-size: 5rem;
+        font-size: 3rem;
         font-weight: 100;
         color: #FFFBED;
     }
@@ -330,6 +330,7 @@ nav a.button-collapse {
     left: -25px;
 }
 
+
 .card-avatar .waves-effect {
     text-align: center;
     margin-top: 20px;
@@ -377,7 +378,6 @@ footer.page-footer {
     max-width: 50%;
     height: auto;
 }
-
 
 .boton{
     background-color: #FFBA08;

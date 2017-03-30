@@ -34,7 +34,15 @@ angular.module("plunker").service("dataService", function(filterFilter) {
         "name": "Nexus 6",
         "size": "6.0 inches",
         "camera": "13 megapixels"
-    }];
+    }, {
+            "name": "Nexus 6",
+            "size": "6.0 inches",
+            "camera": "13 megapixels"
+        },{
+            "name": "Nexus 6",
+            "size": "6.0 inches",
+            "camera": "13 megapixels"
+        }];
 
     this.getProducts = function() {
         return items;
