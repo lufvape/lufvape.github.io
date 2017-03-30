@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="595.276" height="595.276" viewBox="0, 0, 595.276, 595.276">
+  <g id="Capa_1">
+    <path d="M297.477,581.5 C140.924,581.5 14.012,454.589 14.012,298.036 C14.012,141.483 140.924,14.571 297.477,14.571 C454.03,14.571 580.941,141.483 580.941,298.036 C580.941,454.589 454.03,581.5 297.477,581.5 z" fill-opacity="0" stroke="#FFFBED" stroke-width="20"/>
+    <text transform="matrix(1, 0, 0, 1, 296.977, 323.071)">
+      <tspan x="-143.7" y="99.5" font-family="SignPainter-HouseScriptSemibold" font-size="400" fill="#FFFBED">VL</tspan>
+    </text>
+  </g>
+</svg>
