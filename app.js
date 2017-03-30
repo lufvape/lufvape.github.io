@@ -3,7 +3,7 @@
  */
 var app = angular.module('plunker', ['ngRoute']);
 
-app.config(function($routeProvider) {
+app.config(function($routeProvider,$locationProvider) {
 
         $routeProvider.when('/main', {
             templateUrl: "main.html",
