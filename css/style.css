@@ -318,6 +318,14 @@ nav ul a {
     .boton{
         width: 35% !important;
     }
+
+    .imagen2{
+        max-width: 20% !important;
+    }
+
+    .modal2{
+        max-width: 33% !important;
+    }
 }
 
 
@@ -372,6 +380,7 @@ footer.page-footer {
 }
 
 .imagen2{
+    margin-top: 2% !important;
     display: flex;
     position: relative;
     margin:auto auto auto auto;
@@ -383,7 +392,7 @@ footer.page-footer {
     background-color: #FFBA08;
     display: inline-block;
     margin-bottom: 5%;
-    width: 50%;
+    width: 70%;
 }
 
 .boton:hover{
@@ -411,6 +420,14 @@ footer.page-footer {
     margin-right: 1rem;
     margin-left: 1rem;
     margin-top: 1rem;
+    z-index: 997;
+    background-color: transparent !important;
+}
+
+.mg-rg2 {
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 5%;
     z-index: 997;
     background-color: transparent !important;
 }
@@ -444,6 +461,14 @@ footer.page-footer {
 .side-nav{
     background-color: #FFBA08 !important;
 }
+
+.modal2{
+    background-color: #FFBA08 !important;
+    min-height: 100% !important;
+    max-width: 50%;
+}
+
+
 
 
 
