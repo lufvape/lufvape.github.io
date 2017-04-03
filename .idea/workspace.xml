@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89b5cdbd-951b-43c7-a6e2-10b42502b697" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/modal.js" afterPath="$PROJECT_DIR$/js/modal.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pgs/about.html" afterPath="$PROJECT_DIR$/pgs/about.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pgs/aboutes.html" afterPath="$PROJECT_DIR$/pgs/aboutes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pgs/approach.html" afterPath="$PROJECT_DIR$/pgs/approach.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pgs/work.html" afterPath="$PROJECT_DIR$/pgs/work.html" />
     </list>
     <ignored path="lufvape.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,21 +34,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="about.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="about.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pgs/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7789142">
-              <caret line="66" column="166" selection-start-line="66" selection-start-column="166" selection-end-line="66" selection-end-column="166" />
+            <state vertical-scroll-proportion="-40.0">
+              <caret line="64" column="161" selection-start-line="64" selection-start-column="161" selection-end-line="64" selection-end-column="161" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="aboutes.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="aboutes.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pgs/aboutes.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-40.0">
-              <caret line="64" column="173" selection-start-line="64" selection-start-column="173" selection-end-line="64" selection-end-column="173" />
+            <state vertical-scroll-proportion="0.7553108">
+              <caret line="64" column="91" selection-start-line="64" selection-start-column="91" selection-end-line="64" selection-end-column="91" />
               <folding />
             </state>
           </provider>
@@ -479,18 +474,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pgs/aboutes.html">
+    <entry file="file://$PROJECT_DIR$/pgs/about.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-40.0">
-          <caret line="64" column="173" selection-start-line="64" selection-start-column="173" selection-end-line="64" selection-end-column="173" />
+          <caret line="64" column="161" selection-start-line="64" selection-start-column="161" selection-end-line="64" selection-end-column="161" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pgs/about.html">
+    <entry file="file://$PROJECT_DIR$/pgs/aboutes.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7789142">
-          <caret line="66" column="166" selection-start-line="66" selection-start-column="166" selection-end-line="66" selection-end-column="166" />
+        <state vertical-scroll-proportion="0.7553108">
+          <caret line="64" column="91" selection-start-line="64" selection-start-column="91" selection-end-line="64" selection-end-column="91" />
           <folding />
         </state>
       </provider>
