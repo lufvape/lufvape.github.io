@@ -1,6 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="plunkeres">
 <head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https:////ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="../js/appes.js"></script>
+
+
     <link rel="icon" type="image/png" href="img/icono.png" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
@@ -34,40 +40,30 @@
     <nav class="nav_f" role="navigation">
         <div class="container">
             <div class="nav-wrapper">
-                <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                <a href=#modalNav class="modal-trigger button-collapse">
+                    <i class="mdi-navigation-menu"></i>
+                </a>
             </div>
         </div>
     </nav>
 </div>
-<ul id="slide-out" class="side-nav text-lighten-4 z-depth-2"> <br />
 
+<div id="modalNav" class="modal modal2 bottom-sheet">
     <img class="imagen2" src="../img/lv2.svg">
     <div class="carousel-fixed-item center-align">
-        <a href="aboutes.html" class="btn-flat text_h4b mg-rg">Conóceme</a>
-        <a href="approaches.html" class="btn-flat text_h4b mg-rg">Filosofía</a>
-        <a href="workes.html" class="btn-flat text_h4b mg-rg">Proyectos</a>
-        <a href="../indexen.html" class="btn-flat text_h4b mg-rg">English</a>
+        <a href="aboutes.html" class="btn-flat text_h4b mg-rg2">Conóceme</a> <br>
+        <a href="approaches.html" class="btn-flat text_h4b mg-rg2">Filosofía</a><br>
+        <a href="workes.html" class="btn-flat text_h4b mg-rg2">Proyectos</a><br>
+        <a href="../indexen.html" class="btn-flat text_h4b mg-rg2">English</a>
     </div>
-</ul>
+</div>
 
 
 <main>
     <div class="section scrollspy arriba">
-        <div class="container">
+        <div class="container center-align">
             <div class="row">
-                <div class="col s12">
-                    <img class="imagen" src="../img/vectorpipe.svg">
-                    <p class="text_p arriba justificar">
-                        I'm a passionate about technology, and how it changes the way we do things in our daily basis.  <br><br>
-                        An engineer by major, who believe design is a big key point in today's systems and services. My process starts with discovering people needs to get the requirements. The second stage is to ideate a solution
-                        that satisfies all the stakeholders. Finally I take that solution to real life using a prototype.
-                    </p>
-                    <div class="col s12 center-align">
-                        <a href="../hvs/hvi.pdf" target="_blank" class="btn waves-effect waves-light boton">Hoja de vida
-                            <i class="mdi-file-file-download right white-text"></i>
-                        </a>
-                    </div>
-                </div>
+                <div ng-view></div>
             </div>
         </div>
     </div>

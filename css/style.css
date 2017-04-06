@@ -43,6 +43,14 @@ main {
     margin-top: 20%;
 }
 
+.text_hb {
+    padding: 0 0;
+    font-size: 2rem;
+    font-weight: 200;
+    color: #231123 !important;
+    margin-top: 20%;
+}
+
 .brand-logo{
     position: absolute;
     color: #FFFBED;
