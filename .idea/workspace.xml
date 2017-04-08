@@ -2,59 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89b5cdbd-951b-43c7-a6e2-10b42502b697" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ANSI.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/Diagrama de Actividad1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/Funcionamiento.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/Modelado del mundo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/a1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/a2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/a3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/a4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/a5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/american-football.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/chef.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/circulo.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/contabilidad.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/couple.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/cubelets1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/cubelets2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/drone-3.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/hombre.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/idempiere1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/idempiere2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/interactividad.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/layer.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/lv.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/lv2.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/msmc.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/msmc1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/msmc2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/msmc3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/mujer.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/remoto.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/responsive-design-for-variety-of-screens-formats.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/robot.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/servidor-nube.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/sfimc.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/sitting-dog.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/squash-ball.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/stand.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/swimming-figure.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/taller.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/video-player.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/wastel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/wastel.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/web-panel.svg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/indexen.html" afterPath="$PROJECT_DIR$/indexen.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pgs/about.html" afterPath="$PROJECT_DIR$/pgs/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pgs/aboutes.html" afterPath="$PROJECT_DIR$/pgs/aboutes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pgs/approach.html" afterPath="$PROJECT_DIR$/pgs/approach.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pgs/approaches.html" afterPath="$PROJECT_DIR$/pgs/approaches.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pgs/work.html" afterPath="$PROJECT_DIR$/pgs/work.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pgs/workes.html" afterPath="$PROJECT_DIR$/pgs/workes.html" />
     </list>
     <ignored path="lufvape.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,20 +23,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.125">
-              <caret line="273" column="1" selection-start-line="273" selection-start-column="1" selection-end-line="273" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.8465775">
+              <caret line="463" column="16" selection-start-line="463" selection-start-column="16" selection-end-line="463" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="appes.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="appes.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/appes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35907337">
+            <state vertical-scroll-proportion="0.0">
               <caret line="31" column="75" selection-start-line="31" selection-start-column="75" selection-end-line="31" selection-end-column="75" />
               <folding />
             </state>
@@ -136,9 +84,9 @@
         <option value="$PROJECT_DIR$/pgs/work.html" />
         <option value="$PROJECT_DIR$/pgs/aboutes.html" />
         <option value="$PROJECT_DIR$/pgs/about.html" />
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/pgs/approach.html" />
         <option value="$PROJECT_DIR$/pgs/approaches.html" />
+        <option value="$PROJECT_DIR$/css/style.css" />
       </list>
     </option>
   </component>
@@ -636,18 +584,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
+    <entry file="file://$PROJECT_DIR$/js/appes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.125">
-          <caret line="273" column="1" selection-start-line="273" selection-start-column="1" selection-end-line="273" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="75" selection-start-line="31" selection-start-column="75" selection-end-line="31" selection-end-column="75" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/appes.js">
+    <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35907337">
-          <caret line="31" column="75" selection-start-line="31" selection-start-column="75" selection-end-line="31" selection-end-column="75" />
+        <state vertical-scroll-proportion="0.8465775">
+          <caret line="463" column="16" selection-start-line="463" selection-start-column="16" selection-end-line="463" selection-end-column="16" />
           <folding />
         </state>
       </provider>
