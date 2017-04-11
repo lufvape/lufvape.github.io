@@ -27,22 +27,92 @@ app.config(function($routeProvider) {
 
 angular.module("plunker").service("dataService", function(filterFilter) {
     var items = [{
-        "name": "Nexus 5",
-        "size": "4.95 inches",
-        "camera": "8 megapixels"
+        "name": "MSMc Arquitectos",
+        "title": "Portfolio access from any place in the world",
+        "client": "MSMc Arquitectos",
+        "place": "Ibagué",
+        "date": "2016",
+        "description":"I'm a service designer with focus on interaction, who believes in solving the problems end to end. That's why my approach is aligned with the Deming cycle(Plan-Do-Check-Act) I'm a service designer with focus on interaction, who believes in solving the problems end to end. That's why my approach is aligned with the Deming cycle(Plan-Do-Check-Act)",
+        "image": "../img/msmc.svg",
+        "define": "../img/msmc.svg",
+        "understand": "../img/msmc.svg",
+        "conceptualize": "../img/msmc.svg",
+        "analyze": "../img/msmc.svg",
+        "prototype": "../img/msmc.svg",
+        "implement": "../img/msmc.svg",
+
     }, {
-        "name": "Nexus 6",
-        "size": "6.0 inches",
-        "camera": "13 megapixels"
+        "name": "Marfil",
+        "title": "The on-line health supermarket",
+        "client": "Marfil",
+        "place": "Ibagué",
+        "date": "2016",
+        "description":"I'm a service designer with focus on interaction, who believes in solving the problems end to end. That's why my approach is aligned with the Deming cycle(Plan-Do-Check-Act) I'm a service designer with focus on interaction, who believes in solving the problems end to end. That's why my approach is aligned with the Deming cycle(Plan-Do-Check-Act)",
+        "image": "../img/marfil.svg",
+        "define": "../img/marfil.svg",
+        "understand": "../img/marfil.svg",
+        "conceptualize": "../img/marfil.svg",
+        "analyze": "../img/marfil.svg",
+        "prototype": "../img/marfil.svg",
+        "implement": "../img/marfil.svg",
     }, {
-            "name": "Nexus 6",
-            "size": "6.0 inches",
-            "camera": "13 megapixels"
-        },{
-            "name": "Nexus 6",
-            "size": "6.0 inches",
-            "camera": "13 megapixels"
-        }];
+        "name": "IDEO",
+        "title": "Reducing food waste",
+        "client": "IDEO(MOOC)",
+        "place": "Bogotá",
+        "date": "2016",
+        "description":"I'm a service designer with focus on interaction, who believes in solving the problems end to end. That's why my approach is aligned with the Deming cycle(Plan-Do-Check-Act) I'm a service designer with focus on interaction, who believes in solving the problems end to end. That's why my approach is aligned with the Deming cycle(Plan-Do-Check-Act)",
+        "image": "../img/wastel.svg",
+        "define": "../img/wastel.svg",
+        "understand": "../img/wastel.svg",
+        "conceptualize": "../img/wastel.svg",
+        "analyze": "../img/wastel.svg",
+        "prototype": "../img/wastel.svg",
+        "implement": "../img/wastel.svg",
+    },{
+        "name": "SFIMC",
+        "title": "affordable ERP for Colombian SME's",
+        "client": "Uniandes(final project)",
+        "place": "Bogotá",
+        "date": "2015",
+        "description":"I'm a service designer with focus on interaction, who believes in solving the problems end to end. That's why my approach is aligned with the Deming cycle(Plan-Do-Check-Act) I'm a service designer with focus on interaction, who believes in solving the problems end to end. That's why my approach is aligned with the Deming cycle(Plan-Do-Check-Act)",
+        "image": "../img/sfimc.svg",
+        "define": "../img/sfimc.svg",
+        "understand": "../img/sfimc.svg",
+        "conceptualize": "../img/sfimc.svg",
+        "analyze": "../img/sfimc.svg",
+        "prototype": "../img/sfimc.svg",
+        "implement": "../img/sfimc.svg",
+    }, {
+        "name": "UbD",
+        "title": "Teaching robotics in elementary school",
+        "client": "Uniandes(final project)",
+        "place": "Bogotá",
+        "date": "2015",
+        "description":"I'm a service designer with focus on interaction, who believes in solving the problems end to end. That's why my approach is aligned with the Deming cycle(Plan-Do-Check-Act) I'm a service designer with focus on interaction, who believes in solving the problems end to end. That's why my approach is aligned with the Deming cycle(Plan-Do-Check-Act)",
+        "image": "../img/ubd.svg",
+        "define": "../img/ubd.svg",
+        "understand": "../img/ubd.svg",
+        "conceptualize": "../img/ubd.svg",
+        "analyze": "../img/ubd.svg",
+        "prototype": "../img/ubd.svg",
+        "implement": "../img/ubd.svg",
+    },{
+        "name": "Zeal",
+        "title": "Electronic security",
+        "client": "Uniandes(course project)",
+        "place": "Bogotá",
+        "date": "2015",
+        "description":"I'm a service designer with focus on interaction, who believes in solving the problems end to end. That's why my approach is aligned with the Deming cycle(Plan-Do-Check-Act) I'm a service designer with focus on interaction, who believes in solving the problems end to end. That's why my approach is aligned with the Deming cycle(Plan-Do-Check-Act)",
+        "image": "../img/zeal.svg",
+        "define": "../img/zeal.svg",
+        "understand": "../img/zeal.svg",
+        "conceptualize": "../img/zeal.svg",
+        "analyze": "../img/zeal.svg",
+        "prototype": "../img/zeal.svg",
+        "implement": "../img/zeal.svg",
+    }];
+
 
     this.getProducts = function() {
         return items;

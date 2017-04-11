@@ -4,6 +4,8 @@
 
 $(document).ready(function(){
 
+    $('.materialboxed').materialbox();
+
     $('.modal-trigger').leanModal();
 
     $('.slider').slider({

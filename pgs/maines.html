@@ -1,11 +1,19 @@
-<h3>Proyectos:</h3>
-
+<h1 class="text_hb">Diseño de servicios e interacciones</h1>
+<p class="text_p arriba justificar">
+    Si necesitas desarrollar o mejorar un servicio, o establecer una mejor interacción entre TI y tus usuarios, estoy aquí para ayudar
+</p>
+<ul class="text_p arriba">
+    <li>Diseño de servicios</li>
+    <li>Diseño interactivo</li>
+    <li>Tecnología educativa</li>
+</ul>
 
 <div ng-repeat="product in store.products" class="col s12 m4">
     <div class="card">
         <div class=" card-image">
-            <img src="../img/wastel.svg">
+            <img src="{{product.image}}">
             <span class="card-title">    <a class="text_h" href="#/detail/{{product.name}}">{{product.name}}</a></span>
         </div>
     </div>
 </div>
+
