@@ -39,7 +39,7 @@ angular.module("plunker").service("dataService", function(filterFilter) {
         "analyze": "../img/msmc4.png",
         "prototype": "../img/msmc5.png",
         "implement": "../img/msmc6.png",
-
+        "link": "https://lufvape.github.io/MSMcArquitectos/"
     }, {
         "name": "Marfil",
         "title": "The on-line health supermarket",
@@ -54,6 +54,7 @@ angular.module("plunker").service("dataService", function(filterFilter) {
         "analyze": "../img/marfil.svg",
         "prototype": "../img/marfil.svg",
         "implement": "../img/marfil.svg",
+        "link": "https://lufvape.github.io/MSMcArquitectos/"
     }, {
         "name": "IDEO",
         "title": "Reducing food waste",
@@ -68,6 +69,7 @@ angular.module("plunker").service("dataService", function(filterFilter) {
         "analyze": "../img/wastel.svg",
         "prototype": "../img/wastel.svg",
         "implement": "../img/wastel.svg",
+        "link": "https://lufvape.github.io/MSMcArquitectos/"
     },{
         "name": "SFIMC",
         "title": "affordable ERP for Colombian SME's",
@@ -82,6 +84,7 @@ angular.module("plunker").service("dataService", function(filterFilter) {
         "analyze": "../img/sfimc.svg",
         "prototype": "../img/sfimc.svg",
         "implement": "../img/sfimc.svg",
+        "link": "https://lufvape.github.io/MSMcArquitectos/"
     }, {
         "name": "UbD",
         "title": "Teaching robotics in elementary school",
@@ -96,6 +99,7 @@ angular.module("plunker").service("dataService", function(filterFilter) {
         "analyze": "../img/ubd.svg",
         "prototype": "../img/ubd.svg",
         "implement": "../img/ubd.svg",
+        "link": "https://lufvape.github.io/MSMcArquitectos/"
     },{
         "name": "Zeal",
         "title": "Electronic security",
@@ -110,6 +114,7 @@ angular.module("plunker").service("dataService", function(filterFilter) {
         "analyze": "../img/zeal.svg",
         "prototype": "../img/zeal.svg",
         "implement": "../img/zeal.svg",
+        "link": "https://lufvape.github.io/MSMcArquitectos/"
     }];
 
 
