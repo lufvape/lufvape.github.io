@@ -36,14 +36,17 @@ angular.module("plunkeres").service("dataService", function(filterFilter) {
         "client": "MSMc Arquitectos",
         "place": "Ibagué",
         "date": "2016",
-        "description":"I'm a service designer with focus on interaction, who believes in solving the problems end to end. That's why my approach is aligned with the Deming cycle(Plan-Do-Check-Act) I'm a service designer with focus on interaction, who believes in solving the problems end to end. That's why my approach is aligned with the Deming cycle(Plan-Do-Check-Act)",
+        "description":"La firma de arquitectos MSMc Arquitectos me confió la realización de su portafolio web. El proyecto comenzó con entender las necesidades de los arquitectos y el nicho al que dirigían su página" +
+        "mediante una serie de reuniones entre las partes. El siguiente paso fue realizar el estudio de los usuarios, esto mediante unas pocas entrevistas y la creación de personas y mapas de usuario." +
+        " Luego se realizaron los primeros bocetos de las páginas que se requerían, teniendo en cuenta hacer las interacciones simples.El proceso fue incremental, comenzando desde lo básico con papel y lápiz hasta llegar a prototipos de alta fidelidad." +
+        " Finalmente se decidieron las herramientas y marcos de trabajo a utilizar, se trabajó con materializeCSS y Jquery para manejar las interacciones.",
         "image": "../img/msmc.svg",
-        "define": "../img/msmc.svg",
-        "understand": "../img/msmc.svg",
-        "conceptualize": "../img/msmc.svg",
-        "analyze": "../img/msmc.svg",
-        "prototype": "../img/msmc.svg",
-        "implement": "../img/msmc.svg",
+        "define": "../img/msmc1.png",
+        "understand": "../img/msmc2.png",
+        "conceptualize": "../img/msmc3.png",
+        "analyze": "../img/msmc4.png",
+        "prototype": "../img/msmc5.png",
+        "implement": "../img/msmc6.png",
 
     }, {
         "name": "Marfil",

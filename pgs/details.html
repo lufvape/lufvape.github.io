@@ -1,62 +1,55 @@
 <h1 class="text_h1 justificar">{{product.title}}</h1>
-<p class="text_h4 justificar">Client: {{product.client}}</p>
+<p class="text_h4 justificar">Cliente: {{product.client}}</p>
 <p class="text_h4 justificar">{{product.place}}, {{product.date}}</p>
-<p class="text_p arriba">
+<p class="text_p arriba justificar">
     {{product.description}}
 </p>
 
 <div class="section">
-    <div class="col s12 m4">
+    <div class="col s12">
         <div class="card">
             <div class="card-image">
                 <img src="{{product.define}}">
-                <span class="card-title">Definición</span>
             </div>
         </div>
     </div>
-    <div class="col s12 m4">
+    <div class="col s12">
         <div class="card">
             <div class="card-image">
-                <img src="{{product.define}}">
-                <span class="card-title">Entendimiento</span>
+                <img src="{{product.understand}}">
             </div>
         </div>
     </div>
-    <div class="col s12 m4">
+    <div class="col s12">
         <div class="card">
             <div class="card-image">
-                <img src="{{product.define}}">
-                <span class="card-title">Conceptualización</span>
+                <img src="{{product.conceptualize}}">
             </div>
         </div>
     </div>
-    <div class="col s12 m4">
+    <div class="col s12">
         <div class="card">
             <div class="card-image">
-                <img src="{{product.define}}">
-                <span class="card-title">Análisis</a></span>
+                <img src="{{product.analyze}}">
             </div>
         </div>
     </div>
-    <div class="col s12 m4">
+    <div class="col s12">
         <div class="card">
             <div class="card-image">
-                <img src="{{product.define}}">
-                <span class="card-title">Prototipado</span>
+                <img src="{{product.prototype}}">
             </div>
         </div>
     </div>
-    <div class="col s12 m4">
+    <div class="col s12">
         <div class="card">
             <div class="card-image">
-                <img src="{{product.define}}">
-                <span class="card-title">Implementación</span>
+                <img src="{{product.implement}}">
             </div>
         </div>
     </div>
 </div>
 
-
-</div>
+<a href="{{product.link}}" target="_blank" class="btn-flat text_p mg-rg"><strong>DEMO</strong></a> <br>
 
 <a href="#/main" class="btn-flat text_p mg-rg"><strong>Proyectos</strong></a>
