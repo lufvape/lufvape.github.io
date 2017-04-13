@@ -6,12 +6,14 @@
     <li>Diseño de servicios</li>
     <li>Diseño interactivo</li>
     <li>Tecnología educativa</li>
+    <li>Talleres</li>
+
 </ul>
 
 <div ng-repeat="product in store.products" class="col s12 m4">
     <div class="card">
         <div class=" card-image">
-            <a class="text_h" href="#/detail/{{product.name}}"><img src="{{product.image}}"></a>
+            <a href="#/detail/{{product.name}}"><img src="{{product.image}}"></a>
             <span class="card-title">    <a class="text_h" href="#/detail/{{product.name}}">{{product.name}}</a></span>
         </div>
     </div>

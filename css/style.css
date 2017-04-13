@@ -34,6 +34,13 @@ main {
     box-shadow: none !important;
 }
 
+.text_h {
+    padding: 4% 0;
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: #FFFBED;
+}
+
 .text_hb {
     padding: 0 0;
     font-size: 3rem;
