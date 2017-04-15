@@ -67,7 +67,7 @@ angular.module("plunker").service("dataService", function(filterFilter) {
         "place": "Bogotá",
         "date": "2016",
         "description":"At the online course of human centered design by IDEO we formed a team to give a solution to the food waste problem in our community. Focusing on singles and just married couples. " +
-        "At first we designed different types of interviews, one for experts on the field and one for the target market, by conducting the interviews, relevant and interesting data was obtained." +
+        "At first we designed different types of interviews, one for experts on the field and one for the target market, by conducting the interviews, relevant and interesting data was obtained. " +
         "Ideation was about giving a chance to any idea, without restrictions interesting concepts arrived, and a clear vision about the niche and the responsability of the problem in hand. " +
         "Finally a first protitype was made. It consist on a mobile app that connects with smart kitchen products to serve as a social network of waste. A kitchen kit was made in order to have an offline experience. ",
         "image": "../img/wastel.svg",
@@ -104,7 +104,7 @@ angular.module("plunker").service("dataService", function(filterFilter) {
         "date": "2015",
         "description":"Some schools made a great use of information technology, to the point to connect and discuss with students arround the world, to share works and experiences; but this is just an example of what can be made with IT." +
         " But it must be a better and more efficient way to bind technology with the process of teaching and learning in schools. An that's the main objective of this work: To give students and teachers of elementary schools," +
-        " the description of some activities by which they get a better knowledge of the engineering design process and it relation to technology, ending with a genuine interest in STEM." +
+        " the description of some activities by which they get a better knowledge of the engineering design process and its relation to technology, ending with a genuine interest in STEM. " +
         "Robotics have been one of the major influences in the last decade for IT literacy, with a great variety of products to choose from; for this specific project the robots are cubelets from modular robotics. " +
         "To include robots in class in an interesting way, the framework of work was Understanding by Design(Jay McTighe y Grant Wiggins) for designing the activities. This framework looks for designing the curriculum in a descending way, form objectives to activities, " +
         " and having the final result as the most important aspect, measured by the skills and knowledge that students must develop at the end of the work session..",

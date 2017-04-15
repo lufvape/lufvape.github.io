@@ -36,9 +36,9 @@ angular.module("plunkeres").service("dataService", function(filterFilter) {
         "client": "MSMc Arquitectos",
         "place": "Ibagué",
         "date": "2016",
-        "description":"La firma de arquitectos MSMc Arquitectos me confió la realización de su portafolio web. El proyecto comenzó con entender las necesidades de los arquitectos y el nicho al que dirigían su página" +
+        "description":"La firma de arquitectos MSMc Arquitectos me confió la realización de su portafolio web. El proyecto comenzó con entender las necesidades de los arquitectos y el nicho al que dirigían su página, " +
         "mediante una serie de reuniones entre las partes. El siguiente paso fue realizar el estudio de los usuarios, esto mediante unas pocas entrevistas y la creación de personas y mapas de usuario." +
-        " Luego se realizaron los primeros bocetos de las páginas que se requerían, teniendo en cuenta hacer las interacciones simples.El proceso fue incremental, comenzando desde lo básico con papel y lápiz hasta llegar a prototipos de alta fidelidad." +
+        " Luego se realizaron los primeros bocetos de las páginas que se requerían, teniendo en cuenta hacer las interacciones simples. El proceso fue incremental, comenzando desde lo básico con papel y lápiz hasta llegar a prototipos de alta fidelidad." +
         " Finalmente se decidieron las herramientas y marcos de trabajo a utilizar, se trabajó con materializeCSS y Jquery para manejar las interacciones.",
         "image": "../img/msmc.svg",
         "define": "../img/msmc1.png",
@@ -56,12 +56,12 @@ angular.module("plunkeres").service("dataService", function(filterFilter) {
         "place": "Ibagué",
         "date": "2016",
         "description":"Marfil es una empresa familiar ibaguereña que quería comenzar a tener presencia en la red mediante una plataforma para que sus clientes pudieran ordenar sus productos en linea. " +
-        "Todo comenzó con una reunión con los dueños, mediante la cual se establecieron las prioridades de la aplicación. El siguiente paso fue comenzar a construir los bocetos preliminares con ayuda de los mismos empleados de la empresa y clientes." +
+        "Todo comenzó con una reunión con los dueños, mediante la cual se establecieron las prioridades de la aplicación. El siguiente paso fue comenzar a construir los bocetos preliminares con ayuda de los mismos empleados de la empresa y clientes. " +
         "La funcionalidad se fue desarrollando y probando iterativamente con los empleados, la empresa y algunos usuarios, con esto se lograron hacer modificaciones y tener un sistema agradable al uso. " +
         "Para el prototipado final e implementación de la aplicación web se utilizaron Angular, Firebase y Bootstrap.",
         "image": "../img/marfil.svg",
-        "define": "../img/marfil1.jpg",
-        "understand": "../img/marfil2.jpg",
+        "define": "../img/marfil1.JPG",
+        "understand": "../img/marfil2.JPG",
         "conceptualize": "../img/marfil3.png",
         "analyze": "../img/marfil4.png",
         "prototype": "../img/marfil5.png",
@@ -74,8 +74,8 @@ angular.module("plunkeres").service("dataService", function(filterFilter) {
         "place": "Bogotá",
         "date": "2016",
         "description":"En el marco del curso de diseño centrado en el usuario dictado de manera virtual por IDEO formamos un grupo de trabajo para dar solución al problema de desperdicio de comida. Nuestro nicho de mercado fueron solteros y recién casados. " +
-        "Como primera medida se diseñaron distintos tipos de entrevistas, una para expertos como chefs y amas de casa, y otra para el grupo al que queríamos intervenir, las entrevistas se realizaron a diferentes personas y se obtuvieron datos relevantes e interesantes sobre el problema " +
-        "En la fase de ideación se tomaron en cuenta todas las ideas que pudieran llegar a la mente, sin restricciones se pudo llegar a conceptos interesantes y que podían ayudar a mejorar tanto la visión del grupo objetivo como el nivel de responsabilidad hacia el problema " +
+        "Como primera medida se diseñaron distintos tipos de entrevistas, una para expertos como chefs y amas de casa, y otra para el grupo al que queríamos intervenir, las entrevistas se realizaron a diferentes personas y se obtuvieron datos relevantes e interesantes sobre el problema. " +
+        "En la fase de ideación se tomaron en cuenta todas las ideas que pudieran llegar a la mente, sin restricciones se pudo llegar a conceptos interesantes y que podían ayudar a mejorar tanto la visión del grupo objetivo como el nivel de responsabilidad hacia el problema. " +
         "Finalmente se realizó un prototipo inicial que consistía en una apalicación la cual tenía el principio de una red social que lograba integrarse con su ambiente y un kit para la cocina. ",
         "image": "../img/wastel.svg",
         "define": "../img/hcd1.png",
@@ -120,7 +120,7 @@ angular.module("plunkeres").service("dataService", function(filterFilter) {
         "define": "../img/ubd1.png",
         "understand": "../img/ubd2.png",
         "conceptualize": "../img/ubd3.png",
-        "analyze": "../img/ubd4.jpg",
+        "analyze": "../img/ubd4.JPG",
         "prototype": "../img/ubd5.png",
         "implement": "../img/ubd6.png",
         "link": "https://youtu.be/fJwEZWsIZpw"
