@@ -2,16 +2,17 @@ var app = angular.module('plunker', ['ngRoute']);
 
 app.config(function($routeProvider) {
 
-    $routeProvider.when('/main', {
-        templateUrl: "main.html",
-        controller: "mainController"
-    }).when('/detail/:productName', {
-        templateUrl: "details.html",
-        controller: "detailsController"
-    }).otherwise({
-        redirectTo: "/main"
-    });
-})
+        $routeProvider.when('/main', {
+            templateUrl: "main.html",
+            controller: "mainController"
+        }).when('/detail/:productName', {
+            templateUrl: "details.html",
+            controller: "detailsController"
+        }).otherwise({
+            redirectTo: "/main"
+        });
+    })
+
     .controller("mainController", function($scope, dataService) {
         $scope.store = {}; //.products
 
