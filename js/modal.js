@@ -4,13 +4,10 @@
 
 $(document).ready(function(){
 
-    $('.materialboxed').materialbox();
-
-    $('.modal-trigger').leanModal();
-
-    $('.slider').slider({
-        full_width: true,
-    });
+    $('.button-collapse').sideNav({
+        menuWidth: 400, // Default is 300
+ }
+ );
 });
 
 

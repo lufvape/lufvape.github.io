@@ -16,7 +16,6 @@
 
 html,body{
     height: 100%;
-    background-color: #FFFBED;
 }
 
 body {
@@ -34,19 +33,6 @@ main {
     box-shadow: none !important;
 }
 
-.text_h {
-    padding: 4% 0;
-    font-size: 1.5rem;
-    font-weight: 100;
-    color: #FFFBED;
-}
-
-.text_hb {
-    padding: 0 0;
-    font-size: 3rem;
-    font-weight: 500;
-    color: #231123 !important;
-}
 
 .brand-logo{
     position: absolute;
@@ -59,40 +45,14 @@ main {
     letter-spacing: 7px;
 }
 
-.text_h1 {
-    font-weight: 500;
-    line-height: 6rem;
-    font-size: 4rem;
-    color: #231123 !important;
-}
-
-.text_h3 {
-    font-weight: 300;
-    line-height: 1rem;
-    font-size: 2rem;
-    color: #231123 !important;
-}
-
-.text_h4 {
-    font-weight: 300;
-    line-height: 1rem;
-    font-size: 1rem;
-    color: #231123 !important;
-}
-
-.text_h4b {
-    font-weight: 300;
-    line-height: 1rem;
-    font-size: 2rem;
+.text_nav {
+    font-weight: 900;
+    line-height: 5rem !important;
+    font-size: 2rem !important;
     color: #FFFBED !important;
 }
 
-.text_h2 {
-    font-weight: 100;
-    line-height: 5rem;
-    font-size: 2em;
-    color: #FFFBED !important;
-}
+
 
 .text_p {
     font-weight: 100;
@@ -101,20 +61,7 @@ main {
     color: #231123 !important;
 }
 
-.text-fun{
-    font-weight: 100;
-    line-height: 3rem;
-    font-size: 1.2rem;
-    color: #FFFBED !important;
-}
 
-.text-footer{
-    font-weight: 100;
-    margin-bottom: 4%;
-    line-height: 1rem;
-    font-size: 1rem;
-    color: #231123 !important;
-}
 
 
 .text_b{color: #231123;}
@@ -276,7 +223,7 @@ nav ul a {
     z-index:1200; /* makes sure it stays on top */
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 990px) {
     .text_h {
         padding: 4% 0;
         font-size: 3rem;
@@ -299,15 +246,9 @@ nav ul a {
         color: #231123 !important;
     }
 
-    .vista {
-        position: relative;
-        z-index: 997;
-        top: 0;
-        width: 50%;
-        height: 60%;
-        margin-top: 5%;
-        margin-left: 30%;
-
+    main {
+        flex: 1 0 auto;
+        padding-left: 400px;
     }
 
     .button-collapse{
@@ -319,15 +260,14 @@ nav ul a {
     }
 
     .imagen2{
-        max-width: 20% !important;
+        margin-top: 20% !important;
+        max-width: 50% !important;
     }
 
     .modal2{
         max-width: 33% !important;
     }
 }
-
-
 
 input, textarea {
     border-bottom: 1px solid #fff;
@@ -379,7 +319,7 @@ footer.page-footer {
 }
 
 .imagen2{
-    margin-top: 2% !important;
+    margin-top: 20% !important;
     display: flex;
     position: relative;
     margin:auto auto auto auto;
@@ -394,7 +334,7 @@ footer.page-footer {
     width: 70%;
 }
 
-.boton:hover{
+.boton:hover, .btn-footer:hover{
     background-color: #960FB2 !important;
 }
 
@@ -435,15 +375,7 @@ footer.page-footer {
     opacity: 0 !important;
 }
 
-.mediumsn{
-    background-color: #1ca25f !important;
-}
-
-.linkedin{
-    background-color: #0075B5 !important;
-}
-
-.correo{
+.btn-footer{
     background-color: #FFBA08 !important;
 }
 
@@ -455,19 +387,15 @@ footer.page-footer {
 
 .interno{
     display: inline-block !important;
+    margin-left: 30%;
 }
 
 .side-nav{
     background-color: #FFBA08 !important;
 }
 
-.modal2{
-    background-color: #FFBA08 !important;
-    min-height: 100% !important;
-    max-width: 70%;
-}
-
 .interno{
-    display: inline-block;
+    display: flex !important;
+    text-align: center !important;
 }
 
