@@ -14,10 +14,6 @@
     padding: 0 15px;
 }
 
-html,body{
-    height: 100%;
-}
-
 body {
     display: flex;
     min-height: 100vh;
@@ -46,22 +42,30 @@ main {
 }
 
 .text_nav {
-    font-weight: 900;
+    font-weight: 500;
     line-height: 5rem !important;
     font-size: 2rem !important;
     color: #FFFBED !important;
 }
 
-
+.text_inicio {
+    font-weight: 900;
+    line-height: 5rem !important;
+    font-size: 5rem !important;
+    color: #FFBA08 !important;
+    text-align: center;
+}
 
 .text_p {
     font-weight: 100;
-    line-height: 3rem;
-    font-size: 1.5rem;
+    line-height: 2rem;
+    font-size: 1.5rem !important;
     color: #231123 !important;
 }
 
-
+.text_izq {
+    text-align: right !important;
+}
 
 
 .text_b{color: #231123;}
@@ -92,11 +96,7 @@ nav ul a {
     text-align: justify;
 }
 .arriba{
-    margin-top: 5%;
-}
-
-.arriba2{
-    margin-top: 35%;
+    margin-top: 20%;
 }
 
 .cd-headline.type .cd-words-wrapper {
@@ -260,8 +260,11 @@ nav ul a {
     }
 
     .imagen2{
-        margin-top: 20% !important;
-        max-width: 50% !important;
+        display: flex;
+        position: relative;
+        margin:auto auto auto auto;
+        max-width: 30%;
+        height: auto;
     }
 
     .modal2{
@@ -323,7 +326,7 @@ footer.page-footer {
     display: flex;
     position: relative;
     margin:auto auto auto auto;
-    max-width: 50%;
+    max-width: 30%;
     height: auto;
 }
 
@@ -379,6 +382,14 @@ footer.page-footer {
     background-color: #FFBA08 !important;
 }
 
+.btn-flat{
+    text-transform: lowercase !important;
+}
+
+.btn-flat:first-letter {
+    text-transform: uppercase !important;
+}
+
 .button-collapse{
     display: flex !important;
     margin-right: 5%;
@@ -392,6 +403,10 @@ footer.page-footer {
 
 .side-nav{
     background-color: #FFBA08 !important;
+}
+
+blockquote{
+    border-left: 1px solid #FFBA08 !important;
 }
 
 .interno{
