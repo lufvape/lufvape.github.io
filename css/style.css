@@ -26,6 +26,13 @@ main {
     color: #FFFBED !important;
 }
 
+.text_nav2 {
+    font-weight: 900;
+    line-height: 5rem !important;
+    font-size: 2rem !important;
+    color: #FFFBED !important;
+}
+
 .text_inicio {
     font-weight: 900;
     line-height: 5rem !important;
@@ -241,4 +248,8 @@ blockquote{
 .row .input-field textarea:focus {
     border-bottom: 1px solid #960FB2 !important;
     box-shadow: 0 1px 0 0 #960FB2 !important
+}
+
+.borde{
+    text-decoration: underline;
 }
