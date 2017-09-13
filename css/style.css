@@ -35,6 +35,14 @@ main {
     margin-top: 30%;
 }
 
+.text_grande {
+    font-weight: 900;
+    line-height: 5rem !important;
+    font-size: 5rem !important;
+    color: #FFBA08 !important;
+    text-align: center;
+}
+
 .text_p {
     font-weight: 100;
     line-height: 2rem;
@@ -48,6 +56,10 @@ strong{
 
 .text_izq {
     text-align: right !important;
+}
+
+.text_pegado{
+    margin-top: -5%;
 }
 
 nav ul a {
@@ -141,6 +153,14 @@ nav a.button-collapse {
     max-width: 70%;
     height: auto;
     float: right;
+}
+
+.imagen4{
+    display: flex;
+    position: relative;
+    margin:auto auto auto auto;
+    max-width: 70%;
+    height: auto;
 }
 
 .boton{
