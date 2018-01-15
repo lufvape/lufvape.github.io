@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89b5cdbd-951b-43c7-a6e2-10b42502b697" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/servicios.svg" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/pgs/gobierno.html" afterPath="$PROJECT_DIR$/pgs/caso.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pgs/concientizacion.html" afterPath="$PROJECT_DIR$/pgs/concientizacion.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pgs/cultura.html" afterPath="$PROJECT_DIR$/pgs/cultura.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pgs/filosofia.html" afterPath="$PROJECT_DIR$/pgs/filosofia.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pgs/caso.html" afterPath="$PROJECT_DIR$/pgs/caso.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pgs/gestion.html" afterPath="$PROJECT_DIR$/pgs/gestion.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pgs/servicios.html" afterPath="$PROJECT_DIR$/pgs/servicios.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pgs/tecnologias.html" afterPath="$PROJECT_DIR$/pgs/tecnologias.html" />
     </list>
     <ignored path="lufvape.github.io.iws" />
@@ -30,7 +25,7 @@
     <favorites_list name="lufvape.github.io" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -75,12 +70,12 @@
         <option value="$PROJECT_DIR$/pgs/contacto.html" />
         <option value="$PROJECT_DIR$/pgs/filosofia.html" />
         <option value="$PROJECT_DIR$/pgs/servicios.html" />
-        <option value="$PROJECT_DIR$/pgs/tecnologias.html" />
-        <option value="$PROJECT_DIR$/pgs/gestion.html" />
-        <option value="$PROJECT_DIR$/pgs/concientizacion.html" />
-        <option value="$PROJECT_DIR$/pgs/caso.html" />
         <option value="$PROJECT_DIR$/pgs/cultura.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/pgs/caso.html" />
+        <option value="$PROJECT_DIR$/pgs/concientizacion.html" />
+        <option value="$PROJECT_DIR$/pgs/gestion.html" />
+        <option value="$PROJECT_DIR$/pgs/tecnologias.html" />
       </list>
     </option>
   </component>
@@ -322,7 +317,13 @@
       <option name="project" value="LOCAL" />
       <updated>1515121418215</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="cambio de contenido">
+      <created>1516038999210</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1516038999210</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -395,7 +396,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -680,10 +680,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pgs/servicios.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7635934">
+          <caret line="92" column="378" selection-start-line="92" selection-start-column="378" selection-end-line="92" selection-end-column="378" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pgs/perfil.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35460994">
+          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59101653">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pgs/contacto.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35405192">
+        <state vertical-scroll-proportion="0.35460994">
           <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -695,42 +717,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pgs/servicios.html">
+    <entry file="file://$PROJECT_DIR$/pgs/gestion.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7635934">
-          <caret line="92" column="378" selection-start-line="92" selection-start-column="378" selection-end-line="92" selection-end-column="378" />
+        <state vertical-scroll-proportion="-31.875">
+          <caret line="51" column="10" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pgs/tecnologias.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-27.5">
-          <caret line="44" column="126" selection-start-line="44" selection-start-column="126" selection-end-line="44" selection-end-column="126" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pgs/gestion.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5555556">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pgs/concientizacion.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4491726">
-          <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pgs/perfil.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35460994">
-          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+        <state vertical-scroll-proportion="-31.25">
+          <caret line="50" column="10" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -743,18 +741,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pgs/caso.html">
+    <entry file="file://$PROJECT_DIR$/pgs/concientizacion.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5673759">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.59101653">
+          <caret line="50" column="7" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/pgs/caso.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59101653">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.41371158">
+          <caret line="35" column="46" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
           <folding />
         </state>
       </provider>
