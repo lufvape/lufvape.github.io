@@ -51,7 +51,7 @@
 
 				});
 
-		// Prioritize "important" elements on medium.
+		// Prioritize "important" elements on medium.x
 			skel.on('+medium -medium', function() {
 				$.prioritize(
 					'.important\\28 medium\\29',
