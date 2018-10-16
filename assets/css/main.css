@@ -1698,10 +1698,16 @@ p {
     margin: 0 0 2em 0;
     color: #614703;
     font-weight: 300;
+    text-align: justify;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1{
     color: #ffffff;
+    line-height: 1.5;
+}
+
+h2, h3, h4, h5, h6{
+    color: rgba(97,71,3,0.75);
     line-height: 1.5;
 }
 
