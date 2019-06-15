@@ -11,7 +11,7 @@ $theme-colors: (
   secondary: #08A6A2,
   light: #FFFFFF,
   dark: #2c2c2c,
-  info: #CEE50B,
+  info: #CFE50B,
   success: #18ce0f,
   warning: #FFB236,
   danger: #FF3636,
@@ -44,7 +44,7 @@ $border-radius-sm:  .2rem !default;
 
 // Fonts
 
-$font-family-base: 				Lato, Helvetica;
+$font-family-base: 				Lato;
 $display-font-family: 		Comfortaa;
 $headings-font-family: 		Comfortaa;
 
@@ -760,7 +760,7 @@ html,body {
 
 
 .cover {
-	min-height: 125%;
+	max-height: 100%;
 	.container {
 		height: 100vh;
 	}
