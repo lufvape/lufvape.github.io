@@ -1,11 +1,11 @@
 /*!
-* Based on Bootstrap v4.0.0 (https://getbootstrap.com) 
+* Based on Bootstrap v4.0.0 (https://getbootstrap.com)
 */
 
 @import url('https://fonts.googleapis.com/css?family=Comfortaa|Lato');
 
 // Color system
- 
+
 $theme-colors: (
   primary: #004C99,
   secondary: #08A6A2,
@@ -15,7 +15,7 @@ $theme-colors: (
   success: #18ce0f,
   warning: #FFB236,
   danger: #FF3636,
-	gray : #EEEEEE, 
+	gray : #EEEEEE,
 );
 
 $yiq-text-dark: 						#888 !default;
@@ -48,14 +48,14 @@ $font-family-base: 				Lato;
 $display-font-family: 		Comfortaa;
 $headings-font-family: 		Comfortaa;
 
-$line-height-base: 				1.6;
+$line-height-base: 				1.2rem;
 $headings-line-height: 		1.4em;
 
 $font-weight-normal: 			400;
 $headings-font-weight: 		400;
 $headings-margin-bottom: 	30px;
 
-$font-size-base: 					0.875rem;
+$font-size-base: 					1rem;
 $lead-font-size: 					1.30rem;
 $small-font-size: 				70%;
 
@@ -64,7 +64,7 @@ $h2-font-size: 						2.5em;
 $h3-font-size: 						2em;
 $h4-font-size: 						1.714em;
 $h5-font-size: 						1.57em;
-$h6-font-size: 						1em; 
+$h6-font-size: 						1em;
 
 $display1-size: 					2.8em;
 $display2-size: 					5.5 * $font-size-base;
@@ -102,7 +102,7 @@ $input-border-radius:      	$border-radius * 10;
 $input-border-radius-lg:   	$border-radius-lg * 10;
 $input-border-radius-sm:   	$border-radius * 10;
 
-$custom-control-indicator-bg:										transparent;				
+$custom-control-indicator-bg:										transparent;
 $custom-control-indicator-checked-bg:						transparent;
 $custom-control-indicator-checked-disabled-bg:  transparent;
 $custom-control-indicator-disabled-bg:  				transparent;
@@ -205,7 +205,7 @@ $progress-height:   1px;
 	    	border-radius: 30px;
 		  }
     }
-    
+
     @each $name, $value in $theme-colors {
       &.bg-#{$name}{
         > .nav-item {
@@ -221,11 +221,11 @@ $progress-height:   1px;
       }
     }
   }
-  
-  &.nav-pills {  
+
+  &.nav-pills {
     .nav-item {
       margin-right: 15px;
-      
+
       &.circle .nav-link {
         display: flex;
         justify-content: center;
@@ -235,7 +235,7 @@ $progress-height:   1px;
         overflow: hidden;
         border-radius: 120px;
       }
-      
+
       .nav-link {
         background-color: rgba(222, 222, 222, 0.3);
         color: #9a9a9a;
@@ -246,7 +246,7 @@ $progress-height:   1px;
         }
       }
     }
-    
+
     &.flex-column {
       .nav-item {
         margin-right: 0px;
@@ -262,17 +262,17 @@ $progress-height:   1px;
 }
 
 
-.navbar {  
+.navbar {
   transition: all 0.5s;
   transition-delay: 0.25s;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
-  
+
   &.navbar-ontop {
     background-color: transparent !important;
     padding-top: 20px;
     box-shadow: none !important;
   }
-  
+
   .nav-item .nav-link  {
     font-size: 10px;
     transition:background-color 0.4s;
@@ -280,20 +280,20 @@ $progress-height:   1px;
     padding-top: 11px;
     padding-bottom: 11px;
     line-height: 21px;
-    
+
     &:hover {
       background-color:rgba(white,0.2);
     }
-    
+
     &.active {
       background-color:rgba(white,0.2);
     }
   }
-  
+
   &.transparent {
   	box-shadow: none !important;
   }
-  
+
   .btn {
   	padding-top: 11px;
     padding-bottom: 11px;
@@ -309,21 +309,21 @@ $progress-height:   1px;
 	@each $color, $value in $theme-colors {
  		&.btn-#{$color} {
   		@include button-variant($value, transparent, lighten($value, 7.5%), transparent, lighten($value, 7.5%), transparent);
-      
+
 	  	&:not(:disabled):not(.disabled):hover {
-    		box-shadow: $btn-box-shadow; 
+    		box-shadow: $btn-box-shadow;
   	  }
-    
+
       &:disabled:focus, &.disabled:focus {
         box-shadow: none !important;
       }
-    
+
       &:not(:disabled):not(.disabled):active:focus, &:not(:hover):focus {
         background-color: lighten($value, 7.5%);
         box-shadow: none !important;
       }
 	  }
-  
+
     &.btn-outline-#{$color} {
       @include button-outline-variant($value, $value, transparent, $value);
       box-shadow: none !important;
@@ -331,7 +331,7 @@ $progress-height:   1px;
         color:$value !important;
       }
 
-    }  
+    }
 	}
 }
 
@@ -369,7 +369,7 @@ form {
 	.form-control {
 		font-size: $input-font-size;
 	}
-  
+
   .form-group.is-valid {
     &:after {
       font-family: Nucleo Outline;
@@ -377,26 +377,26 @@ form {
       display: inline-block;
       position: absolute;
       right: 30px;
-      top: calc((#{$input-height-inner} / 2) - #{$font-size-base * $line-height-base} / 2);  
-      color: theme-color("success"); 
+      top: calc((#{$input-height-inner} / 2) - #{$font-size-base * $line-height-base} / 2);
+      color: theme-color("success");
     }
   }
-  
+
   .form-group.is-invalid {
     > * {
       border-color: transparentize(theme-color("danger"), .7);
       background: transparentize(theme-color("dark"), .98);
       color: theme-color("danger");
     }
-    
+
     &:after {
       font-family: Nucleo Outline;
       content: "\ea53";
       display: inline-block;
       position: absolute;
       right: 30px;
-      top: calc((#{$input-height-inner} / 2) - #{$font-size-base * $line-height-base} / 2);  
-      color: theme-color("danger"); 
+      top: calc((#{$input-height-inner} / 2) - #{$font-size-base * $line-height-base} / 2);
+      color: theme-color("danger");
     }
   }
 }
@@ -407,35 +407,35 @@ form {
   border-radius: $input-border-radius;
   border: $input-border-width solid $input-border-color;
 	transition: all 0.3s;
-  
+
   .input-group-prepend span, .form-control {
-		background: transparent;	
-	} 
-  
+		background: transparent;
+	}
+
   &.focus {
    background-color: $input-focus-bg;
   }
-  
+
   * {
     border:none;
   }
-  
+
   .input-group-append span {
    padding-left: 0;
   }
-  
+
   .input-group-prepend span {
    padding-right: 0;
   }
 }
 
 
-.custom-control {  
+.custom-control {
 	.custom-control-label {
     padding-left: 5px;
     line-height: 26px;
 	}
-  
+
   .custom-control-label::before {
     border: 1px solid #E3E3E3;
   }
@@ -445,15 +445,15 @@ form {
     opacity:0;
     color: $custom-control-indicator-checked-color;
   }
-  
- 	.custom-control-input {  
+
+ 	.custom-control-input {
     &:checked ~ .custom-control-label {
     	&::after {
 				opacity:1;
   	  }
 	  }
-    
-	 	&:disabled ~ .custom-control-label::before {  
+
+	 	&:disabled ~ .custom-control-label::before {
 			opacity:.4;
 	  }
     &:disabled ~ .custom-control-label::after {
@@ -465,33 +465,33 @@ form {
     appearance: none !important;
     -webkit-appearance: none !important;
   }
-  
-  &.custom-checkbox {  
+
+  &.custom-checkbox {
     .custom-control-label {
       padding-left: 40px;
     }
-    
+
     .custom-control-label::before {
       top: 0;
       width: 26px;
       height: 26px;
-      border: 1px solid #E3E3E3; 
+      border: 1px solid #E3E3E3;
       border-radius: $custom-checkbox-indicator-border-radius;
     }
-    
-    .custom-control-input {  
+
+    .custom-control-input {
       &:checked ~ .custom-control-label {
         &::after {
           border-radius: $custom-checkbox-indicator-border-radius;
           top: 0;
           left: 6px;
           font-family: 'Nucleo Outline';
-          content: "\ea22";   
+          content: "\ea22";
         }
       }
-    } 
+    }
   }
-  
+
   &.custom-radio {
     margin-bottom:1rem;
   }
@@ -533,7 +533,7 @@ form {
     border-right: .4em solid transparent;
     border-left: .4em solid transparent;
   }
-  
+
   .dropdown-item {
     font-size: 0.8571em;
   }
@@ -544,7 +544,7 @@ form {
     .page-item {
      		background-color:transparent !important;
     }
-  	
+
     .page-item .page-link{
         border: 0;
         border-radius: 30px ;
@@ -559,13 +559,13 @@ form {
   	.disabled > a {
          color:theme-color("secondary") !important;
   	}
-  
+
  		@each $name, $value in $theme-colors {
        .page-item.bg-#{$name} > a {
          background-color: $value;
           border-radius: 30px !important;
        }
-    }  
+    }
   	.active > a {
       color:white !important;
       box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.3);
@@ -610,8 +610,8 @@ form {
     &.blockquote-#{$name} {
       border-color: $value !important;
       color: $value !important;
-    } 
-    
+    }
+
     &.blockquote-#{$name} > .blockquote-footer {
       color: $value !important;
     }
@@ -648,7 +648,7 @@ form {
   @each $color, $value in $theme-colors {
     &.progress.bg-#{$color} {
       background: rgba($value, 0.3) !important;
-    
+
       .progress-bar {
         background: $value;
       }
@@ -659,7 +659,7 @@ form {
 
 // Custom styles
 //
-// Now ui kit additional classes for 
+// Now ui kit additional classes for
 
 html,body {
    -moz-osx-font-smoothing: grayscale;
@@ -669,17 +669,17 @@ html,body {
 
 .custom-toggle {
   height: 2.0rem;
-  position:relative;  
+  position:relative;
   .custom-control-label {
     padding-left:70px;
     position:absolute;
-    
-  }  
+
+  }
   input {
     width:60px;
     height:22px;
     z-index:1;
-  }  
+  }
   .custom-control-input ~ .custom-control-label {
     &::before {
       @include gradient-bg($custom-control-indicator-checked-bg);
@@ -699,59 +699,59 @@ html,body {
       background-color:rgba(23, 23, 23, 0.4);
       opacity:1;
     }
-  }  
+  }
   .custom-control-input:checked ~ .custom-control-label {
     &::before {
       background:rgba(44, 44, 44, 0.2);
-    }    
+    }
     &::after {
       background-color:white !important;
       box-shadow: 0px 0px 4px #333;
       left:40px;
-    }    
+    }
   }
 }
 
 
-.custom-slider { 
+.custom-slider {
   .custom-control-label::before {
     display:none;
   }
-  
+
   .custom-control-label::after {
     display:none;
   }
-  
+
   .slider {
-    -webkit-appearance: none;  
+    -webkit-appearance: none;
     appearance: none;
-    height: 1px; 
-    background: #888; 
-    outline: none; 
-    opacity: 0.7; 
+    height: 1px;
+    background: #888;
+    outline: none;
+    opacity: 0.7;
     transition: opacity .3s;
-  }  
+  }
 
   .slider::-webkit-slider-thumb:active {
     transform: scale3d(1.5,1.5,1);
   }
-  
+
   .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 15px; 
-    height: 15px; 
+    width: 15px;
+    height: 15px;
     border-radius: 15px;
-    background: white; 
-    cursor: pointer; 
+    background: white;
+    cursor: pointer;
     box-shadow:0 1px 13px 0 rgba(0, 0, 0, 0.2);
     transition: all .3s;
   }
   .noslider::-moz-range-thumb {
-      width: 25px; 
-      height: 25px; 
-      background: #4CAF50; 
-      cursor: pointer; 
+      width: 25px;
+      height: 25px;
+      background: #4CAF50;
+      cursor: pointer;
   }
   .noslider:hover {
     opacity: 1;
@@ -769,8 +769,8 @@ html,body {
 
 .gradient-overlay {
   overflow: hidden;
-  position: relative;  
-  
+  position: relative;
+
   > *:first-child:before {
     content: '';
     width: 100%;
@@ -778,7 +778,7 @@ html,body {
     display: block;
     position: absolute;
     left: 0px;
-    top: 0px; 
+    top: 0px;
     pointer-events:none;
 		background:linear-gradient(0deg, rgba(44, 44, 44, 0.2), rgba(224, 23, 3, 0.6));
   }
@@ -847,7 +847,7 @@ html,body {
     &.new, &.old {
   		color: rgba(white, .4) !important;
   	}
-  }  
+  }
 }
 
 /** shadow from 4.1 **/
