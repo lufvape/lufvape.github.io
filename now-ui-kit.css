@@ -7417,8 +7417,6 @@ html, body {
 
 .cover {
   max-height: 100%; }
-  .cover .container {
-    height: 100vh; }
 
 .gradient-overlay {
   overflow: hidden;
