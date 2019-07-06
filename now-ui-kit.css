@@ -4236,7 +4236,7 @@ button.bg-primary:focus {
   background-color: #003366 !important; }
 
 .bg-secondary {
-  background-color: #08A6A2 !important; }
+  background-color: #082A4D !important; }
 
 a.bg-secondary:hover, a.bg-secondary:focus,
 button.bg-secondary:hover,
@@ -6955,7 +6955,7 @@ form .form-group.is-invalid:after {
   border-radius: 30px !important; }
 
 .pagination .page-item.bg-secondary > a {
-  background-color: #08A6A2;
+  background-color: #082A4D;
   border-radius: 30px !important; }
 
 .pagination .page-item.bg-success > a {
