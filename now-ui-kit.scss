@@ -44,15 +44,15 @@ $border-radius-sm:  .2rem !default;
 
 // Fonts
 
-$font-family-base: 				Lato;
-$display-font-family: 		Comfortaa;
-$headings-font-family: 		Comfortaa;
+$font-family-base: 				Lato, Montserrat;
+$display-font-family: 		$font-family-base;
+$headings-font-family: 		Comfortaa, $font-family-base;
 
-$line-height-base: 				1.2rem;
+$line-height-base: 				1.6;
 $headings-line-height: 		1.4em;
 
-$font-weight-normal: 			400;
-$headings-font-weight: 		400;
+
+
 $headings-margin-bottom: 	30px;
 
 $font-size-base: 					1rem;
@@ -60,7 +60,7 @@ $lead-font-size: 					1.30rem;
 $small-font-size: 				70%;
 
 $h1-font-size: 						2.5em;
-$h2-font-size: 						2em;
+$h2-font-size: 						2.0em;
 $h3-font-size: 						1.75em;
 $h4-font-size: 						1.5em;
 $h5-font-size: 						1.25em;
@@ -137,7 +137,7 @@ $nav-tabs-border-width : 			0px;
 
 // Navbar
 
-$navbar-brand-font-size:		0.85 * $font-size-base;
+$navbar-brand-font-size:		$font-size-base;
 $navbar-dark-color:         white;
 $navbar-dark-hover-color:   white;
 $navbar-padding-y:          9px;
@@ -186,6 +186,16 @@ $modal-sm:                   255px;
 // Progress bars
 
 $progress-height:   1px;
+
+
+
+
+
+
+
+
+
+
 
 
 // Import Bootstrap 4.0.0
@@ -274,7 +284,7 @@ $progress-height:   1px;
   }
 
   .nav-item .nav-link  {
-    font-size: 10px;
+    font-size: 0.8rem;
     transition:background-color 0.4s;
     border-radius:3px;
     padding-top: 11px;
@@ -760,7 +770,7 @@ html,body {
 
 
 .cover {
-	max-height: 100%;
+	min-height: 100%;
 	.container {
 		height: 100vh;
 	}
