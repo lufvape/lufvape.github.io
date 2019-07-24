@@ -143,12 +143,12 @@ sup {
   top: -.5em; }
 
 a {
-  color: #004C99;
+  color: #292b2c;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
   a:hover {
-    color: #00264d;
+    color: #040404;
     text-decoration: none; }
 
 a:not([href]):not([tabindex]) {
@@ -2076,10 +2076,10 @@ fieldset:disabled a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #004C99;
+  color: #292b2c;
   background-color: transparent; }
   .btn-link:hover {
-    color: #00264d;
+    color: #040404;
     text-decoration: none;
     background-color: transparent;
     border-color: transparent; }
@@ -3228,11 +3228,11 @@ tbody.collapse.show {
   padding: 0.5rem 0.75rem;
   margin-left: 0px;
   line-height: 1.25;
-  color: #004C99;
+  color: #292b2c;
   background-color: #fff;
   border: 0px solid #dee2e6; }
   .page-link:hover {
-    color: #00264d;
+    color: #040404;
     text-decoration: none;
     background-color: #e9ecef;
     border-color: #dee2e6; }
@@ -3969,7 +3969,7 @@ button.close {
   .bs-popover-top .arrow::before, .bs-popover-auto[x-placement^="top"] .arrow::before {
     bottom: 0;
     border-top-color: rgba(0, 0, 0, 0.25); }
-
+  
   .bs-popover-top .arrow::after,
   .bs-popover-auto[x-placement^="top"] .arrow::after {
     bottom: 0px;
@@ -3989,7 +3989,7 @@ button.close {
   .bs-popover-right .arrow::before, .bs-popover-auto[x-placement^="right"] .arrow::before {
     left: 0;
     border-right-color: rgba(0, 0, 0, 0.25); }
-
+  
   .bs-popover-right .arrow::after,
   .bs-popover-auto[x-placement^="right"] .arrow::after {
     left: 0px;
@@ -4006,7 +4006,7 @@ button.close {
   .bs-popover-bottom .arrow::before, .bs-popover-auto[x-placement^="bottom"] .arrow::before {
     top: 0;
     border-bottom-color: rgba(0, 0, 0, 0.25); }
-
+  
   .bs-popover-bottom .arrow::after,
   .bs-popover-auto[x-placement^="bottom"] .arrow::after {
     top: 0px;
@@ -4035,7 +4035,7 @@ button.close {
   .bs-popover-left .arrow::before, .bs-popover-auto[x-placement^="left"] .arrow::before {
     right: 0;
     border-left-color: rgba(0, 0, 0, 0.25); }
-
+  
   .bs-popover-left .arrow::after,
   .bs-popover-auto[x-placement^="left"] .arrow::after {
     right: 0px;
@@ -7417,6 +7417,8 @@ html, body {
 
 .cover {
   min-height: 100%; }
+  .cover .container {
+    height: 100vh; }
 
 .gradient-overlay {
   overflow: hidden;
