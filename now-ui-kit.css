@@ -7416,7 +7416,8 @@ html, body {
   opacity: 1; }
 
 .cover {
-  min-height: 100%; }
+  min-height: 100%;
+}
 
 .gradient-overlay {
   overflow: hidden;
