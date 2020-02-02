@@ -2,16 +2,16 @@
 * Based on Bootstrap v4.0.0 (https://getbootstrap.com)
 */
 
-@import url('https://fonts.googleapis.com/css?family=Comfortaa|Lato');
+@import url('https://fonts.googleapis.com/css?family=Nunito|Montserrat');
 
 // Color system
 
 $theme-colors: (
-  primary: #004C99,
-  secondary: #082A4D,
+  primary: #FFB908,
+  secondary: #FFC021,
   light: #FFFFFF,
-  dark: #2c2c2c,
-  info: #5C660A,
+  dark: #B38103,
+  info: #002FB3,
   success: #18ce0f,
   warning: #FFB236,
   danger: #A61A11,
@@ -44,12 +44,12 @@ $border-radius-sm:  .2rem !default;
 
 // Fonts
 
-$font-family-base: 				Lato, Montserrat;
+$font-family-base: 				Montserrat, Montserrat;
 $display-font-family: 		$font-family-base;
-$headings-font-family: 		Comfortaa, $font-family-base;
+$headings-font-family: 		Nunito, $font-family-base;
 
-$line-height-base: 				1.6;
-$headings-line-height: 		1.4em;
+$line-height-base: 				1.5;
+
 
 
 
@@ -187,6 +187,13 @@ $modal-sm:                   255px;
 
 $progress-height:   1px;
 $link-color: #292b2c;
+$enable-responsive-font-sizes: true;
+$headings-line-height: 1.5;
+
+
+
+
+
 
 
 
