@@ -7,13 +7,13 @@
 // Color system
 
 $theme-colors: (
-  primary: #FFB908,
-  secondary: #FFCF54,
-  light: #FFFFFF,
-  dark: #805C04,
-  info: #002FB3,
-  success: #18ce0f,
-  warning: #FFB236,
+  primary: #FFBA08,
+  secondary: #E6A607,
+  light: #FFECAF,
+  dark: #80672A,
+  info: #1BA7CC,
+  success: #ffffff,
+  warning: #402E02,
   danger: #A61A11,
 	gray : #EEEEEE,
 );
@@ -25,7 +25,7 @@ $yiq-contrasted-threshold: 	200 !default;
 // Body
 
 $body-bg: 						white;
-$body-color: 					#292b2c;
+$body-color: 					#402E02;
 $body-color-inverse: 	invert($body-color) !default;
 $text-muted: 					#9A9A9A !default;
 
@@ -186,7 +186,7 @@ $modal-sm:                   255px;
 // Progress bars
 
 $progress-height:   1px;
-$link-color: #292b2c;
+$link-color: #1BA7CC;
 $enable-responsive-font-sizes: true;
 $headings-line-height: 1.5;
 
