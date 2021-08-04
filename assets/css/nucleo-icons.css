@@ -1,554 +1,597 @@
+/*--------------------------------
 
-/* --------------------------------
-
-Nucleo Outline Web Font - nucleoapp.com/
+hermes-dashboard-icons Web Font - built using nucleoapp.com
 License - nucleoapp.com/license/
-Created using IcoMoon - icomoon.io
 
 -------------------------------- */
-
 @font-face {
-    font-family: 'Nucleo Outline';
-    src: url("../fonts/nucleo-outline.eot");
-    src: url("../fonts/nucleo-outline.eot") format("embedded-opentype"), url("../fonts/nucleo-outline.woff2") format("woff2"), url("../fonts/nucleo-outline.woff") format("woff"), url("../fonts/nucleo-outline.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'NucleoIcons';
+  src: url('../fonts/nucleo-icons.eot');
+  src: url('../fonts/nucleo-icons.eot') format('embedded-opentype'), url('../fonts/nucleo-icons.woff2') format('woff2'), url('../fonts/nucleo-icons.woff') format('woff'), url('../fonts/nucleo-icons.ttf') format('truetype'), url('../fonts/nucleo-icons.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
-
 
 /*------------------------
-	base class definition
+    base class definition
 -------------------------*/
-
-.now-ui-icons {
-    display: inline-block;
-    font: normal normal normal 16px/1 'Nucleo Outline';
-    font-size: inherit;
-    speak: none;
-    text-transform: none;
-    /* Better Font Rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+.ni {
+  display: inline-block;
+  font: normal normal normal 14px/1 NucleoIcons;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-
 
 /*------------------------
   change icon size
 -------------------------*/
-
-.now-ui-icons.md {
-  font-size: 1.15em;
-  vertical-align: -10%;
+.ni-lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
 }
 
-.now-ui-icons.lg {
-  font-size: 1.3em;
-  vertical-align: -20%;
-}
-
-.now-ui-icons.x2 {
-  font-size: 1.6em;
-  vertical-align: -20%;
-}
-
-.now-ui-icons.x3 {
+.ni-2x {
   font-size: 2em;
-  vertical-align: -20%;
+}
+
+.ni-3x {
+  font-size: 3em;
+}
+
+.ni-4x {
+  font-size: 4em;
+}
+
+.ni-5x {
+  font-size: 5em;
 }
 
 /*----------------------------------
   add a square/circle background
 -----------------------------------*/
-
-.now-ui-icons.circle {
-    padding: 0.33333333em;
-    vertical-align: -16%;
-    background-color: #eee;
+.ni.square,
+.ni.circle {
+  padding: 0.33333333em;
+  vertical-align: -16%;
+  background-color: #eee;
 }
 
-.now-ui-icons.circle {
-    border-radius: 50%;
+.ni.circle {
+  border-radius: 50%;
 }
-
 
 /*------------------------
   list icons
 -------------------------*/
-
-.nc-icon-ul {
-    padding-left: 0;
-    margin-left: 2.14285714em;
-    list-style-type: none;
+.ni-ul {
+  padding-left: 0;
+  margin-left: 2.14285714em;
+  list-style-type: none;
 }
 
-.nc-icon-ul>li {
-    position: relative;
+.ni-ul>li {
+  position: relative;
 }
 
-.nc-icon-ul>li>.now-ui-icons {
-    position: absolute;
-    left: -1.57142857em;
-    top: 0.14285714em;
-    text-align: center;
+.ni-ul>li>.ni {
+  position: absolute;
+  left: -1.57142857em;
+  top: 0.14285714em;
+  text-align: center;
 }
 
-.nc-icon-ul>li>.now-ui-icons.circle {
-    top: -0.19047619em;
-    left: -1.9047619em;
+.ni-ul>li>.ni.lg {
+  top: 0;
+  left: -1.35714286em;
 }
 
+.ni-ul>li>.ni.circle,
+.ni-ul>li>.ni.square {
+  top: -0.19047619em;
+  left: -1.9047619em;
+}
 
 /*------------------------
   spinning icons
 -------------------------*/
-
-.now-ui-icons.spin {
-    -webkit-animation: nc-icon-spin 2s infinite linear;
-    -moz-animation: nc-icon-spin 2s infinite linear;
-    animation: nc-icon-spin 2s infinite linear;
+.ni.spin {
+  -webkit-animation: nc-spin 2s infinite linear;
+  -moz-animation: nc-spin 2s infinite linear;
+  animation: nc-spin 2s infinite linear;
 }
 
-@-webkit-keyframes nc-icon-spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
+@-webkit-keyframes nc-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
-@-moz-keyframes nc-icon-spin {
-    0% {
-        -moz-transform: rotate(0deg);
-    }
-    100% {
-        -moz-transform: rotate(360deg);
-    }
+@-moz-keyframes nc-spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(360deg);
+  }
 }
 
-@keyframes nc-icon-spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
+@keyframes nc-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
 
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 
 /*------------------------
   rotated/flipped icons
 -------------------------*/
+.ni.rotate-90 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
 
+.ni.rotate-180 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.ni.rotate-270 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.ni.flip-y {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+.ni.flip-x {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: scale(1, -1);
+  -moz-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
 
 /*------------------------
-	font icons
+    font icons
 -------------------------*/
 
-.now-ui-icons.ui-1_check:before {
-    content: "\ea22";
+.ni-active-40::before {
+  content: "\ea02";
 }
 
-.now-ui-icons.ui-1_email-85:before {
-    content: "\ea2a";
+.ni-air-baloon::before {
+  content: "\ea03";
 }
 
-.now-ui-icons.arrows-1_cloud-download-93:before {
-    content: "\ea21";
+.ni-album-2::before {
+  content: "\ea04";
 }
 
-.now-ui-icons.arrows-1_cloud-upload-94:before {
-    content: "\ea24";
+.ni-align-center::before {
+  content: "\ea05";
 }
 
-.now-ui-icons.arrows-1_minimal-down:before {
-    content: "\ea39";
+.ni-align-left-2::before {
+  content: "\ea06";
 }
 
-.now-ui-icons.arrows-1_minimal-left:before {
-    content: "\ea3a";
+.ni-ambulance::before {
+  content: "\ea07";
 }
 
-.now-ui-icons.arrows-1_minimal-right:before {
-    content: "\ea3b";
+.ni-app::before {
+  content: "\ea08";
 }
 
-.now-ui-icons.arrows-1_minimal-up:before {
-    content: "\ea3c";
+.ni-archive-2::before {
+  content: "\ea09";
 }
 
-.now-ui-icons.arrows-1_refresh-69:before {
-    content: "\ea44";
+.ni-atom::before {
+  content: "\ea0a";
 }
 
-.now-ui-icons.arrows-1_share-66:before {
-    content: "\ea4c";
+.ni-badge::before {
+  content: "\ea0b";
 }
 
-.now-ui-icons.business_badge:before {
-    content: "\ea09";
+.ni-bag-17::before {
+  content: "\ea0c";
 }
 
-.now-ui-icons.business_bank:before {
-    content: "\ea0a";
+.ni-basket::before {
+  content: "\ea0d";
 }
 
-.now-ui-icons.business_briefcase-24:before {
-    content: "\ea13";
+.ni-bell-55::before {
+  content: "\ea0e";
 }
 
-.now-ui-icons.business_bulb-63:before {
-    content: "\ea15";
+.ni-bold-down::before {
+  content: "\ea0f";
 }
 
-.now-ui-icons.business_chart-bar-32:before {
-    content: "\ea1e";
+.ni-bold-left::before {
+  content: "\ea10";
 }
 
-.now-ui-icons.business_chart-pie-36:before {
-    content: "\ea1f";
+.ni-bold-right::before {
+  content: "\ea11";
 }
 
-.now-ui-icons.business_globe:before {
-    content: "\ea2f";
+.ni-bold-up::before {
+  content: "\ea12";
 }
 
-.now-ui-icons.business_money-coins:before {
-    content: "\ea40";
+.ni-bold::before {
+  content: "\ea13";
 }
 
-.now-ui-icons.clothes_tie-bow:before {
-    content: "\ea5b";
+.ni-book-bookmark::before {
+  content: "\ea14";
 }
 
-.now-ui-icons.design_vector:before {
-    content: "\ea61";
+.ni-books::before {
+  content: "\ea15";
 }
 
-.now-ui-icons.design_app:before {
-    content: "\ea08";
+.ni-box-2::before {
+  content: "\ea16";
 }
 
-.now-ui-icons.design_bullet-list-67:before {
-    content: "\ea14";
+.ni-briefcase-24::before {
+  content: "\ea17";
 }
 
-.now-ui-icons.design_image:before {
-    content: "\ea33";
+.ni-building::before {
+  content: "\ea18";
 }
 
-.now-ui-icons.design_palette:before {
-    content: "\ea41";
+.ni-bulb-61::before {
+  content: "\ea19";
 }
 
-.now-ui-icons.design_scissors:before {
-    content: "\ea4a";
+.ni-bullet-list-67::before {
+  content: "\ea1a";
 }
 
-.now-ui-icons.design-2_html5:before {
-    content: "\ea32";
+.ni-bus-front-12::before {
+  content: "\ea1b";
 }
 
-.now-ui-icons.design-2_ruler-pencil:before {
-    content: "\ea48";
+.ni-button-pause::before {
+  content: "\ea1c";
 }
 
-.now-ui-icons.emoticons_satisfied:before {
-    content: "\ea49";
+.ni-button-play::before {
+  content: "\ea1d";
 }
 
-.now-ui-icons.files_box:before {
-    content: "\ea12";
+.ni-button-power::before {
+  content: "\ea1e";
 }
 
-.now-ui-icons.files_paper:before {
-    content: "\ea43";
+.ni-calendar-grid-58::before {
+  content: "\ea1f";
 }
 
-.now-ui-icons.files_single-copy-04:before {
-    content: "\ea52";
+.ni-camera-compact::before {
+  content: "\ea20";
 }
 
-.now-ui-icons.health_ambulance:before {
-    content: "\ea07";
+.ni-caps-small::before {
+  content: "\ea21";
 }
 
-.now-ui-icons.loader_gear:before {
-    content: "\ea4e";
+.ni-cart::before {
+  content: "\ea22";
 }
 
-.now-ui-icons.loader_refresh:before {
-    content: "\ea44";
+.ni-chart-bar-32::before {
+  content: "\ea23";
 }
 
-.now-ui-icons.location_bookmark:before {
-    content: "\ea10";
+.ni-chart-pie-35::before {
+  content: "\ea24";
 }
 
-.now-ui-icons.location_compass-05:before {
-    content: "\ea25";
+.ni-chat-round::before {
+  content: "\ea25";
 }
 
-.now-ui-icons.location_map-big:before {
-    content: "\ea3d";
+.ni-check-bold::before {
+  content: "\ea26";
 }
 
-.now-ui-icons.location_pin:before {
-    content: "\ea47";
+.ni-circle-08::before {
+  content: "\ea27";
 }
 
-.now-ui-icons.location_world:before {
-    content: "\ea63";
+.ni-cloud-download-95::before {
+  content: "\ea28";
 }
 
-.now-ui-icons.media-1_album:before {
-    content: "\ea02";
+.ni-cloud-upload-96::before {
+  content: "\ea29";
 }
 
-.now-ui-icons.media-1_button-pause:before {
-    content: "\ea16";
+.ni-compass-04::before {
+  content: "\ea2a";
 }
 
-.now-ui-icons.media-1_button-play:before {
-    content: "\ea18";
+.ni-controller::before {
+  content: "\ea2b";
 }
 
-.now-ui-icons.media-1_button-power:before {
-    content: "\ea19";
+.ni-credit-card::before {
+  content: "\ea2c";
 }
 
-.now-ui-icons.media-1_camera-compact:before {
-    content: "\ea1c";
+.ni-curved-next::before {
+  content: "\ea2d";
 }
 
-.now-ui-icons.media-2_note-03:before {
-    content: "\ea3f";
+.ni-delivery-fast::before {
+  content: "\ea2e";
 }
 
-.now-ui-icons.media-2_sound-wave:before {
-    content: "\ea57";
+.ni-diamond::before {
+  content: "\ea2f";
 }
 
-.now-ui-icons.objects_diamond:before {
-    content: "\ea29";
+.ni-email-83::before {
+  content: "\ea30";
 }
 
-.now-ui-icons.objects_globe:before {
-    content: "\ea2f";
+.ni-fat-add::before {
+  content: "\ea31";
 }
 
-.now-ui-icons.objects_key-25:before {
-    content: "\ea38";
+.ni-fat-delete::before {
+  content: "\ea32";
 }
 
-.now-ui-icons.objects_planet:before {
-    content: "\ea46";
+.ni-fat-remove::before {
+  content: "\ea33";
 }
 
-.now-ui-icons.objects_spaceship:before {
-    content: "\ea55";
+.ni-favourite-28::before {
+  content: "\ea34";
 }
 
-.now-ui-icons.objects_support-17:before {
-    content: "\ea56";
+.ni-folder-17::before {
+  content: "\ea35";
 }
 
-.now-ui-icons.objects_umbrella-13:before {
-    content: "\ea5f";
+.ni-glasses-2::before {
+  content: "\ea36";
 }
 
-.now-ui-icons.education_agenda-bookmark:before {
-    content: "\ea01";
+.ni-hat-3::before {
+  content: "\ea37";
 }
 
-.now-ui-icons.education_atom:before {
-    content: "\ea0c";
+.ni-headphones::before {
+  content: "\ea38";
 }
 
-.now-ui-icons.education_glasses:before {
-    content: "\ea2d";
+.ni-html5::before {
+  content: "\ea39";
 }
 
-.now-ui-icons.education_hat:before {
-    content: "\ea30";
+.ni-istanbul::before {
+  content: "\ea3a";
 }
 
-.now-ui-icons.education_paper:before {
-    content: "\ea42";
+.ni-key-25::before {
+  content: "\ea3b";
 }
 
-.now-ui-icons.shopping_bag-16:before {
-    content: "\ea0d";
+.ni-laptop::before {
+  content: "\ea3c";
 }
 
-.now-ui-icons.shopping_basket:before {
-    content: "\ea0b";
+.ni-like-2::before {
+  content: "\ea3d";
 }
 
-.now-ui-icons.shopping_box:before {
-    content: "\ea11";
+.ni-lock-circle-open::before {
+  content: "\ea3e";
 }
 
-.now-ui-icons.shopping_cart-simple:before {
-    content: "\ea1d";
+.ni-map-big::before {
+  content: "\ea3f";
 }
 
-.now-ui-icons.shopping_credit-card:before {
-    content: "\ea28";
+.ni-mobile-button::before {
+  content: "\ea40";
 }
 
-.now-ui-icons.shopping_delivery-fast:before {
-    content: "\ea27";
+.ni-money-coins::before {
+  content: "\ea41";
 }
 
-.now-ui-icons.shopping_shop:before {
-    content: "\ea50";
+.ni-note-03::before {
+  content: "\ea42";
 }
 
-.now-ui-icons.shopping_tag-content:before {
-    content: "\ea59";
+.ni-notification-70::before {
+  content: "\ea43";
 }
 
-.now-ui-icons.sport_trophy:before {
-    content: "\ea5d";
+.ni-palette::before {
+  content: "\ea44";
 }
 
-.now-ui-icons.sport_user-run:before {
-    content: "\ea60";
+.ni-paper-diploma::before {
+  content: "\ea45";
 }
 
-.now-ui-icons.tech_controller-modern:before {
-    content: "\ea26";
+.ni-pin-3::before {
+  content: "\ea46";
 }
 
-.now-ui-icons.tech_headphones:before {
-    content: "\ea31";
+.ni-planet::before {
+  content: "\ea47";
 }
 
-.now-ui-icons.tech_laptop:before {
-    content: "\ea36";
+.ni-ruler-pencil::before {
+  content: "\ea48";
 }
 
-.now-ui-icons.tech_mobile:before {
-    content: "\ea3e";
+.ni-satisfied::before {
+  content: "\ea49";
 }
 
-.now-ui-icons.tech_tablet:before {
-    content: "\ea58";
+.ni-scissors::before {
+  content: "\ea4a";
 }
 
-.now-ui-icons.tech_tv:before {
-    content: "\ea5e";
+.ni-send::before {
+  content: "\ea4b";
 }
 
-.now-ui-icons.tech_watch-time:before {
-    content: "\ea62";
+.ni-settings-gear-65::before {
+  content: "\ea4c";
 }
 
-.now-ui-icons.text_align-center:before {
-    content: "\ea05";
+.ni-settings::before {
+  content: "\ea4d";
 }
 
-.now-ui-icons.text_align-left:before {
-    content: "\ea06";
+.ni-single-02::before {
+  content: "\ea4e";
 }
 
-.now-ui-icons.text_bold:before {
-    content: "\ea0e";
+.ni-single-copy-04::before {
+  content: "\ea4f";
 }
 
-.now-ui-icons.text_caps-small:before {
-    content: "\ea1b";
+.ni-sound-wave::before {
+  content: "\ea50";
 }
 
-.now-ui-icons.gestures_tap-01:before {
-    content: "\ea5a";
+.ni-spaceship::before {
+  content: "\ea51";
 }
 
-.now-ui-icons.transportation_air-baloon:before {
-    content: "\ea03";
+.ni-square-pin::before {
+  content: "\ea52";
 }
 
-.now-ui-icons.transportation_bus-front-12:before {
-    content: "\ea17";
+.ni-support-16::before {
+  content: "\ea53";
 }
 
-.now-ui-icons.travel_info:before {
-    content: "\ea04";
+.ni-tablet-button::before {
+  content: "\ea54";
 }
 
-.now-ui-icons.travel_istanbul:before {
-    content: "\ea34";
+.ni-tag::before {
+  content: "\ea55";
 }
 
-.now-ui-icons.ui-1_bell-53:before {
-    content: "\ea0f";
+.ni-tie-bow::before {
+  content: "\ea56";
 }
 
-.now-ui-icons.ui-1_calendar-60:before {
-    content: "\ea1a";
+.ni-time-alarm::before {
+  content: "\ea57";
 }
 
-.now-ui-icons.ui-1_lock-circle-open:before {
-    content: "\ea35";
+.ni-trophy::before {
+  content: "\ea58";
 }
 
-.now-ui-icons.ui-1_send:before {
-    content: "\ea4d";
+.ni-tv-2::before {
+  content: "\ea59";
 }
 
-.now-ui-icons.ui-1_settings-gear-63:before {
-    content: "\ea4e";
+.ni-umbrella-13::before {
+  content: "\ea5a";
 }
 
-.now-ui-icons.ui-1_simple-add:before {
-    content: "\ea4f";
+.ni-user-run::before {
+  content: "\ea5b";
 }
 
-.now-ui-icons.ui-1_simple-delete:before {
-    content: "\ea54";
+.ni-vector::before {
+  content: "\ea5c";
 }
 
-.now-ui-icons.ui-1_simple-remove:before {
-    content: "\ea53";
+.ni-watch-time::before {
+  content: "\ea5d";
 }
 
-.now-ui-icons.ui-1_zoom-bold:before {
-    content: "\ea64";
+.ni-world::before {
+  content: "\ea5e";
 }
 
-.now-ui-icons.ui-2_chat-round:before {
-    content: "\ea20";
+.ni-zoom-split-in::before {
+  content: "\ea5f";
 }
 
-.now-ui-icons.ui-2_favourite-28:before {
-    content: "\ea2b";
+.ni-collection::before {
+  content: "\ea60";
 }
 
-.now-ui-icons.ui-2_like:before {
-    content: "\ea37";
+.ni-image::before {
+  content: "\ea61";
 }
 
-.now-ui-icons.ui-2_settings-90:before {
-    content: "\ea4b";
+.ni-shop::before {
+  content: "\ea62";
 }
 
-.now-ui-icons.ui-2_time-alarm:before {
-    content: "\ea5c";
+.ni-ungroup::before {
+  content: "\ea63";
 }
 
-.now-ui-icons.users_circle-08:before {
-    content: "\ea23";
+.ni-world-2::before {
+  content: "\ea64";
 }
 
-.now-ui-icons.users_single-02:before {
-    content: "\ea51";
+.ni-ui-04::before {
+  content: "\ea65";
 }
+
+
+/* all icon font classes list here */
