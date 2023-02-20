@@ -9933,7 +9933,7 @@ p {
   position: relative;
   z-index: 1; }
   .text-gradient.text-primary {
-    background-image: linear-gradient(310deg, #FFBA08, #FFCF54); }
+    background-image: linear-gradient(310deg, #7928CA, #FF0080); }
   .text-gradient.text-info {
     background-image: linear-gradient(310deg, #2152FF, #21D4FD); }
   .text-gradient.text-success {
