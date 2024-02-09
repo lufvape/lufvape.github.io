@@ -37,15 +37,50 @@ Coded by www.creative-tim.com
 
 <body class="index-page">
   <!-- Navbar -->
-  <div class="container position-sticky z-index-sticky top-0">
-        <nav class="navbar navbar-expand-lg position-absolute top-0 z-index-3 w-100 shadow-none my-3 navbar-transparent">
-          <div class="container-fluid">  
-            <a href="https://wa.me/573164939435" class="btn btn-twitter mb-lg-0 mb-2  btn-round mb-0 me-1 mt-2 mt-md-0 me-2 position-sticky z-index-sticky top-0" style="background-color: #128C7E; color: white; display: flex" >
-            <i class="fab fa-whatsapp me-1"></i></a>  
+    <div class="container position-sticky z-index-sticky top-0">
+    <div class="row">
+      <div class="col-12">
+        <nav class="navbar navbar-expand-lg  blur blur-rounded top-0  z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+          <div class="container-fluid">
+            <a class="navbar-brand font-weight-bolder ms-sm-3" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
+              Luis Felipe Vargas Perilla
+            </a>
+            <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon mt-2">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </span>
+            </button>
+            <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+              <ul class="navbar-nav navbar-nav-hover ms-lg-12 ps-lg-5 w-100">
+                <li class="nav-item dropdown dropdown-hover mx-2">
+                  <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" href="#Asesoria">
+                    Asesoría
+                  </a>
+                </li>
+                <li class="nav-item dropdown dropdown-hover mx-2">
+                  <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" href="#Curso">
+                    Cursos
+                  </a>
+                </li>
+                <li class="nav-item ms-lg-auto">
+                  <a class="nav-link nav-link-icon me-2" href="https://github.com/creativetimofficial/soft-ui-design-system" target="_blank">
+                    <i class="fab fa-medium me-1"></i>
+                    <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip" data-bs-placement="bottom">Medium</p>
+                  </a>
+                </li>
+                <li class="nav-item my-auto ms-3 ms-lg-0">
+                  <a href="https://wa.me/573164939435" target="_blank" class="btn btn-sm  btn-round mb-0 me-1 mt-2 mt-md-0" style="background-color: #128C7E; color: white"><i class="fa-brands fa-whatsapp me-2"></i>Contáctame</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </nav>
         <!-- End Navbar -->
       </div>
+    </div>
+  </div>
   <header class="bg-gradient-dark">
     <div class="page-header section-height-85" style="background-image: url('./assets/img/bonneval-sebastien-lG-6_ox_UXE-unsplash.jpg');">
       <span class="mask bg-primary opacity-8"></span>
@@ -81,15 +116,8 @@ Coded by www.creative-tim.com
           <div class="row">
             <div class="col-md-4 position-relative">
               <div class="p-3 text-center">
-                <div class="row"><h5 class="mt-3">Identifica áreas de crecimiento</h5></div>
-                <p class="text-sm">Descubre nuevas oportunidades de mercado a través de plataformas innovadoras y crea estrategias que impulsen el crecimiento sostenible de tu organización.</p>
-              </div>
-              <hr class="vertical dark">
-            </div>
-            <div class="col-md-4 position-relative">
-              <div class="p-3 text-center">
-                <div class="row"><h5 class="mt-3">Optimiza tu día a día</h5></div>
-                <p class="text-sm">Utiliza análisis de datos para una mejora continua, asegurando decisiones informadas y maximizando la eficiencia operativa en tu crecimiento empresarial.</p>
+                <div class="row"><h5 class="mt-3">Crea historias de futuro</h5></div>
+                <p class="text-sm">Descubre nuevas oportunidades de mercado a través de plataformas innovadoras y escenarios futuros que impulsen el crecimiento sostenible de tu organización.</p>
               </div>
               <hr class="vertical dark">
             </div>
@@ -98,6 +126,13 @@ Coded by www.creative-tim.com
                 <div class="row"><h5 class="mt-3">Vigila y adopta tendencias</h5></div>
                 <p class="text-sm">Fortalece la investigación y desarrollo mediante la adopción proactiva de tendencias. Mejora la vigilancia tecnológica y potencia tu capacidad para ir más allá que tu competencia.</p>
               </div>
+              <hr class="vertical dark">
+            </div>
+            <div class="col-md-4 position-relative">
+              <div class="p-3 text-center">
+                <div class="row"><h5 class="mt-3">Optimiza tu día a día</h5></div>
+                <p class="text-sm">Utiliza análisis de datos para una mejora continua, asegurando decisiones informadas y maximizando la eficiencia operativa en tu crecimiento empresarial.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -105,7 +140,7 @@ Coded by www.creative-tim.com
     </div>
   </section>
     
-    <section class="py-7">
+<section class="py-7">
     <div class="container">
       <div class="row">
       </div>
@@ -155,335 +190,248 @@ Coded by www.creative-tim.com
       </div>
     </div>
   </section>
-
-  <section class="py-md-5">
-    <div class="container"> 
-      <div class="row">
-        <div class="col-lg-9 col-md-8 mx-auto text-center">
-          <h3>Comienza a vivir hoy el futuro de tu empresa</h3>
+    
+  <section id="Asesoria" class="pt-3 pb-5 bg-primary-soft">
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-md-6 mx-auto text-center">
+            <h3>Comienza a vivir hoy el futuro de tu organización</h3>
+            <p class="mb-0"> </p>
+            </div>
         </div>
+        <div class="row mb-5">
+            <div class="col-md-10 mx-auto">
+                <div class="card">
+                    <div class="accordion p-3" id="accordionPricing">
+                        <div class="accordion-item mb-3">
+                        <h6 class="accordion-header" id="headingOne">
+                        <button class="accordion-button border-bottom font-weight-bold text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                ¿Qué esperar de este proceso de acompañamiento?
+                                <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0 me-3 text-primary"></i>
+                                <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0 me-3 text-primary"></i>
+                        </button>
+                        </h6>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionPricing">
+                                <div class="d-block d-lg-flex">
+                                    <div class="accordion-body text-sm opacity-8 my-auto">
+                                        Una total sinergia entre estrategia, inteligencia competitiva y análisis de datos. Te enseñaré a utilizar diferentes herramientas y a crear entornos y marcos de trabajo ideales para anticiparte al futuro, mantenerte actualizado tecnológicamente y descubrir insights a través de los datos. 
+                                        <br>
+                                        Tengo todo preparado para que trabajemos 100% de forma virtual a través de Meet, Mural y Whatsapp principalmente. Pero no me puedo ir sin decir que me encantan los talleres presenciales, y si esa es tu forma de trabajo puedo acoplarme con facilidad. 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3">
+                            <h6 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button border-bottom font-weight-bold text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            ¿Soy un buen candidato para recibirlo?
+                            <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0 me-3 text-primary"></i>
+                            <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0 me-3 text-primary"></i>
+                            </button>
+                            </h6>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionPricing">
+                            <div class="d-block d-lg-flex">
+                                <div class="accordion-body text-sm opacity-8 my-auto">
+                                    Si eres una persona o empresa que busca impulsar su crecimiento a través de un enfoque integral fuertemente basado en la investigación y la tecnología, este proceso definitivamente es para ti. Algunos equipos con los que he trabajado son:
+                                    <br>
+                                    <strong>Juntas Directivas:</strong> Ayudándoles a definir las mejores herramientas tecnológicas a implementar.
+                                    <br>
+                                    <strong>Equipos Gerenciales:</strong> Guiándolos en la construcción de cultura y proceso de innovación.
+                                    <br>
+                                    <strong>Emprendedores:</strong> Orientándolos sobre cómo sacarle el mayor provecho al presente y futuro digital.
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item mb-3">
+                            <h6 class="accordion-header" id="headingThree">
+                            <button class="accordion-button border-bottom font-weight-bold text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            ¿Qué tipos de acompañamiento puedo recibir?
+                            <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0 me-3 text-primary"></i>
+                            <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0 me-3 text-primary"></i>
+                            </button>
+                            </h6>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionPricing">
+                                <div class="d-block d-lg-flex">
+                                    <div class="accordion-body text-sm opacity-8 my-auto">
+                                    Tengo acompañamientos para todos los gustos, seguro alguno es el indicado para ti:
+                                    <br>
+                                    <strong>Lecturas:</strong> Desde reportes de tendencias, hasta blogs o casos de estudio, hechos por mi para ti o tu inspiración.
+                                    <br>
+                                    <strong>Cursos:</strong> Bien sea pre grabados para hacerlos a tu propio ritmo, o síncronos para tener acompañamiento al instante.
+                                    <br>
+                                    <strong>Asesorías personalizadas:</strong> Sesiones de 90 minutos, una o en docena, bien sea para una necesidad puntual o una revisión a profundidad.
+                                    <br>
+                                    <strong>Modelos continuos:</strong> Ideal para tenerme todo el tiempo pensando en tu organización. 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3">
+                            <h6 class="accordion-header" id="headingFour">
+                            <button class="accordion-button border-bottom font-weight-bold text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            ¿Cuál será mi resultado final?
+                            <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0 me-3 text-primary"></i>
+                            <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0 me-3 text-primary"></i>
+                            </button>
+                            </h6>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionPricing">
+                                <div class="d-block d-lg-flex">
+                                    <div class="accordion-body text-sm opacity-8 my-auto">
+                                    <strong>Sesión de 90min:</strong> El desarrollo de una herramienta, bien sea un escenario, la planificación de la vigilancia, el diseño de tu sistema de innovación o tablero de visualización, entre muchas más.
+                                    <br>
+                                    <strong>Paquete 12 sesiones:</strong> El desarrollo de principio a fin, bien sea de un sistema de innovación, una vigilancia, o un tablero para análisis de datos.
+                                    <br>
+                                    <strong>Cursos:</strong> Son una versión grupal del paquete de 12 horas.
+                                    <br>
+                                    <strong>Modelos continuos:</strong> Tenerme siempre como aliado para encontrar insights o desarrollar investigación y prospectiva en tu empresa.  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-lg-4 col-md-6">
+              <div class="p-3 text-center">
+                <div class="icon icon-shape bg-primary shadow text-center">
+                  <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h5 class="mt-4">1 Sesión - 90min</h5>
+                <p class="mb-0">40 USD</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="p-3 text-center">
+                <div class="icon icon-shape bg-primary shadow text-center">
+                  <i class="fa-solid fa-layer-group"></i>
+                </div>
+                <h5 class="mt-4">12 Sesiones</h5>
+                <p class="mb-0">340 USD</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mx-md-auto">
+              <div class="p-3 text-center">
+                <div class="icon icon-shape bg-primary shadow text-center">
+                    <i class="fa-solid fa-recycle"></i>            </div>
+                <h5 class="mt-4">Asesoría continua</h5>
+                <p class="mb-0">2 SMMLV / mes*</p>
+              </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-lg-12">
+                  * Tomando como referencia el salario mínimo mensual legal vigente en Colombia a la fecha. Sugeto a disponibilidad
+                </div>
+            </div>
       </div>
-      <div class="nav-wrapper position-relative end-0 mt-5">
-        <ul class="nav nav-pills nav-fill p-1" id="pills-tab" role="tablist">
-          <li class="nav-item" role="presentation">
-            <a class="nav-link mb-0 px-0 py-1 active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Gestión de la innovación</a>
-          </li>
-          <li class="nav-item" role="presentation">
-            <a class="nav-link mb-0 px-0 py-1" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Inteligencia de negocio</a>
-          </li>
-          <li class="nav-item" role="presentation">
-            <a class="nav-link mb-0 px-0 py-1" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Formación</a>
-          </li>
-        </ul>
-        </div>  
-        <div class="tab-content" id="pills-tabContent">
-          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-           <div class="row mt-5">
-            <div class="col-lg-6 mb-lg-0 mb-4">
-              <div class="card shadow-none border h-100">
-                <div class="card-header text-sm-start text-center pt-4 pb-3 px-4">
-                  <h5 class="mb-1">Sistema de innovación</h5>
-                  <p class="mb-3 text-sm">Establece las bases para la innovación en tu empresa</p>   
-                </div>
-                <div class="card-body">
-                  <div class="d-flex pb-3">
-                    <div>
-                      <i class="fas fa-check text-success text-sm"></i>
-                    </div>
-                    <div class="ps-3">
-                      <span class="text-sm">Definición de misión de innovación</span>
-                    </div>
-                  </div>
-                  <div class="d-flex pb-3">
-                    <div>
-                      <i class="fas fa-check text-success text-sm"></i>
-                    </div>
-                    <div class="ps-3">
-                      <span class="text-sm">Identificación de plataformas de crecimiento</span>
-                    </div>
-                  </div>
-                  <div class="d-flex pb-3">
-                    <div>
-                      <i class="fas fa-check text-success text-sm"></i>
-                    </div>
-                    <div class="ps-3">
-                      <span class="text-sm">Creación de conceptos de negocio</span>
-                    </div>
-                  </div>
-                    <div class="d-flex pb-3">
-                    <div>
-                      <i class="fas fa-check text-success text-sm"></i>
-                    </div>
-                    <div class="ps-3">
-                      <span class="text-sm">Establecimiento de proceso y métricas de inovación</span>
-                    </div>
-                  </div>
-                  <div class="d-flex pb-3">
-                    <div>
-                      <i class="fas fa-check text-success text-sm"></i>
-                    </div>
-                    <div class="ps-3">
-                      <span class="text-sm">Encontrar las reglas no escritas para innovar</span>
-                    </div>
-                  </div>
-                  <a href="https://wa.me/573164939435" class="btn btn-sm bg-gradient bg-primary text-white w-100 border-radius-md mt-4 mb-2">Lo quiero</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6 mb-lg-0 mb-4">
-              <div class="card shadow-none border h-100">
-                <div class="card-header text-sm-start text-center pt-4 pb-3 px-4">
-                  <h5 class="mb-1">Programa de emprendimiento</h5>
-                  <p class="mb-3 text-sm">Establece un programa para potenciar el emprendimiento en tu empresa</p>
-                </div>
-                <div class="card-body">
-                  <div class="d-flex pb-3">
-                    <div>
-                      <i class="fas fa-check text-success text-sm"></i>
-                    </div>
-                    <div class="ps-3">
-                      <span class="text-sm">Identificación de la mejor estrategia de emprendimiento organizacional</span>
-                    </div>
-                  </div>
-                  <div class="d-flex pb-3">
-                    <div>
-                      <i class="fas fa-check text-success text-sm"></i>
-                    </div>
-                    <div class="ps-3">
-                      <span class="text-sm">Análisis del potencial emprendedor</span>
-                    </div>
-                  </div>
-                  <div class="d-flex pb-3">
-                    <div>
-                      <i class="fas fa-check text-success text-sm"></i>
-                    </div>
-                    <div class="ps-3">
-                      <span class="text-sm">Investigación y formalización de alianzas para talleres o convenios</span>
-                    </div>
-                  </div>
-                  <div class="d-flex pb-3">
-                    <div>
-                      <i class="fas fa-check text-success text-sm"></i>
-                    </div>
-                    <div class="ps-3">
-                      <span class="text-sm">Definición de ruta del emprendedor</span>
-                    </div>
-                  </div>                    
-                  <div class="d-flex pb-3">
-                    <div>
-                      <i class="fas fa-check text-success text-sm"></i>
-                    </div>
-                    <div class="ps-3">
-                      <span class="text-sm">Creación manual del emprendedor</span>
-                    </div>
-                  </div>
-                  <a href="https://wa.me/573164939435" class="btn btn-sm bg-gradient bg-primary text-white w-100 border-radius-md mt-4 mb-2">Lo quiero</a>    
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-           <div class="row mt-5">
-            <div class="col-lg-6 col-sm-6 mb-lg-0 mb-4">
-              <div class="card shadow-none border h-100">
-                <div class="card-header text-sm-start text-center pt-4 pb-3 px-4">
-                  <h5 class="mb-1">Anticipación continua</h5>
-                  <p class="mb-3 text-sm">Utiliza análisis de datos para lograr una mejora continua en tus procesos</p>   
-                </div>
-                <div class="card-body">
-                  <div class="d-flex pb-3">
-                    <div>
-                      <i class="fas fa-check text-success text-sm"></i>
-                    </div>
-                    <div class="ps-3">
-                      <span class="text-sm">Estructuración de preguntas clave a resolver</span>
-                    </div>
-                  </div>
-                  <div class="d-flex pb-3">
-                    <div>
-                      <i class="fas fa-check text-success text-sm"></i>
-                    </div>
-                    <div class="ps-3">
-                      <span class="text-sm">Definición de KPI's a estudiar</span>
-                    </div>
-                  </div>
-                    <div class="d-flex pb-3">
-                    <div>
-                      <i class="fas fa-check text-success text-sm"></i>
-                    </div>
-                    <div class="ps-3">
-                      <span class="text-sm">Construcción de tableros de control</span>
-                    </div>
-                  </div>
-                  <div class="d-flex pb-3">
-                    <div>
-                      <i class="fas fa-check text-success text-sm"></i>
-                    </div>
-                    <div class="ps-3">
-                      <span class="text-sm">Análisis de insights generados</span>
-                    </div>
-                  </div>
-                    <a href="https://wa.me/573164939435" class="btn btn-sm bg-gradient bg-primary text-white w-100 border-radius-md mt-4 mb-2">Lo quiero</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6 col-sm-6 mb-lg-0 mb-4">
-              <div class="card shadow-none border h-100">
-                <div class="card-header text-sm-start text-center pt-4 pb-3 px-4">
-                  <h5 class="mb-1">Prospectiva tecnológica</h5>
-                  <p class="mb-3 text-sm">Mejora tus capacidades de I+D mediante la adopción de tendencias</p>
-                </div>
-                <div class="card-body">
-                  <div class="d-flex pb-3">
-                    <div>
-                      <i class="fas fa-check text-success text-sm"></i>
-                    </div>
-                    <div class="ps-3">
-                      <span class="text-sm">Identificación de temática y señales tempranas</span>
-                    </div>
-                  </div>
-                  <div class="d-flex pb-3">
-                    <div>
-                      <i class="fas fa-check text-success text-sm"></i>
-                    </div>
-                    <div class="ps-3">
-                      <span class="text-sm">Búsqueda y análisis de información(tecnológica, financiera, de mercado)</span>
-                    </div>
-                  </div>
-                  <div class="d-flex pb-3">
-                    <div>
-                      <i class="fas fa-check text-success text-sm"></i>
-                    </div>
-                    <div class="ps-3">
-                      <span class="text-sm"> Creación y priorización de conceptos de negocio</span>
-                    </div>
-                  </div>
-                    <div class="d-flex pb-3">
-                    <div>
-                      <i class="fas fa-check text-success text-sm"></i>
-                    </div>
-                    <div class="ps-3">
-                      <span class="text-sm">Ingeniería inversa al proyecto a desarrollar</span>
-                    </div>
-                  </div>
-                    <a href="https://wa.me/573164939435" class="btn btn-sm bg-gradient bg-primary text-white w-100 border-radius-md mt-4 mb-2">Lo quiero</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>   
-        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-           <div class="row mt-5">
-            <div class="col-lg-6 col-sm-6 mb-lg-0 mb-4">
-              <div class="card shadow-none border h-100">
-                <div class="card-header text-sm-start text-center pt-4 pb-3 px-4">
-                  <h5 class="mb-1">Inteligencia de negocio</h5>
-                  <p class="mb-3 text-sm">Crea tu propio tablero de control para analizar datos de tu negocio</p>   
-                </div>
-                <hr class="horizontal dark my-0">
-                <div class="card-body">
-                  <div class="d-flex pb-3">
-                    <div>
-                      <i class="fas fa-check text-success text-sm"></i>
-                    </div>
-                    <div class="ps-3">
-                      <span class="text-sm">Análisis de datos sencillo y sin muchos tecnicismos</span>
-                    </div>
-                  </div>
-                  <div class="d-flex pb-3">
-                    <div>
-                      <i class="fas fa-check text-success text-sm"></i>
-                    </div>
-                    <div class="ps-3">
-                      <span class="text-sm">Curso base grupal en vivo y grabado</span>
-                    </div>
-                  </div>
-                    <div class="d-flex pb-3">
-                    <div>
-                      <i class="fas fa-check text-success text-sm"></i>
-                    </div>
-                    <div class="ps-3">
-                      <span class="text-sm">Acompañamiento personalizado desde la estrategia hasta la visualización</span>
-                    </div>
-                  </div>
-                  <div class="d-flex pb-3">
-                    <div>
-                      <i class="fas fa-check text-success text-sm"></i>
-                    </div>
-                    <div class="ps-3">
-                      <span class="text-sm">4 semanas, hasta 10 sesiones de trabajo</span>
-                    </div>
-                  </div>
-                    <a href="https://wa.me/573164939435" class="btn btn-sm bg-gradient bg-primary text-white w-100 border-radius-md mt-4 mb-2">Lo quiero</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6 col-sm-6 mb-lg-0 mb-4">
-              <div class="card shadow-none border h-100">
-                <div class="card-header text-sm-start text-center pt-4 pb-3 px-4">
-                  <h5 class="mb-1">Vigilancia tecnológica</h5>
-                  <p class="mb-3 text-sm">Realiza vigilancia tecnológica para un proyecto preciso que tengas en mente</p>
-                </div>
-                <hr class="horizontal dark my-0">
-                <div class="card-body">
-                  <div class="d-flex pb-3">
-                    <div>
-                      <i class="fas fa-check text-success text-sm"></i>
-                    </div>
-                    <div class="ps-3">
-                      <span class="text-sm">Vigilancia tecnológica rápida y a bajo costo</span>
-                    </div>
-                  </div>
-                  <div class="d-flex pb-3">
-                    <div>
-                      <i class="fas fa-check text-success text-sm"></i>
-                    </div>
-                    <div class="ps-3">
-                      <span class="text-sm">Curso base grupal en vivo y grabado</span>
-                    </div>
-                  </div>
-                  <div class="d-flex pb-3">
-                    <div>
-                      <i class="fas fa-check text-success text-sm"></i>
-                    </div>
-                    <div class="ps-3">
-                      <span class="text-sm">Acompañamiento personalizado en cada etapa del proceso de vigilancia</span>
-                    </div>
-                  </div>
-                    <div class="d-flex pb-3">
-                    <div>
-                      <i class="fas fa-check text-success text-sm"></i>
-                    </div>
-                    <div class="ps-3">
-                      <span class="text-sm">8 semanas, hasta 15 sesiones de trabajo</span>
-                    </div>
-                  </div>
-                    <a href="https://wa.me/573164939435" class="btn btn-sm bg-gradient bg-primary text-white w-100 border-radius-md mt-4 mb-2">Lo quiero</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-    </div>
-    <div class="row text-center">
+      <div class="row text-center">
         <div class="col-lg-12 mt-6">
           <h4 class="mb-1">¿No sabes por donde empezar?</h4>
           <p class="lead mb-0">Programa una sesión exploratoria sin costo.</p>
           <a href="https://zcal.co/i/EPpg-RBU" class="btn btn-dribbble mb-lg-0 mb-2 mx-4 bg-primary mt-2 text-white">
-            <i class="fa-solid fa-calendar-day"></i> Ver disponibilidad
+            <i class="fa-solid fa-calendar-day me-2"></i> Ver disponibilidad
           </a>
         </div>
-      </div> 
+      </div>
+    </div>
 </section>
+<section id="Curso" class="py-lg-5">
+    <div class="container">
+      <div class="row">
+        <div class="card">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="card-body">
+                <h3>Inteligencia competitiva para todos</h3>
+                <p>No solo aprende a hacerlo, termina la semana 12  con una vigilancia tecnológica y comercial hecha.</p>
+                <div class="row mt-5 mb-2">
+                  <div class="col-lg-3 col-12">
+                    <h6 class="text-dark tet-uppercase">¿Cómo funciona?</h6>
+                  </div>
+                  <div class="col-6">
+                    <hr class="horizontal dark">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-12 ps-0">
+                    <div class="d-flex align-items-center p-2">
+                      <div class="icon icon-shape icon-xs rounded-circle bg-primary opacity-6 shadow text-center">
+                        <i class="fas fa-check opacity-10"></i>
+                      </div>
+                      <div>
+                        <span class="ps-2">12 Semanas</span>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center p-2">
+                      <div class="icon icon-shape icon-xs rounded-circle bg-primary opacity-6 shadow text-center">
+                        <i class="fas fa-check opacity-10"></i>
+                      </div>
+                      <div>
+                        <span class="ps-2">10 Sesiones en vivo</span>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center p-2">
+                      <div class="icon icon-shape icon-xs rounded-circle bg-primary opacity-6 shadow text-center">
+                        <i class="fas fa-check opacity-10"></i>
+                      </div>
+                      <div>
+                        <span class="ps-2">4 Sesiones 1:1</span>
+                      </div>
+                    </div>  
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-12 ps-sm-2 ps-0">
+                    <div class="d-flex align-items-center p-2">
+                      <div class="icon icon-shape icon-xs rounded-circle bg-primary opacity-6 shadow text-center">
+                        <i class="fas fa-check opacity-10"></i>
+                      </div>
+                      <div>
+                        <span class="ps-2">6 Plazas</span>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center p-2">
+                      <div class="icon icon-shape icon-xs rounded-circle bg-primary opacity-6 shadow text-center">
+                        <i class="fas fa-check opacity-10"></i>
+                      </div>
+                      <div>
+                        <span class="ps-2">Grupo Whatsapp</span>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center p-2">
+                      <div class="icon icon-shape icon-xs rounded-circle bg-primary opacity-6 shadow text-center">
+                        <i class="fas fa-check opacity-10"></i>
+                      </div>
+                      <div>
+                        <span class="ps-2">Comunidad Slack</span>
+                      </div>
+                    </div>  
+                  </div>
+                </div>
+                <p class="text-sm">Todas las sesiones quedan grabadas. Acceso vitalicio a la comunidad en Slack</p>
+              </div>
+            </div>
+            <div class="col-lg-4 my-auto">
+              <div class="card-body text-center">
+                <h6 class="mt-sm-4 mt-0 mb-0">Accede a la próxima cohorte</h6>
+                <h1 class="mt-0">
+                  <small>180 USD</small>
+                </h1>
+                <button type="button" class="btn bg-primary btn-lg mt-2 text-white">Inscríbete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <footer class="footer py-5 bg-gradient-dark position-relative overflow-hidden">
     <div class="py-lg-5 py-0">
         <div class="container">
           <div class="row">
             <div class="col-lg-6">
               <h4 class="mb-1">Hazlo tú mismo</h4>
-              <p class="lead mb-0">Aprende de forma práctica a gestionar la innovación en tu empresa</p>
+              <p class="lead mb-0">Anticipa el futuro a tu ritmo, de forma práctica y sin presiones(al menos mías)</p>
             </div>
             <div class="col-lg-6 mt-lg-0 mt-4 d-lg-flex align-items-center">
               <a href="javascript:;" class="btn btn-twitter mb-lg-0 mb-2 me-2">
