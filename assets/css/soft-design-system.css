@@ -27,8 +27,8 @@
   --bs-light: #e9ecef;
   --bs-dark: #252f40;
   --bs-white: #fff;
-  --bs-font-sans-serif: Open Sans;
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-font-sans-serif: Nunito;
+  --bs-font-monospace: Montserrat, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)); }
 
 *,
@@ -99,7 +99,8 @@ h6, .h6 {
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem; 
+  font-family: Montserrat;}
 
 abbr[title],
 abbr[data-bs-original-title] {
@@ -5896,7 +5897,7 @@ textarea.form-control-lg {
   color: #e9ecef !important; }
 
 .text-dark {
-  color: #252f40 !important; }
+  color: #4E2D55 !important; }
 
 .text-white {
   color: #fff !important; }
@@ -5920,7 +5921,7 @@ textarea.form-control-lg {
   background-color: #FFBA08 !important; }
 
 .bg-secondary {
-  background-color: #FF1464 !important; }
+  background-color: #4E2D55 !important; }
 
 .bg-success {
   background-color: #FFC021 !important; }
@@ -5935,7 +5936,7 @@ textarea.form-control-lg {
   background-color: #21FF35 !important; }
 
 .bg-light {
-  background-color: #e9ecef !important; }
+  background-color: #F6E8B6 !important; }
 
 .bg-dark {
   background-color: #252f40 !important; }
@@ -8653,7 +8654,7 @@ textarea.form-control-lg {
   .card .card-header {
     padding: 1.5rem; }
   .card .card-body {
-    font-family: "Open Sans";
+    font-family: "Nunito";
     padding: 1.5rem; }
   .card.card-plain {
     background-color: transparent;
@@ -9595,7 +9596,7 @@ hr.horizontal {
     .nav.nav-pills.nav-pills-primary .nav-link.active {
       color: #fff; }
     .nav.nav-pills.nav-pills-primary .moving-tab .nav-link.active {
-      background: #7928CA;
+      background: var(--bs-primary);
       color: #7928CA; }
   .nav.nav-pills.nav-pills-info {
     background: #fff;
@@ -9736,7 +9737,8 @@ body {
   background-color: #fff; }
 
 h1, .h1, .h1, h2, .h2, .h2, h3, .h3, .h3, h4, .h4, .h4, h5, .h5, .h5, h6, .h6, .h6 {
-  color: #252f40; }
+  color: #252f40; 
+font-family: Nunito;}
 
 h1, .h1, .h1 {
   font-size: 3rem;
@@ -9831,7 +9833,7 @@ p {
   font-weight: 400; }
 
 .text-sans-serif {
-  font-family: "Open Sans" !important; }
+  font-family: "Nunito" !important; }
 
 .text-monospace {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important; }
