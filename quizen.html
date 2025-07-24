@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Organizational Creativity Assesment | 15 minutes test</title>
+  <meta name="description" content="Take this free creativity assessment  tailored for American businesses. Uncover your company's creative profile and the most effective  innovation system to pursue. Result in less than 15 minutes." />
+  <meta name="keywords" content="creativity assessment test, innovation profile assessment, US creativity test, business creativity quiz, innovation system evaluation, creative leadership, organizational creativity, creativity assessment, free creativity test" />
+
+<!--     Fonts and icons     -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+<!-- Nucleo Icons -->
+  <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/1b9607c045.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/1b9607c045.css" crossorigin="anonymous">
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link id="pagestyle" href="./assets/css/soft-design-system.css?v=1.0.4" rel="stylesheet" />
+
+  <!-- SortableJS (drag & drop) -->
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Diagnóstico de Creatividad Organizacional",
+      "description": "Interactive tool to determine which of the 12 creativity profiles are the one your business is using",
+      "url": "https://luisfvargas.com/quiz.html",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web Browser",
+      "browserRequirements": "Requires JavaScript",
+      "author": {
+        "@type": "Person",
+        "name": "Luis Felipe Vargas Perilla",
+        "url": "https://luisfvargas.com"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Organizational Creativity"
+        },
+        {
+          "@type": "Thing", 
+          "name": "Innovation Management"
+        }
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "SMEs Managers, Innovation officers, "US business leaders, innovation managers, creative professionals""
+      },
+      "educationalUse": "assessment",
+      "timeRequired": "PT15M",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YC4M9LGXTG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YC4M9LGXTG');
+</script>
+
+      <!-- Preload crítico -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/soft-design-system@1.0.9/dist/css/soft-design-system.min.css" as="style"/>
+  <link rel="preload" href="app.js" as="script"/>
+  <link rel="canonical" href="https://luisfvargas.com/quiz.html"/>
+</head>
+<body class="bg-light">
+
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card shadow-none border bg-light h-100 overflow-hidden border-0 p-4">
+
+          <!-- BIENVENIDA -->
+          <div id="welcome-section">
+            <h2 class="text-gradient text-primary mb-0 text-center">Organizational Creativity Diagnosis</h2>
+            <p class="text-center text-dark mb-4">They are 12 different profiles, discover the one of your business in 15 min aprox.</p>
+
+            <div class="row text-center mt-4">
+              <div class="col-4">
+                <div class="icon icon-shape bg-gradient-secondary shadow mx-auto">
+                  <i class="fa-solid fa-palette"></i>
+                </div>
+                <h5 class="mt-4 text-dark">Creativity type</h5>
+                <p class="text-dark">Identify which of the 4 creative types your business uses.</p>
+              </div>
+              <div class="col-4">
+                <div class="icon icon-shape bg-gradient-secondary shadow mx-auto">
+                  <i class="fa-solid fa-gear"></i>
+                </div>
+                <h5 class="mt-4 text-dark">Recomended System</h5>
+                <p class="text-dark">Discover wich of the 3 idea management systems best suits you.</p>              
+              </div>
+              <div class="col-4">
+                <div class="icon icon-shape bg-gradient-secondary shadow mx-auto">
+                  <i class="fa-solid fa-list-ol"></i>
+                </div>
+                <h5 class="mt-4 text-dark">Activities</h5>
+                <p class="text-dark">Find out the activities to develop your idea management programme.</p>
+              </div>
+            </div>
+
+            <div class="text-center">
+              <button class="btn btn-primary btn-lg px-5" onclick="startQuiz()">
+                <i class="fas fa-play me-2"></i>Start
+              </button>
+            </div>
+          </div>
+
+          <!-- QUIZ -->
+          <div id="quiz-section" style="display:none;">
+            <!-- Progreso -->
+            <div id="progress-container" class="mb-4">
+              <div class="d-flex justify-content-between small">
+                <span id="section-title" class="text-dark fw-bold"></span>
+                <span id="progress-text" class="text-dark"></span>
+              </div>
+              <div class="progress">
+                <div id="progress-bar" class="progress-bar bg-primary" style="width:0%"></div>
+              </div>
+            </div>
+
+            <!-- Pregunta -->
+            <div id="question-container" class="mb-4"></div>
+
+            <!-- Navegación -->
+            <div class="d-flex justify-content-between">
+              <button id="prev-btn" class="btn btn-outline-primary btn-lg" onclick="previousQuestion()" style="display:none;">
+                <i class="fas fa-arrow-left me-2"></i>Back
+              </button>
+              <button id="next-btn" class="btn btn-primary btn-lg" onclick="nextQuestion()" disabled>
+                Next<i class="fas fa-chevron-right ms-2"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- RESULTADOS -->
+          <div id="results-section" style="display:none;">
+            <div class="text-center mb-4">
+              <h2 class="text-gradient text-primary mb-0 text-center">¡You have finished the test!</h2>
+              <div class="card shadow-none border bg-light h-100 overflow-hidden border-0 p-4">
+                <h4 class="mb-3 text-dark">Your results</h4>
+                <p class="mb-0 text-dark" id="result-text">
+                  Your creative profile is: <strong id="creativity-result"></strong><br>
+                  <span class="text-dark" id="perfil-desc"></span>
+                  </p>                
+              </div>
+              
+              <div class="card shadow-none border bg-light h-100 overflow-hidden border-0 p-4">
+                <h4 class="text-dark mb-3">Your analysis is ready</h4>
+                <p class="text-dark mb-0">I have manually prepared a guide for you with the following points:</p>
+                <ul class="text-start mt-3 mb-0">
+                  <li>
+                    <div class="d-flex pb-3">
+                      <div>
+                        <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
+                      </div>
+                      <div class="ps-3">
+                        <span class="text-sm text-dark">Full creative type anaysis</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="d-flex pb-3">
+                      <div>
+                        <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
+                      </div>
+                      <div class="ps-3">
+                        <span class="text-sm text-dark">Recomended idea management system to use</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="d-flex pb-3">
+                      <div>
+                        <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
+                      </div>
+                      <div class="ps-3">
+                        <span class="text-sm text-dark">Activities and tools for each step in the idea management system</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="d-flex pb-3">
+                      <div>
+                        <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
+                      </div>
+                      <div class="ps-3">
+                        <span class="text-sm text-dark">Templates for each step in the idea management process</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="text-center mb-3">
+              <button class="btn btn-success btn-lg px-5" onclick="downloadEbook()">
+                <i class="fas fa-download me-2"></i>Download Ebook 
+              </button>
+            </div>
+
+            <div class="text-center">
+              <button class="btn btn-outline-secondary btn-lg" onclick="restartQuiz()">
+                <i class="fas fa-redo me-2"></i>Restart Test
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lógica -->
+  <script src="appen.js"></script>
+</body>
+</html>
