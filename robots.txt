@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://luisfvargas.com/sitemap.xml
