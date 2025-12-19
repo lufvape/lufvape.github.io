@@ -116,9 +116,14 @@
             </div>
 
             <div class="text-center">
-              <button class="btn btn-primary btn-lg px-5" onclick="startQuiz()">
-                <i class="fas fa-play me-2"></i>Start
-              </button>
+              <div id="prequiz-form" class="mb-3">
+                <input id="user-email" type="email" class="form-control mb-2" placeholder="Email address" required />
+                <input id="user-company" type="text" class="form-control mb-2" placeholder="Company" required />
+                <div class="text-danger small" id="prequiz-error" style="display:none;"></div>
+                <button id="prequiz-start-btn" class="btn btn-primary btn-lg px-5" onclick="prepareAndStart()" disabled>
+                  <i class="fas fa-play me-2"></i>Start
+                </button>
+              </div>
             </div>
           </div>
 
@@ -227,7 +232,8 @@
     </div>
   </div>
 
-  <!-- Lógica -->
-  <script src="appen.js"></script>
+  <!-- Lógica (data + shared core) -->
+  <script src="quiz-data-en.js"></script>
+  <script src="quiz-core.js"></script>
 </body>
 </html>

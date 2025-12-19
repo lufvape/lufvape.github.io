@@ -63,7 +63,7 @@
         "availability": "https://schema.org/InStock"
       }
     }
-    </script>
+</script>
 
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YC4M9LGXTG"></script>
@@ -118,9 +118,14 @@
             </div>
 
             <div class="text-center">
-              <button class="btn btn-primary btn-lg px-5" onclick="startQuiz()">
-                <i class="fas fa-play me-2"></i>Comenzar
-              </button>
+              <div id="prequiz-form" class="mb-3">
+                <input id="user-email" type="email" class="form-control mb-2" placeholder="Correo electrónico" required />
+                <input id="user-company" type="text" class="form-control mb-2" placeholder="Empresa" required />
+                <div class="text-danger small" id="prequiz-error" style="display:none;"></div>
+                <button id="prequiz-start-btn" class="btn btn-primary btn-lg px-5" onclick="prepareAndStart()" disabled>
+                  <i class="fas fa-play me-2"></i>Comenzar
+                </button>
+              </div>
             </div>
           </div>
 
@@ -229,7 +234,8 @@
     </div>
   </div>
 
-  <!-- Lógica -->
-  <script src="app.js"></script>
+  <!-- Lógica (data + shared core) -->
+  <script src="quiz-data-es.js"></script>
+  <script src="quiz-core.js"></script>
 </body>
 </html>

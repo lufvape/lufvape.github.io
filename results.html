@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz Results</title>
+  <!--     Fonts and icons     -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+<!-- Nucleo Icons -->
+  <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/1b9607c045.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/1b9607c045.css" crossorigin="anonymous">
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link id="pagestyle" href="./assets/css/soft-design-system.css?v=1.0.4" rel="stylesheet" />
+
+  <!-- SortableJS (drag & drop) -->
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+  <link rel="stylesheet" href="assets/css/soft-design-system.css">
+</head>
+<body>
+<!-- Section with four info areas left & one card right with image and waves -->
+<section class="py-6 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <div class="row justify-content-start">
+            <blockquote class="blockquote">
+            <h2 id="perfil-frase" class="mb-0 ps-2"></h2>
+            </blockquote>
+        </div>
+        <a href="quiz.html" class="btn btn-primary me-2 mt-5">Volver a realizar el quiz</a>
+      </div>
+      <div class="col-lg-4 ms-auto">
+        <div class="card">
+          <img id="perfil-imagen" src="" alt="perfil image" class="card-img-top" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/funny.jpg">
+          <div class="position-relative overflow-hidden" style="height:50px;margin-top:-50px;">
+            <div class="position-absolute w-100 top-0 z-index-1">
+                <svg class="waves waves-sm" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto">
+                  <defs>
+                    <path id="card-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+                  </defs>
+                  <g class="moving-waves">
+                    <use xlink:href="#card-wave" x="48" y="-1" fill="rgba(255,255,255,0.30"></use>
+                    <use xlink:href="#card-wave" x="48" y="3" fill="rgba(255,255,255,0.35)"></use>
+                    <use xlink:href="#card-wave" x="48" y="5" fill="rgba(255,255,255,0.25)"></use>
+                    <use xlink:href="#card-wave" x="48" y="8" fill="rgba(255,255,255,0.20)"></use>
+                    <use xlink:href="#card-wave" x="48" y="13" fill="rgba(255,255,255,0.15)"></use>
+                    <use xlink:href="#card-wave" x="48" y="16" fill="rgba(255,255,255,0.99)"></use>
+                  </g>
+                </svg>
+              </div>
+          </div>
+          <div class="card-body text-center">
+            <h4 class="perfil-nombre-repeat"></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END Section with four info areas left & one card right with image and waves -->
+
+  <section class="pt-3 pt-md-5 pb-md-5 pt-lg-7 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 mb-lg-0 mb-3">
+          <ul class="nav flex-column bg-white border-radius-lg p-3 position-sticky top-1">
+            <li class="nav-item">
+              <a class="nav-link text-dark" data-scroll href="#perfil">
+                <i class="fa-solid fa-address-card me-2"></i>
+                Mi Perfil
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" data-scroll href="#tipo">
+                <i class="fa-solid fa-palette me-2"></i>
+                Tipo de Creatividad
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" data-scroll href="#sistema">
+                <i class="fa-solid fa-gears me-2"></i>
+                Sistema de Innovación
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" data-scroll href="#capacidades">
+                <i class="fa-solid fa-cubes me-2"></i>
+                Capacidades
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" data-scroll href="#ideas">
+                <i class="fa-solid fa-satellite-dish me-2"></i>
+                Generación de Ideas
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" data-scroll href="#programas">
+                <i class="fa-solid fa-arrows-to-dot me-2"></i>
+                Programas Recomendados
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-9">
+          <div class="card shadow-lg mb-5">
+            <div class="card-header bg-primary p-5 position-relative">
+              <h1 id="perfil-nombre" class="text-white mb-5 perfil-nombre-repeat"></h1>
+              <div class="position-absolute w-100 z-index-1 bottom-0 ms-n5">
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto" style="height:7vh;min-height:50px;">
+                  <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+                  </defs>
+                  <g class="moving-waves">
+                    <use xlink:href="#gentle-wave" x="48" y="-1" fill="rgba(255,255,255,0.40"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.35)"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.25)"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="8" fill="rgba(255,255,255,0.20)"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="13" fill="rgba(255,255,255,0.15)"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="16" fill="rgba(255,255,255,0.95"></use>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="card-body p-5">
+                <div id="result-content">
+                  <section id="perfil" class="mb-4">
+                    <div class="d-flex align-items-start">
+                      <img id="perfil-imagen" src="" alt="perfil image" style="width:120px;height:120px;object-fit:cover;border-radius:8px;margin-right:16px;display:none" />
+                      <div>
+                        <p class="lead" id="perfil-descripcion"></p>
+                      </div>
+                    </div>
+                    <!-- radar de perfiles (reemplaza los dos radares anteriores) -->
+                    <div class="mt-3">
+                        <canvas id="radar-profiles-canvas" width="900" height="520" style="max-width:100%;height:auto;border:1px solid #eee;background:#fff;"></canvas>
+                    </div>
+                    <p class="text-center">Radar de perfiles de innovación</p>
+                  </section>
+
+                  <section id="tipo" class="mb-4">
+                    <h3>Tipo de Creatividad</h3>
+                    <h5 id="tipo-titulo"></h5>
+                    <p class="lead" id="tipo-desc"></p>
+                  </section>
+
+                  <section id="sistema" class="mb-4">
+                    <h3>Sistema de Innovación Recomendado</h3>
+                    <h5 id="sistema-titulo"></h5>
+                    <p class="lead" id="sistema-desc"></p>
+                  </section>
+
+                  <section id="capacidades" class="mb-4">
+                    <h3>Capacidades</h3>
+                    <p class="lead">Tu perfil específico tiene ciertas características únicas, que lo hacen brillar y sobresalir en la gestión de proyectos de innovación. Tus mayores fortalezas son las siguientes:</p>
+                    <ul class="lead" id="capacidades-list"></ul>
+                  </section>
+
+                  <section id="ideas" class="mb-4">
+                    <h3>Generación de Ideas</h3>
+                    <p class="lead">Uno de los pilares del embudo de innovación es de dónde sacar las ideas que vamos a convertir en proyectos en la empresa. Es por eso que es de vital importancia conocer cuáles son las actividades que mejor se acoplan a tu forma de trabajar la innovación. Acá te muestro algunas de ellas para que puedas aplicar hoy mismo:</p>
+                    <ul class="lead" id="ideas-list"></ul>
+                  </section>
+
+                  <section id="programas" class="mb-4">
+                    <h3>Programas Recomendados</h3>
+                    <p class="lead">Finalmente, la innovación viene también a traves de programas organizacionales de alto valor en los qe podamos resolver los retos que nos planteamos día a día. Algunos programas ideales según tu perfil de innovación son:</p>
+                    <ul class="lead" id="programas-list"></ul>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<!-- -------- END HEADER 12 w/ mobile ------- -->
+  <main class="container py-5" style="display: none;">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h1 class="mb-3">Tus Resultados</h1>
+        <h2 id="creativity-result" class="mb-2"></h2>
+        <p id="perfil-desc" class="lead mb-4"></p>
+
+        <div id="raw-scores" class="text-start mb-4" style="display:none">
+          <h5>Scores</h5>
+          <pre id="scores-json"></pre>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Load Spanish quiz data so `window.perfilesCombinados` is available
+    (function(){
+      var s = document.createElement('script');
+      s.src = 'quiz-data-es.js';
+      s.onload = initResults;
+      s.onerror = initResults; // still attempt init if data fails to load
+      document.head.appendChild(s);
+
+      function initResults(){
+        try {
+          let raw = null;
+          try { raw = localStorage.getItem('quiz_result'); } catch(e) { raw = null; }
+          if (!raw) { try { raw = sessionStorage.getItem('quiz_result'); } catch(e) { raw = null; } }
+          if (!raw) {
+            document.getElementById('creativity-result').textContent = 'No hay resultados disponibles';
+            return;
+          }
+          const data = JSON.parse(raw || '{}');
+          document.getElementById('creativity-result').textContent = data.perfilNombre || 'Perfil';
+          document.getElementById('perfil-desc').textContent = data.perfilDescripcion || '';
+          const scoresEl = document.getElementById('scores-json');
+          if (scoresEl) {
+            scoresEl.textContent = JSON.stringify(data.results && data.results.scores ? data.results.scores : {}, null, 2);
+            document.getElementById('raw-scores').style.display = 'block';
+          }
+
+            // populate detailed sections using perfilesCombinados
+          try {
+            const comboKey = data.results && data.results.creativity && data.results.system ? `${data.results.creativity}_${data.results.system}` : null;
+            let perfilData = comboKey && window.perfilesCombinados && window.perfilesCombinados[comboKey] ? window.perfilesCombinados[comboKey] : null;
+            if (!perfilData && window.perfilesCombinados) {
+              // fallback: match by nombre
+              const entries = Object.values(window.perfilesCombinados);
+              perfilData = entries.find(e => e.nombre && e.nombre.toLowerCase() === (data.perfilNombre||'').toLowerCase());
+            }
+            if (perfilData) {
+              // perfil
+              if (perfilData.imagen) {
+                const img = document.getElementById('perfil-imagen');
+                img.src = perfilData.imagen;
+                img.style.display = '';
+              }
+              const perfilNombre = perfilData.nombre || data.perfilNombre || '';
+              // set all places that should show the perfil name
+              document.querySelectorAll('.perfil-nombre-repeat').forEach(el => { el.textContent = perfilNombre; });
+              document.getElementById('perfil-frase').textContent = perfilData.frase || '';
+              document.getElementById('perfil-descripcion').textContent = perfilData.descripcion || data.perfilDescripcion || '';
+
+              // tipo
+              if (Array.isArray(perfilData.creatividadTipo)) {
+                document.getElementById('tipo-titulo').textContent = perfilData.creatividadTipo[0] || '';
+                document.getElementById('tipo-desc').textContent = perfilData.creatividadTipo[1] || '';
+              }
+
+              // sistema
+              if (Array.isArray(perfilData.sistemaTipo)) {
+                document.getElementById('sistema-titulo').textContent = perfilData.sistemaTipo[0] || '';
+                document.getElementById('sistema-desc').textContent = perfilData.sistemaTipo[1] || '';
+              }
+
+              // capacidades
+              const capList = document.getElementById('capacidades-list');
+              capList.innerHTML = '';
+              (perfilData.capacidades || []).forEach(item => { const li = document.createElement('li'); li.textContent = item; capList.appendChild(li); });
+
+              // generación de ideas
+              const genList = document.getElementById('ideas-list');
+              genList.innerHTML = '';
+              (perfilData.generaciónIdeas || perfilData.generacionIdeas || []).forEach(item => { const li = document.createElement('li'); li.textContent = item; genList.appendChild(li); });
+
+              // programas
+              const progList = document.getElementById('programas-list');
+              progList.innerHTML = '';
+              (perfilData.programasRecomendados || []).forEach(item => { const li = document.createElement('li'); li.textContent = item; progList.appendChild(li); });
+            }
+          } catch (e) { console.warn('Failed populating perfil data:', e); }
+
+            // draw single radar with 12 profile scores (no axis labels; show name on hover)
+            try {
+              const canvas = document.getElementById('radar-profiles-canvas');
+              if (canvas && window.perfilesCombinados && data.results && data.results.scores) {
+                const scores = data.results.scores;
+                const creativityScores = scores.creativity || {};
+                const systemScores = scores.system || {};
+                const comboKeys = Object.keys(window.perfilesCombinados || {});
+                const labels = [];
+                const values = [];
+                comboKeys.forEach(key => {
+                  const parts = key.split('_');
+                  const cKey = parts[0];
+                  const sKey = parts[1];
+                  const cVal = (creativityScores[cKey] != null) ? Number(creativityScores[cKey]) : 0;
+                  const sVal = (systemScores[sKey] != null) ? Number(systemScores[sKey]) : 0;
+                  const total = cVal + sVal;
+                  const perfilObj = window.perfilesCombinados[key] || {};
+                  labels.push(perfilObj.nombre || key);
+                  values.push(total);
+                });
+
+                const ctx = canvas.getContext('2d');
+                const w = canvas.width; const h = canvas.height; ctx.clearRect(0,0,w,h); ctx.fillStyle='#fff'; ctx.fillRect(0,0,w,h);
+                const cx = w/2, cy = h/2; const margin = 80; const radius = Math.min(w,h)/2 - margin; const n = labels.length || 1; const angleStep = (Math.PI*2)/n;
+                // compute theoretical maximums from quizData so radar limit equals max possible profile score
+                function computeMaxPossibleScores(quizData){
+                  const maxCreat = {}; const maxSys = {};
+                  if (!quizData || !Array.isArray(quizData.preguntas)) return {creativity: maxCreat, system: maxSys};
+                  quizData.preguntas.forEach(section => {
+                    (section.preguntas || []).forEach(q => {
+                      if (!q.scoring) return;
+                      // creatividad
+                      if (q.scoring.creatividad) {
+                        Object.keys(q.scoring.creatividad).forEach(type => {
+                          if (!maxCreat[type]) maxCreat[type] = 0;
+                          if (q.tipo === 'seleccion') {
+                            const arr = q.scoring.creatividad[type] || [];
+                            const mx = arr.length ? Math.max.apply(null, arr.map(n=>Number(n)||0)) : 0;
+                            maxCreat[type] += mx;
+                          } else if (q.tipo === 'ordenamiento') {
+                            const itemScores = q.scoring.creatividad[type] || {};
+                            const vals = Object.keys(itemScores).map(k => Number(itemScores[k])||0);
+                            const mx = vals.length ? Math.max.apply(null, vals) : 0;
+                            // ordering allows a max weight of 1 for the top item
+                            maxCreat[type] += mx;
+                          }
+                        });
+                      }
+                      // sistema
+                      if (q.scoring.sistema) {
+                        Object.keys(q.scoring.sistema).forEach(type => {
+                          if (!maxSys[type]) maxSys[type] = 0;
+                          if (q.tipo === 'seleccion') {
+                            const arr = q.scoring.sistema[type] || [];
+                            const mx = arr.length ? Math.max.apply(null, arr.map(n=>Number(n)||0)) : 0;
+                            maxSys[type] += mx;
+                          } else if (q.tipo === 'ordenamiento') {
+                            const itemScores = q.scoring.sistema[type] || {};
+                            const vals = Object.keys(itemScores).map(k => Number(itemScores[k])||0);
+                            const mx = vals.length ? Math.max.apply(null, vals) : 0;
+                            maxSys[type] += mx;
+                          }
+                        });
+                      }
+                    });
+                  });
+                  return {creativity: maxCreat, system: maxSys};
+                }
+                const all = values.map(Number).filter(n=>!isNaN(n)); const rawMax = all.length ? Math.max(...all) : 1;
+                const maxPossible = computeMaxPossibleScores(window.quizData || window.quizData);
+                // compute per-profile theoretical max and use the global maximum as radar limit
+                const profileMaxes = comboKeys.map(key => {
+                  const parts = key.split('_'); const cKey = parts[0]; const sKey = parts[1];
+                  const mc = (maxPossible.creativity && maxPossible.creativity[cKey]) ? Number(maxPossible.creativity[cKey]) : 0;
+                  const ms = (maxPossible.system && maxPossible.system[sKey]) ? Number(maxPossible.system[sKey]) : 0;
+                  return mc + ms;
+                });
+                const profileMax = profileMaxes.length ? Math.max(...profileMaxes) : (rawMax + 10);
+                // add 10% padding for visual breathing room
+                const maxVal = Math.ceil((profileMax || (rawMax + 10)) * 1.10);
+
+                // draw grid
+                const levels = 4; ctx.strokeStyle='#ddd'; ctx.lineWidth=1;
+                for (let lvl=1; lvl<=levels; lvl++){
+                  const r = radius * (lvl/levels);
+                  ctx.beginPath();
+                  for (let i=0;i<n;i++){
+                    const a = -Math.PI/2 + i*angleStep;
+                    const x = cx + r * Math.cos(a);
+                    const y = cy + r * Math.sin(a);
+                    if (i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+                  }
+                  ctx.closePath(); ctx.stroke();
+                }
+
+                // draw axes (no labels)
+                ctx.strokeStyle='#f5f5f5';
+                for (let i=0;i<n;i++){
+                  const a = -Math.PI/2 + i*angleStep;
+                  const x = cx + radius * Math.cos(a);
+                  const y = cy + radius * Math.sin(a);
+                  ctx.beginPath(); ctx.moveTo(cx,cy); ctx.lineTo(x,y); ctx.stroke();
+                }
+
+                // compute points for hover
+                const radarPoints = [];
+                for (let i=0;i<n;i++){
+                  const v = (values[i] != null) ? Number(values[i]) : 0;
+                  const r = maxVal ? (v/maxVal)*radius : 0;
+                  const a = -Math.PI/2 + i*angleStep;
+                  const x = cx + r*Math.cos(a);
+                  const y = cy + r*Math.sin(a);
+                  radarPoints.push({x, y, label: labels[i], value: v});
+                }
+
+                // polygon
+                ctx.beginPath();
+                for (let i=0;i<n;i++){
+                  const p = radarPoints[i];
+                  if (i===0) ctx.moveTo(p.x,p.y); else ctx.lineTo(p.x,p.y);
+                }
+                ctx.closePath(); ctx.strokeStyle='#007bff'; ctx.lineWidth=2; ctx.stroke(); ctx.fillStyle='#007bff'; ctx.globalAlpha=0.14; ctx.fill(); ctx.globalAlpha=1;
+
+                // points and numeric values
+                for (let i=0;i<n;i++){
+                  const p = radarPoints[i];
+                  ctx.beginPath(); ctx.fillStyle='#007bff'; ctx.arc(p.x,p.y,4,0,Math.PI*2); ctx.fill();
+                  ctx.fillStyle='#111'; ctx.font='11px sans-serif'; ctx.textAlign='center'; ctx.fillText(String(p.value), p.x, p.y - 8);
+                }
+
+                // tooltip element
+                let tooltip = document.getElementById('radar-tooltip');
+                if (!tooltip) {
+                  tooltip = document.createElement('div');
+                  tooltip.id = 'radar-tooltip';
+                  tooltip.style.position = 'absolute';
+                  tooltip.style.pointerEvents = 'none';
+                  tooltip.style.padding = '6px 8px';
+                  tooltip.style.background = 'rgba(0,0,0,0.78)';
+                  tooltip.style.color = '#fff';
+                  tooltip.style.borderRadius = '4px';
+                  tooltip.style.fontSize = '13px';
+                  tooltip.style.transition = 'opacity 120ms ease';
+                  tooltip.style.opacity = '0';
+                  tooltip.style.zIndex = 9999;
+                  document.body.appendChild(tooltip);
+                }
+
+                function showTooltip(text, clientX, clientY){
+                  tooltip.textContent = text;
+                  const pad = 10;
+                  // convert viewport (clientX/Y) to document coordinates so absolute positioning is correct
+                  const docLeft = (window.scrollX || window.pageXOffset || 0) + clientX + pad;
+                  const docTop = (window.scrollY || window.pageYOffset || 0) + clientY + pad;
+                  tooltip.style.left = docLeft + 'px';
+                  tooltip.style.top = docTop + 'px';
+                  tooltip.style.opacity = '1';
+                }
+                function hideTooltip(){ tooltip.style.opacity = '0'; }
+
+                // hit testing on mousemove
+                function getMousePos(evt){
+                  const rect = canvas.getBoundingClientRect();
+                  return { x: (evt.clientX - rect.left) * (canvas.width / rect.width), y: (evt.clientY - rect.top) * (canvas.height / rect.height), clientX: evt.clientX, clientY: evt.clientY };
+                }
+
+                canvas.addEventListener('mousemove', function(evt){
+                  // use client-space hit testing for reliability when canvas is scaled
+                  const rect = canvas.getBoundingClientRect();
+                  let found = null;
+                  const thresholdClient = 12; // px in screen coords
+                  for (let i=0;i<radarPoints.length;i++){
+                    const p = radarPoints[i];
+                    const pointClientX = rect.left + (p.x * (rect.width / canvas.width));
+                    const pointClientY = rect.top + (p.y * (rect.height / canvas.height));
+                    const dx = evt.clientX - pointClientX; const dy = evt.clientY - pointClientY; const dist = Math.sqrt(dx*dx + dy*dy);
+                    if (dist <= thresholdClient){ found = {point: p, clientX: pointClientX, clientY: pointClientY}; break; }
+                  }
+                  if (found){
+                    // show tooltip near the graph point (use point client coords)
+                    showTooltip(found.point.label + ' — ' + found.point.value, found.clientX, found.clientY);
+                    // optional debug
+                    if (window && window.console && console.debug) console.debug('radar hover', found.point.label, found.point.value);
+                  } else {
+                    hideTooltip();
+                  }
+                });
+                canvas.addEventListener('mouseleave', function(){ hideTooltip(); });
+              }
+            } catch(e){ console.warn('Failed drawing profiles radar:', e); }
+
+        } catch (e) {
+          console.warn('Failed to read quiz_result:', e);
+        }
+
+        document.getElementById('clear-btn').addEventListener('click', function(){
+          try { localStorage.removeItem('quiz_result'); } catch(e) { /* ignore */ }
+          try { sessionStorage.removeItem('quiz_result'); } catch(e) { /* ignore */ }
+          location.href = 'quiz.html';
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
