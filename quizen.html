@@ -116,14 +116,9 @@
             </div>
 
             <div class="text-center">
-              <div id="prequiz-form" class="mb-3">
-                <input id="user-email" type="email" class="form-control mb-2" placeholder="Email address" required />
-                <input id="user-company" type="text" class="form-control mb-2" placeholder="Company" required />
-                <div class="text-danger small" id="prequiz-error" style="display:none;"></div>
-                <button id="prequiz-start-btn" class="btn btn-primary btn-lg px-5" onclick="prepareAndStart()" disabled>
-                  <i class="fas fa-play me-2"></i>Start
-                </button>
-              </div>
+              <button class="btn btn-primary btn-lg px-5" onclick="startQuiz()">
+                <i class="fas fa-play me-2"></i>Start
+              </button>
             </div>
           </div>
 
@@ -154,76 +149,29 @@
             </div>
           </div>
 
-          <!-- RESULTADOS -->
-          <div id="results-section" style="display:none;">
-            <div class="text-center mb-4">
-              <h2 class="text-gradient text-primary mb-0 text-center">¡You have finished the test!</h2>
-              <div class="card shadow-none border bg-light h-100 overflow-hidden border-0 p-4">
-                <h4 class="mb-3 text-dark">Your results</h4>
-                <p class="mb-0 text-dark" id="result-text">
-                  Your creative profile is: <strong id="creativity-result"></strong><br>
-                  <span class="text-dark" id="perfil-desc"></span>
-                  </p>                
-              </div>
-              
-              <div class="card shadow-none border bg-light h-100 overflow-hidden border-0 p-4">
-                <h4 class="text-dark mb-3">Your analysis is ready</h4>
-                <p class="text-dark mb-0">I have manually prepared a guide for you with the following points:</p>
-                <ul class="text-start mt-3 mb-0">
-                  <li>
-                    <div class="d-flex pb-3">
-                      <div>
-                        <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
-                      </div>
-                      <div class="ps-3">
-                        <span class="text-sm text-dark">Full creative type anaysis</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="d-flex pb-3">
-                      <div>
-                        <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
-                      </div>
-                      <div class="ps-3">
-                        <span class="text-sm text-dark">Recomended idea management system to use</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="d-flex pb-3">
-                      <div>
-                        <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
-                      </div>
-                      <div class="ps-3">
-                        <span class="text-sm text-dark">Activities and tools for each step in the idea management system</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="d-flex pb-3">
-                      <div>
-                        <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
-                      </div>
-                      <div class="ps-3">
-                        <span class="text-sm text-dark">Templates for each step in the idea management process</span>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="text-center mb-3">
-              <button class="btn btn-success btn-lg px-5" onclick="downloadEbook()">
-                <i class="fas fa-download me-2"></i>Download Ebook 
-              </button>
-            </div>
-
-            <div class="text-center">
-              <button class="btn btn-outline-secondary btn-lg" onclick="restartQuiz()">
-                <i class="fas fa-redo me-2"></i>Restart Test
-              </button>
+          <!-- POST-QUIZ FORM -->
+          <div id="results-form-section" style="display:none;">
+            <h2 class="text-gradient text-primary mb-0 text-center">Almost there!</h2>
+            <p class="text-center text-dark mb-4">Complete your details to see your results and receive your personalized report.</p>
+            <div id="postquiz-form" class="mb-3 col-lg-8 mx-auto">
+                <input id="user-name" type="text" class="form-control mb-2" placeholder="Full Name" required />
+                <input id="user-company" type="text" class="form-control mb-2" placeholder="Company" required />
+                <input id="user-email" type="email" class="form-control mb-2" placeholder="Email address" required />
+                <select id="user-role" class="form-select mb-2" required>
+                  <option value="" disabled selected>Role</option>
+                  <option value="Chief Innovation Officer">Chief Innovation Officer</option>
+                  <option value="Innovation Analyst">Innovation Analyst</option>
+                  <option value="Senior Management">Senior Management</option>
+                  <option value="Consultant">Consultant</option>
+                  <option value="Intern">Intern</option>
+                  <option value="Other">Other</option>
+                </select>
+                <div class="text-danger small" id="results-form-error" style="display:none;"></div>
+                <div class="text-center mt-3">
+                    <button id="postquiz-submit-btn" class="btn btn-primary btn-lg px-5" onclick="submitResultsAndRedirect()">
+                        See my results
+                    </button>
+                </div>
             </div>
           </div>
 

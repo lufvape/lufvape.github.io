@@ -118,14 +118,9 @@
             </div>
 
             <div class="text-center">
-              <div id="prequiz-form" class="mb-3">
-                <input id="user-email" type="email" class="form-control mb-2" placeholder="Correo electrónico" required />
-                <input id="user-company" type="text" class="form-control mb-2" placeholder="Empresa" required />
-                <div class="text-danger small" id="prequiz-error" style="display:none;"></div>
-                <button id="prequiz-start-btn" class="btn btn-primary btn-lg px-5" onclick="prepareAndStart()" disabled>
-                  <i class="fas fa-play me-2"></i>Comenzar
-                </button>
-              </div>
+              <button class="btn btn-primary btn-lg px-5" onclick="startQuiz()">
+                <i class="fas fa-play me-2"></i>Comenzar
+              </button>
             </div>
           </div>
 
@@ -156,76 +151,29 @@
             </div>
           </div>
 
-          <!-- RESULTADOS -->
-          <div id="results-section" style="display:none;">
-            <div class="text-center mb-4">
-              <h2 class="text-gradient text-primary mb-0 text-center">¡Diagnóstico completado!</h2>
-              <div class="card shadow-none border bg-light h-100 overflow-hidden border-0 p-4">
-                <h4 class="mb-3 text-dark">Resultado de tu Diagnóstico</h4>
-                <p class="mb-0 text-dark" id="result-text">
-                  Tu perfil creativo es <strong id="creativity-result"></strong><br>
-                  <span class="text-dark" id="perfil-desc"></span>
-                  </p>                
+          <!-- POST-QUIZ FORM -->
+          <div id="results-form-section" style="display:none;">
+            <h2 class="text-gradient text-primary mb-0 text-center">¡Casi listo!</h2>
+            <p class="text-center text-dark mb-4">Completa tus datos para ver los resultados y recibir tu informe personalizado.</p>
+            <div id="postquiz-form" class="mb-3 col-lg-8 mx-auto">
+              <input id="user-name" type="text" class="form-control mb-2" placeholder="Nombre Completo" required />
+              <input id="user-company" type="text" class="form-control mb-2" placeholder="Empresa" required />
+              <input id="user-email" type="email" class="form-control mb-2" placeholder="Correo electrónico" required />
+              <select id="user-role" class="form-select mb-2" required>
+                <option value="" disabled selected>Cargo</option>
+                <option value="Director / Líder de innovación">Director / Líder de innovación</option>
+                <option value="Analista / Coordinador de innovación">Analista / Coordinador de innovación</option>
+                <option value="Gerente">Gerente</option>
+                <option value="Consultor">Consultor</option>
+                <option value="Practicante">Practicante</option>
+                <option value="Otro">Otro</option>
+              </select>
+              <div class="text-danger small" id="results-form-error" style="display:none;"></div>
+              <div class="text-center mt-3">
+                  <button id="postquiz-submit-btn" class="btn btn-primary btn-lg px-5" onclick="submitResultsAndRedirect()">
+                      Ver mis resultados
+                  </button>
               </div>
-              
-              <div class="card shadow-none border bg-light h-100 overflow-hidden border-0 p-4">
-                <h4 class="text-dark mb-3">Tu análisis personalizado está listo</h4>
-                <p class="text-dark mb-0">Cuidadosamente he realizado un informe detallado para ti con:</p>
-                <ul class="text-start mt-3 mb-0">
-                  <li>
-                    <div class="d-flex pb-3">
-                      <div>
-                        <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
-                      </div>
-                      <div class="ps-3">
-                        <span class="text-sm text-dark">Análisis completo de tu perfil creativo</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="d-flex pb-3">
-                      <div>
-                        <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
-                      </div>
-                      <div class="ps-3">
-                        <span class="text-sm text-dark">Tipo creativo y sistema de gestión recomendado</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="d-flex pb-3">
-                      <div>
-                        <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
-                      </div>
-                      <div class="ps-3">
-                        <span class="text-sm text-dark">Plan de actividades para cada etapa del sistema según tu perfil</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="d-flex pb-3">
-                      <div>
-                        <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
-                      </div>
-                      <div class="ps-3">
-                        <span class="text-sm text-dark">Plantillas para cada etapa de la gestión de ideas</span>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="text-center mb-3">
-              <button class="btn btn-success btn-lg px-5" onclick="downloadEbook()">
-                <i class="fas fa-download me-2"></i>Descargar Ebook 
-              </button>
-            </div>
-
-            <div class="text-center">
-              <button class="btn btn-outline-secondary btn-lg" onclick="restartQuiz()">
-                <i class="fas fa-redo me-2"></i>Reiniciar Diagnóstico
-              </button>
             </div>
           </div>
 
