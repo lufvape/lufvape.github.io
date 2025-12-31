@@ -356,9 +356,32 @@ async function sendToBaserow(name, company, email, role, creativityName, results
     system_scores: JSON.stringify(results.scores.system || {})
   };
   
-  const url = `${BASEROW_API_URL}/api/database/rows/table/${BASEROW_TABLE_ID}/?user_field_names=true`;
+  // Check if user exists
+  let rowId = null;
+  try {
+    const searchUrl = `${BASEROW_API_URL}/api/database/rows/table/${BASEROW_TABLE_ID}/?user_field_names=true&search=${encodeURIComponent(email)}`;
+    const searchRes = await fetch(searchUrl, {
+      method: 'GET',
+      headers: { 'Authorization': `Token ${BASEROW_API_TOKEN}` }
+    });
+    if (searchRes.ok) {
+      const searchData = await searchRes.json();
+      // Find exact email match (case-insensitive)
+      const match = searchData.results.find(r => r.email && r.email.toLowerCase() === email.toLowerCase());
+      if (match) {
+        rowId = match.id;
+      }
+    }
+  } catch (e) {
+    console.warn('Baserow search failed:', e);
+  }
+
+  const url = rowId 
+    ? `${BASEROW_API_URL}/api/database/rows/table/${BASEROW_TABLE_ID}/${rowId}/?user_field_names=true`
+    : `${BASEROW_API_URL}/api/database/rows/table/${BASEROW_TABLE_ID}/?user_field_names=true`;
+  
   const res = await fetch(url, {
-    method: 'POST',
+    method: rowId ? 'PATCH' : 'POST',
     headers: { 'Authorization': `Token ${BASEROW_API_TOKEN}`, 'Content-Type': 'application/json' },
     body: JSON.stringify(payload)
   });
@@ -369,8 +392,8 @@ async function sendToBaserow(name, company, email, role, creativityName, results
   }
   
   const data = await res.json();
-  trackEvent('baserow_submission', { status: 'created' });
-  console.log('Saved to Baserow:', data);
+  trackEvent('baserow_submission', { status: rowId ? 'updated' : 'created' });
+  console.log(`Saved to Baserow (${rowId ? 'Updated' : 'Created'}):`, data);
 }
 
 // Expose a small API for HTML onclick handlers to call

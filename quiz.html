@@ -83,47 +83,49 @@
 </head>
 <body class="bg-light">
 
-  <div class="container my-5">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="card shadow-none border bg-light h-100 overflow-hidden border-0 p-4">
-
-          <!-- BIENVENIDA -->
-          <div id="welcome-section">
-            <h2 class="text-gradient text-primary mb-0 text-center">Diagnóstico Gratuito de Creatividad Organizacional</h2>
-            <p class="text-center text-dark mb-4">Son 12 Perfiles, descubre cual es el de tu empresa en 15 min.</p>
-
-            <div class="row text-center mt-4">
-              <div class="col-4">
-                <div class="icon icon-shape bg-gradient-secondary shadow mx-auto">
-                  <i class="fa-solid fa-palette"></i>
-                </div>
-                <h5 class="mt-4 text-dark">Tipo de Creatividad</h5>
-                <p class="text-dark">Identifica cuál de los 4 tipos creativos usa tu empresa.</p>
-              </div>
-              <div class="col-4">
-                <div class="icon icon-shape bg-gradient-secondary shadow mx-auto">
-                  <i class="fa-solid fa-gear"></i>
-                </div>
-                <h5 class="mt-4 text-dark">Sistema Recomendado</h5>
-                <p class="text-dark">Conoce cuál de los 3 sistemas de gestión es el apropiado.</p>              
-              </div>
-              <div class="col-4">
-                <div class="icon icon-shape bg-gradient-secondary shadow mx-auto">
-                  <i class="fa-solid fa-list-ol"></i>
-                </div>
-                <h5 class="mt-4 text-dark">Actividades</h5>
-                <p class="text-dark">Encuentra las actividades que debes desarrollar.</p>
-              </div>
-            </div>
-
+  <!-- -------- START HEADER 5 w/ text and illustration ------- -->
+<header>
+  <div class="page-header min-vh-80">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 my-auto">
+          <h1 class="text-gradient text-primary mb-0">Creatividad Organizacional</h1>
+          <p class="lead">Son 12 perfiles, dependiendo de la forma en que resuelves problemas y el sistema que más se ajuste a tu empresa. Descubre el tuyo en solo 15 minutos.</p>
             <div class="text-center">
               <button class="btn btn-primary btn-lg px-5" onclick="startQuiz()">
                 <i class="fas fa-play me-2"></i>Comenzar
               </button>
             </div>
+        </div>
+        <div class="col-lg-8 ps-5 pe-0">
+          <div class="row">
+            <div class="col-lg-3 col-6">
+              <img class="w-100 border-radius-lg shadow mt-0 mt-lg-7" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/desire.jpg" alt="">
+            </div>
+            <div class="col-lg-3 col-6">
+              <img class="w-100 border-radius-lg shadow" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/chair.jpg" alt="">
+              <img class="w-100 border-radius-lg shadow mt-4" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/facade.jpg" alt="">
+            </div>
+            <div class="col-lg-3 col-6">
+              <img class="w-100 border-radius-lg shadow mt-0 mt-lg-5" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/architecture.jpg" alt="">
+              <img class="w-100 border-radius-lg shadow mt-4" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/baloon.jpg" alt="">
+            </div>
+            <div class="col-lg-3 col-6">
+              <img class="w-100 border-radius-lg shadow mt-3" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/seaside.jpg" alt="">
+              <img class="w-100 border-radius-lg shadow mt-4" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/medusa.jpg" alt="">
+            </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- -------- END HEADER 5 w/ text and illustration ------- -->
 
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card shadow-none border bg-light h-100 overflow-hidden border-0 p-4">
           <!-- QUIZ -->
           <div id="quiz-section" style="display:none;">
             <!-- Progreso -->
@@ -182,8 +184,47 @@
     </div>
   </div>
 
+<!-- ---- START FOOTER 10 white w/ bg image 5 cols & subscribe area & social---- -->
+<footer id="footer" class="footer py-5 position-relative overflow-hidden bg-light">
+  <div class="position-absolute w-100 bottom-0">
+      <div class="row">
+        <div class="col-lg-12 my-auto text-center">
+          <p class="mb-0 text-dark">
+            Copyright © <script>document.write(new Date().getFullYear())</script> Hecho con <i class="fa fa-heart" aria-hidden="true"></i> en Ibagué, Colombia
+          </p>
+        </div>
+      </div>
+  </div>
+</footer>
+<!-- ---- END FOOTER 10 white w/ bg image 5 cols & subscribe area & social---- -->  
+
   <!-- Lógica (data + shared core) -->
   <script src="quiz-data-es.js"></script>
   <script src="quiz-core.js"></script>
+  <script>
+    // Script para mostrar imágenes aleatorias de los perfiles en el header
+    document.addEventListener("DOMContentLoaded", function() {
+      if (window.perfilesCombinados) {
+        // Extraer todas las imágenes disponibles en los perfiles
+        const profileImages = Object.values(window.perfilesCombinados)
+          .map(p => p.imagen)
+          .filter(img => img);
+
+        // Mezclar aleatoriamente (Fisher-Yates shuffle)
+        for (let i = profileImages.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [profileImages[i], profileImages[j]] = [profileImages[j], profileImages[i]];
+        }
+
+        // Seleccionar las imágenes del header y reemplazar su src
+        const headerImages = document.querySelectorAll('.page-header .col-lg-8 img');
+        headerImages.forEach((img, index) => {
+          if (profileImages[index]) {
+            img.src = profileImages[index];
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>
