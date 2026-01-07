@@ -4,119 +4,444 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Quiz Results</title>
+  <!--     Fonts and icons     -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+<!-- Nucleo Icons -->
+  <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/1b9607c045.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/1b9607c045.css" crossorigin="anonymous">
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link id="pagestyle" href="./assets/css/soft-design-system.css?v=1.0.4" rel="stylesheet" />
+
+  <!-- SortableJS (drag & drop) -->
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
   <link rel="stylesheet" href="assets/css/soft-design-system.css">
 </head>
 <body>
-  <main class="container py-5">
-    <div class="row">
-      <div class="col-lg-3 mb-lg-0 mb-3">
-        <ul class="nav flex-column bg-white border-radius-lg p-3 position-sticky top-1">
-          <li class="nav-item"><a class="nav-link text-dark" href="#perfil">Profile</a></li>
-          <li class="nav-item"><a class="nav-link text-dark" href="#tipo">Creativity Type</a></li>
-          <li class="nav-item"><a class="nav-link text-dark" href="#sistema">Recommended System</a></li>
-          <li class="nav-item"><a class="nav-link text-dark" href="#capacidades">Capabilities</a></li>
-          <li class="nav-item"><a class="nav-link text-dark" href="#ideas">Idea Generation</a></li>
-          <li class="nav-item"><a class="nav-link text-dark" href="#programas">Recommended Programs</a></li>
-        </ul>
+
+<!-- Section with four info areas left & one card right with image and waves -->
+<section class="py-6 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <div class="row justify-content-start">
+            <blockquote class="blockquote">
+            <h2 id="perfil-frase" class="mb-0 ps-2"></h2>
+            </blockquote>
+        </div>
       </div>
-      <div class="col-lg-9">
-        <div class="card shadow-lg mb-5">
-          <div class="card-body p-5">
-            <div id="result-content">
-              <section id="perfil" class="mb-4">
-                <div class="d-flex align-items-start">
-                  <img id="perfil-imagen" src="" alt="profile image" style="width:120px;height:120px;object-fit:cover;border-radius:8px;margin-right:16px;display:none" />
-                  <div>
-                    <h4 class="perfil-nombre-repeat"></h4>
-                    <h3 id="perfil-nombre-detail" class="perfil-nombre-repeat"></h3>
-                    <blockquote id="perfil-frase" class="blockquote"></blockquote>
-                    <p id="perfil-descripcion"></p>
-                  </div>
+      <div class="col-lg-4 ms-auto">
+        <div class="card">
+          <img id="perfil-imagen" src="" alt="profile image" class="card-img-top" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/funny.jpg">
+          <div class="position-relative overflow-hidden" style="height:50px;margin-top:-50px;">
+            <div class="position-absolute w-100 top-0 z-index-1">
+                <svg class="waves waves-sm" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto">
+                  <defs>
+                    <path id="card-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+                  </defs>
+                  <g class="moving-waves">
+                    <use xlink:href="#card-wave" x="48" y="-1" fill="rgba(255,255,255,0.30"></use>
+                    <use xlink:href="#card-wave" x="48" y="3" fill="rgba(255,255,255,0.35)"></use>
+                    <use xlink:href="#card-wave" x="48" y="5" fill="rgba(255,255,255,0.25)"></use>
+                    <use xlink:href="#card-wave" x="48" y="8" fill="rgba(255,255,255,0.20)"></use>
+                    <use xlink:href="#card-wave" x="48" y="13" fill="rgba(255,255,255,0.15)"></use>
+                    <use xlink:href="#card-wave" x="48" y="16" fill="rgba(255,255,255,0.99)"></use>
+                  </g>
+                </svg>
+              </div>
+          </div>
+          <div class="card-body text-center">
+            <h4 class="perfil-nombre-repeat"></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END Section with four info areas left & one card right with image and waves -->
+
+  <section class="pt-3 pt-md-5 pb-md-5 pt-lg-7 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 mb-lg-0 mb-3">
+          <ul class="nav flex-column bg-white border-radius-lg p-3 position-sticky top-1">
+            <li class="nav-item">
+              <a class="nav-link text-dark" data-scroll href="#perfil">
+                <i class="fa-solid fa-address-card me-2"></i>
+                My Profile
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" data-scroll href="#tipo">
+                <i class="fa-solid fa-palette me-2"></i>
+                Creativity Type
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" data-scroll href="#sistema">
+                <i class="fa-solid fa-gears me-2"></i>
+                Innovation System
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" data-scroll href="#capacidades">
+                <i class="fa-solid fa-cubes me-2"></i>
+                Capabilities
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" data-scroll href="#ideas">
+                <i class="fa-solid fa-satellite-dish me-2"></i>
+                Idea Generation
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" data-scroll href="#programas">
+                <i class="fa-solid fa-arrows-to-dot me-2"></i>
+                Recommended Programs
+              </a>
+            </li>
+            <a href="english.html" class="btn btn-primary mt-2">Back to home</a>
+          </ul>
+        </div>
+        <div class="col-lg-9">
+          <div class="card shadow-lg mb-5">
+            <div class="card-header bg-primary p-5 position-relative">
+              <h1 id="perfil-nombre" class="text-white mb-5 perfil-nombre-repeat"></h1>
+              <div class="position-absolute w-100 z-index-1 bottom-0 ms-n5">
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto" style="height:7vh;min-height:50px;">
+                  <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+                  </defs>
+                  <g class="moving-waves">
+                    <use xlink:href="#gentle-wave" x="48" y="-1" fill="rgba(255,255,255,0.40"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.35)"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.25)"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="8" fill="rgba(255,255,255,0.20)"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="13" fill="rgba(255,255,255,0.15)"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="16" fill="rgba(255,255,255,0.95"></use>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="card-body p-5">
+                <div id="result-content">
+                  <section id="perfil" class="mb-4">
+                    <div class="d-flex align-items-start">
+                      <img id="perfil-imagen" src="" alt="profile image" style="width:120px;height:120px;object-fit:cover;border-radius:8px;margin-right:16px;display:none" />
+                      <div>
+                        <p class="lead" id="perfil-descripcion"></p>
+                      </div>
+                    </div>
+                    <!-- radar de perfiles (reemplaza los dos radares anteriores) -->
+                    <div class="mt-3">
+                        <canvas id="radar-profiles-canvas" width="900" height="520" style="max-width:100%;height:auto;border:1px solid #eee;background:#fff;"></canvas>
+                    </div>
+                    <p class="text-center">Innovation Profile Radar</p>
+                  </section>
+
+                  <section id="tipo" class="mb-4">
+                    <h3>Creativity Type</h3>
+                    <h5 id="tipo-titulo"></h5>
+                    <p class="lead" id="tipo-desc"></p>
+                  </section>
+
+                  <section id="sistema" class="mb-4">
+                    <h3>Recommended Innovation System</h3>
+                    <h5 id="sistema-titulo"></h5>
+                    <p class="lead" id="sistema-desc"></p>
+                  </section>
+
+                  <section id="capacidades" class="mb-4">
+                    <h3>Capabilities</h3>
+                    <p class="lead">Your unique profile comes with a specific set of characteristics that allow you to shine and stand out in innovation project management. Your greatest strengths are as follows:</p>
+                    <ul class="lead" id="capacidades-list"></ul>
+                  </section>
+
+                  <section id="ideas" class="mb-4">
+                    <h3>Idea Generation</h3>
+                    <p class="lead">A core pillar of the innovation funnel is identifying where to source the ideas that will eventually become company projects. This is why it’s vital to know which activities best align with your specific innovation style. Here are a few you can start implementing right away:</p>
+                    <ul class="lead" id="ideas-list"></ul>
+                  </section>
+
+                  <section id="programas" class="mb-4">
+                    <h3>Recommended Programs</h3>
+                    <p class="lead">At the end of the day, innovation is driven by top-tier organizational programs designed to tackle our daily hurdles. Here are a few programs that are a perfect match for your innovation profile:</p>
+                    <ul class="lead" id="programas-list"></ul>
+                  </section>
                 </div>
-              </section>
-
-              <section id="tipo" class="mb-4">
-                <h4>Creativity Type</h4>
-                <h5 id="tipo-titulo"></h5>
-                <p id="tipo-desc"></p>
-                <!-- radar of 12 profiles will be placed here (replaces two separate radars) -->
-                <div class="mt-3">
-                  <canvas id="radar-profiles-canvas" width="700" height="520" style="max-width:100%;height:auto;border:1px solid #eee;background:#fff;"></canvas>
-                </div>
-                
-              </section>
-
-              <section id="sistema" class="mb-4">
-                <h4>Recommended System</h4>
-                <h5 id="sistema-titulo"></h5>
-                <p id="sistema-desc"></p>
-                <!-- removed individual system radar; replaced by profiles radar above -->
-              </section>
-
-              <!-- removed combined matrix; using two radars below -->
-
-              <section id="capacidades" class="mb-4">
-                <h4>Capabilities</h4>
-                <ul id="capacidades-list"></ul>
-              </section>
-
-              <section id="ideas" class="mb-4">
-                <h4>Idea Generation</h4>
-                <ul id="ideas-list"></ul>
-              </section>
-
-              <section id="programas" class="mb-4">
-                <h4>Recommended Programs</h4>
-                <ul id="programas-list"></ul>
-              </section>
-
-              <div class="text-center mt-4">
-                <a href="quizen.html" class="btn btn-primary me-2">Retake the quiz</a>
-                <button id="clear-btn" class="btn btn-outline-secondary">Clear results</button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </main>
+  </section>
+  
+<!-- -------- END HEADER 12 w/ mobile ------- -->
+
+<section class="py-3 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 mx-auto">
+        <div class="p-3 text-center mb-5">
+          <div class="icon icon-shape icon-lg bg-primary shadow mx-auto">
+            <i class="fa-regular fa-file-lines fa-2xl"></i>
+          </div>
+          <h2 class="text-gradient text-primary mb-0 text-center">Take your profile a step further.</h2>
+          <div class="d-flex align-items-center justify-content-center">
+            <div class="position-relative d-flex align-items-center">
+              <i class="fa-solid fa-chalkboard-user text-dark me-2"></i>
+              <span class=" me-3">90 minutes 1-1 with me</span>
+            </div>
+            <div class="position-relative d-flex align-items-center">
+              <i class="fa-solid fa-lightbulb text-dark me-2"></i>
+              <span class=" me-3">Detailed agenda and activities for your innovation event</span>
+            </div>
+          </div>                    
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-start mb-5">
+      <div class="col-md-6 mb-md-0 mb-4">
+        <h3 class="text-gradient text-primary mb-5 text-center">A Deep-Dive Assessment of Your Innovation Style.</h3>
+        <p class="lead mb-md-5 mb-4">
+Through a personalized partnership between you, your team, and myself, we will build a profile that is finely tuned to your company’s reality. This ensures that every innovation activity and program is perfectly aligned with your daily operations and what actually works for your unique work style.
+        </p>
+        <ul>
+          <li class="lead">In-depth analysis of your creative profile.</li>
+          <li class="lead">AS-IS Innovation activity mapping tool.</li>
+          <li class="lead">Strategic insights and results debrief.</li>
+          <li class="lead">Strategic roadmap: company profile and innovation blueprint.</li>
+          <li class="lead"><strong>Result:</strong> Core activities for each stage of the idea management lifecycle.</li>
+          <li class="lead"><strong>Result:</strong> Path forward, timeline and next steps for your identified innovation program.</li>
+        </ul>
+        <h3 class="text-gradient text-primary mt-5 text-center"> $162 USD</h3>
+      </div>
+      <div class="col-md-6">
+        <!-- Cal inline embed code begins -->
+          <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-perfilextendido"></div>
+          <script type="text/javascript">
+            (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+          Cal("init", "perfilextendido", {origin:"https://app.cal.com"});
+
+            Cal.ns.perfilextendido("inline", {
+              elementOrSelector:"#my-cal-inline-perfilextendido",
+              config: {"layout":"month_view"},
+              calLink: "lufvape/perfilextendido",
+            });
+
+            Cal.ns.perfilextendido("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#ffba09"}},"hideEventTypeDetails":true,"layout":"month_view"});
+          </script>
+        <!-- Cal inline embed code ends -->
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="Programa" class="py-6 bg-dark">
+  <div class="container">
+    <div class="row align-items-center">
+      <h2 class="text-light mb-0">Or join the next cohort to design a bespoke Innovation Management System following the ISO 56000 family of standards.</h2>
+      <div class="d-flex align-items-center justify-content-md-start justify-content-center">
+        <div class="position-relative d-flex align-items-center">
+          <i class="fa-solid fa-clock text-light me-2"></i>
+          <span class=" me-3">6 Weeks</span>
+          <hr class="vertical dark my-1">
+        </div>
+        <div class="position-relative d-flex align-items-center">
+          <i class="fa-solid fa-chalkboard-user text-light me-2"></i>
+          <span class=" me-3">4 Modules</span>
+        </div>
+        <div class="position-relative d-flex align-items-center">
+          <i class="fa-solid fa-champagne-glasses text-light me-2"></i>
+          <span class=" me-3">Your own innovation event</span>
+        </div>
+        <div class="position-relative d-flex align-items-center ms-3">
+          <i class="fa-solid fa-face-smile text-light me-2"></i>
+          <span class="me-3">250+ IMS developed</span>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="row justify-content-start">
+          <div class="col-md-6">
+            <div class="info">
+              <i class="fa-solid fa-video fa-2xl text-light"></i>
+              <h5 class="text-light mt-4">Self peaced base course</h5>
+              <p>Self peaced course to complete whenever feels comfortable</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info">
+              <i class="fa-solid fa-headset fa-2xl text-light"></i>
+              <h5 class="text-light mt-4">Live support</h5>
+              <p>Every week we will have a live support session to showcase your progress</p>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-start">
+          <div class="col-md-6 mt-5">
+            <div class="info">
+              <i class="fa-solid fa-brain fa-2xl text-light"></i>
+              <h5 class="text-light mt-4">Doers community</h5>
+              <p>24/7 open space to get answers and tips for your management system</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-5">
+            <div class="info">
+              <i class="fa-solid fa-face-grin-stars fa-2xl text-light"></i>
+              <h5 class="text-light mt-4">VIP</h5>
+              <p>Three moments for you to get a deep personalization on the course program</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 ms-auto">
+        <div class="card shadow-none border bg-dark h-100 overflow-hidden">
+          <div class="card-header bg-transparent text-sm-start text-center pt-4 pb-3 px-4">
+            <h4 class="mb-1 text-light">IMS Group Program</h4>
+            <p class="mb-3 text-sm text-white">Build a workflow that’s perfectly in sync with how you operate</p>
+            <small class="text-sm text-white font-weight-bold"><s>$2750 USD</s></small>
+            <h3 class="font-weight-bolder mt-3 text-white">
+              $596 <small class="text-sm text-white font-weight-bold">USD</small>
+            </h3>
+            <a href="javascript:;" class="btn btn-lg bg-primary text-white w-100 border-radius-md mt-4 mb-2">Join now</a>
+          </div>
+          <hr class="horizontal light my-0">
+          <div class="card-body">
+            <div class="d-flex pb-3">
+              <div>
+                <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
+              </div>
+              <div class="ps-3">
+                <span class="text-sm text-white">Innovation playbook based on ISO 56000 family</span>
+              </div>
+            </div>
+
+            <div class="d-flex pb-3">
+              <div>
+                <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
+              </div>
+              <div class="ps-3">
+                <span class="text-sm text-white">Organizational structure to foster innovation</span>
+              </div>
+            </div>
+
+            <div class="d-flex pb-3">
+              <div>
+                <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
+              </div>
+              <div class="ps-3">
+                <span class="text-sm text-white">1 Innovation event designed specifically for you</span>
+              </div>
+            </div>
+
+            <div class="d-flex pb-3">
+              <div>
+                <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
+              </div>
+              <div class="ps-3">
+                <span class="text-sm text-white">3 Personalization moments</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ---- START FOOTER 10 white w/ bg image 5 cols & subscribe area & social---- -->
+<footer id="footer" class="footer py-5 position-relative overflow-hidden bg-dark">
+  <div class="position-absolute w-100 bottom-0">
+      <div class="row">
+        <div class="col-lg-12 my-auto text-center">
+          <p class="mb-0 text-light">
+            Copyright © <script>document.write(new Date().getFullYear())</script> Made with <i class="fa fa-heart" aria-hidden="true"></i> in Ibagué, Colombia
+          </p>
+        </div>
+      </div>
+  </div>
+</footer>
+<!-- ---- END FOOTER 10 white w/ bg image 5 cols & subscribe area & social---- -->
 
   <script>
-    // Load English quiz data then init
+    // Load Spanish quiz data so `window.perfilesCombinados` is available
     (function(){
       var s = document.createElement('script');
       s.src = 'quiz-data-en.js';
       s.onload = initResults;
-      s.onerror = initResults;
+      s.onerror = initResults; // still attempt init if data fails to load
       document.head.appendChild(s);
+
       function initResults(){
         try {
           let raw = null;
           try { raw = localStorage.getItem('quiz_result'); } catch(e) { raw = null; }
           if (!raw) { try { raw = sessionStorage.getItem('quiz_result'); } catch(e) { raw = null; } }
           if (!raw) {
-            document.getElementById('perfil-nombre').textContent = 'No results available';
+            document.getElementById('perfil-nombre').textContent = 'No hay resultados disponibles';
             return;
           }
           const data = JSON.parse(raw || '{}');
-          document.getElementById('perfil-descripcion').textContent = data.perfilDescripcion || '';
 
-          const comboKey = data.results && data.results.creativity && data.results.system ? `${data.results.creativity}_${data.results.system}` : null;
-          let perfilData = comboKey && window.perfilesCombinados && window.perfilesCombinados[comboKey] ? window.perfilesCombinados[comboKey] : null;
-          if (!perfilData && window.perfilesCombinados) {
-            const entries = Object.values(window.perfilesCombinados);
-            perfilData = entries.find(e => e.nombre && e.nombre.toLowerCase() === (data.perfilNombre||'').toLowerCase());
-          }
-          if (perfilData) {
-            if (perfilData.imagen) { const img = document.getElementById('perfil-imagen'); img.src = perfilData.imagen; img.style.display = ''; }
-            const perfilNombre = perfilData.nombre || data.perfilNombre || '';
-            document.querySelectorAll('.perfil-nombre-repeat').forEach(el => { el.textContent = perfilNombre; });
-            document.getElementById('perfil-frase').textContent = perfilData.frase || '';
-            if (Array.isArray(perfilData.creatividadTipo)) { document.getElementById('tipo-titulo').textContent = perfilData.creatividadTipo[0] || ''; document.getElementById('tipo-desc').textContent = perfilData.creatividadTipo[1] || ''; }
-            if (Array.isArray(perfilData.sistemaTipo)) { document.getElementById('sistema-titulo').textContent = perfilData.sistemaTipo[0] || ''; document.getElementById('sistema-desc').textContent = perfilData.sistemaTipo[1] || ''; }
-            const capList = document.getElementById('capacidades-list'); capList.innerHTML = ''; (perfilData.capacidades||[]).forEach(i=>{const li=document.createElement('li');li.textContent=i;capList.appendChild(li);});
-            const genList = document.getElementById('ideas-list'); genList.innerHTML = ''; (perfilData.generaciónIdeas||perfilData.generacionIdeas||[]).forEach(i=>{const li=document.createElement('li');li.textContent=i;genList.appendChild(li);});
-            const progList = document.getElementById('programas-list'); progList.innerHTML = ''; (perfilData.programasRecomendados||[]).forEach(i=>{const li=document.createElement('li');li.textContent=i;progList.appendChild(li);});
+            // populate detailed sections using perfilesCombinados
+          try {
+            const comboKey = data.results && data.results.creativity && data.results.system ? `${data.results.creativity}_${data.results.system}` : null;
+            let perfilData = comboKey && window.perfilesCombinados && window.perfilesCombinados[comboKey] ? window.perfilesCombinados[comboKey] : null;
+            if (!perfilData && window.perfilesCombinados) {
+              // fallback: match by nombre
+              const entries = Object.values(window.perfilesCombinados);
+              perfilData = entries.find(e => e.nombre && e.nombre.toLowerCase() === (data.perfilNombre||'').toLowerCase());
+            }
+            if (perfilData) {
+              // perfil
+              if (perfilData.imagen) {
+                const img = document.getElementById('perfil-imagen');
+                img.src = perfilData.imagen;
+                img.style.display = '';
+              }
+              const perfilNombre = perfilData.nombre || data.perfilNombre || '';
+              // set all places that should show the perfil name
+              document.querySelectorAll('.perfil-nombre-repeat').forEach(el => { el.textContent = perfilNombre; });
+              document.getElementById('perfil-frase').textContent = perfilData.frase || '';
+              document.getElementById('perfil-descripcion').textContent = perfilData.descripcion || data.perfilDescripcion || '';
+
+              // tipo
+              if (Array.isArray(perfilData.creatividadTipo)) {
+                document.getElementById('tipo-titulo').textContent = perfilData.creatividadTipo[0] || '';
+                document.getElementById('tipo-desc').textContent = perfilData.creatividadTipo[1] || '';
+              }
+
+              // sistema
+              if (Array.isArray(perfilData.sistemaTipo)) {
+                document.getElementById('sistema-titulo').textContent = perfilData.sistemaTipo[0] || '';
+                document.getElementById('sistema-desc').textContent = perfilData.sistemaTipo[1] || '';
+              }
+
+              // capacidades
+              const capList = document.getElementById('capacidades-list');
+              capList.innerHTML = '';
+              (perfilData.capacidades || []).forEach(item => { const li = document.createElement('li'); li.textContent = item; capList.appendChild(li); });
+
+              // generación de ideas
+              const genList = document.getElementById('ideas-list');
+              genList.innerHTML = '';
+              (perfilData.generaciónIdeas || perfilData.generacionIdeas || []).forEach(item => { const li = document.createElement('li'); li.textContent = item; genList.appendChild(li); });
+
+              // programas
+              const progList = document.getElementById('programas-list');
+              progList.innerHTML = '';
+              (perfilData.programasRecomendados || []).forEach(item => { const li = document.createElement('li'); li.textContent = item; progList.appendChild(li); });
+            }
+          } catch (e) { console.warn('Failed populating perfil data:', e); }
+
             // draw single radar with 12 profile scores (no axis labels; show name on hover)
             try {
               const canvas = document.getElementById('radar-profiles-canvas');
@@ -149,6 +474,7 @@
                   quizData.preguntas.forEach(section => {
                     (section.preguntas || []).forEach(q => {
                       if (!q.scoring) return;
+                      // creatividad
                       if (q.scoring.creatividad) {
                         Object.keys(q.scoring.creatividad).forEach(type => {
                           if (!maxCreat[type]) maxCreat[type] = 0;
@@ -160,10 +486,12 @@
                             const itemScores = q.scoring.creatividad[type] || {};
                             const vals = Object.keys(itemScores).map(k => Number(itemScores[k])||0);
                             const mx = vals.length ? Math.max.apply(null, vals) : 0;
+                            // ordering allows a max weight of 1 for the top item
                             maxCreat[type] += mx;
                           }
                         });
                       }
+                      // sistema
                       if (q.scoring.sistema) {
                         Object.keys(q.scoring.sistema).forEach(type => {
                           if (!maxSys[type]) maxSys[type] = 0;
@@ -185,6 +513,7 @@
                 }
                 const all = values.map(Number).filter(n=>!isNaN(n)); const rawMax = all.length ? Math.max(...all) : 1;
                 const maxPossible = computeMaxPossibleScores(window.quizData || window.quizData);
+                // compute per-profile theoretical max and use the global maximum as radar limit
                 const profileMaxes = comboKeys.map(key => {
                   const parts = key.split('_'); const cKey = parts[0]; const sKey = parts[1];
                   const mc = (maxPossible.creativity && maxPossible.creativity[cKey]) ? Number(maxPossible.creativity[cKey]) : 0;
@@ -265,6 +594,7 @@
                 function showTooltip(text, clientX, clientY){
                   tooltip.textContent = text;
                   const pad = 10;
+                  // convert viewport (clientX/Y) to document coordinates so absolute positioning is correct
                   const docLeft = (window.scrollX || window.pageXOffset || 0) + clientX + pad;
                   const docTop = (window.scrollY || window.pageYOffset || 0) + clientY + pad;
                   tooltip.style.left = docLeft + 'px';
@@ -292,18 +622,27 @@
                     if (dist <= thresholdClient){ found = {point: p, clientX: pointClientX, clientY: pointClientY}; break; }
                   }
                   if (found){
-                    // position tooltip near the graph point
+                    // show tooltip near the graph point (use point client coords)
                     showTooltip(found.point.label + ' — ' + found.point.value, found.clientX, found.clientY);
+                    // optional debug
                     if (window && window.console && console.debug) console.debug('radar hover', found.point.label, found.point.value);
-                  } else { hideTooltip(); }
+                  } else {
+                    hideTooltip();
+                  }
                 });
                 canvas.addEventListener('mouseleave', function(){ hideTooltip(); });
               }
             } catch(e){ console.warn('Failed drawing profiles radar:', e); }
-          }
-        } catch (e) { console.warn('Failed to init results page:', e); }
 
-        document.getElementById('clear-btn').addEventListener('click', function(){ try{localStorage.removeItem('quiz_result')}catch(e){} try{sessionStorage.removeItem('quiz_result')}catch(e){} location.href='quizen.html'; });
+        } catch (e) {
+          console.warn('Failed to read quiz_result:', e);
+        }
+
+        document.getElementById('clear-btn').addEventListener('click', function(){
+          try { localStorage.removeItem('quiz_result'); } catch(e) { /* ignore */ }
+          try { sessionStorage.removeItem('quiz_result'); } catch(e) { /* ignore */ }
+          location.href = 'quiz.html';
+        });
       }
     })();
   </script>

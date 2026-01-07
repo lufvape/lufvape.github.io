@@ -81,47 +81,40 @@
 </head>
 <body class="bg-light">
 
-  <div class="container my-5">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="card shadow-none border bg-light h-100 overflow-hidden border-0 p-4">
-
-          <!-- BIENVENIDA -->
-          <div id="welcome-section">
-            <h2 class="text-gradient text-primary mb-0 text-center">Organizational Creativity Diagnosis</h2>
-            <p class="text-center text-dark mb-4">They are 12 different profiles, discover the one of your business in 15 min aprox.</p>
-
-            <div class="row text-center mt-4">
-              <div class="col-4">
-                <div class="icon icon-shape bg-gradient-secondary shadow mx-auto">
-                  <i class="fa-solid fa-palette"></i>
-                </div>
-                <h5 class="mt-4 text-dark">Creativity type</h5>
-                <p class="text-dark">Identify which of the 4 creative types your business uses.</p>
-              </div>
-              <div class="col-4">
-                <div class="icon icon-shape bg-gradient-secondary shadow mx-auto">
-                  <i class="fa-solid fa-gear"></i>
-                </div>
-                <h5 class="mt-4 text-dark">Recomended System</h5>
-                <p class="text-dark">Discover wich of the 3 idea management systems best suits you.</p>              
-              </div>
-              <div class="col-4">
-                <div class="icon icon-shape bg-gradient-secondary shadow mx-auto">
-                  <i class="fa-solid fa-list-ol"></i>
-                </div>
-                <h5 class="mt-4 text-dark">Activities</h5>
-                <p class="text-dark">Find out the activities to develop your idea management programme.</p>
-              </div>
-            </div>
-
+    <!-- -------- START HEADER 5 w/ text and illustration ------- -->
+<header>
+  <div class="page-header min-vh-80">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 my-auto">
+          <h1 class="text-gradient text-primary mb-0">Organizational Creativity</h1>
+          <p class="lead">There are 12 distinct profiles, depending on how you tackle problems and which system best fits your company. Find yours in just 15 minutes.</p>
             <div class="text-center">
-              <button class="btn btn-primary btn-lg px-5" onclick="startQuiz()">
+              <button id="start-btn" class="btn btn-primary btn-lg px-5" onclick="startQuizCustom()">
                 <i class="fas fa-play me-2"></i>Start
               </button>
             </div>
+        </div>
+        <div class="col-lg-8 ps-5 pe-0">
+          <div id="images-section" class="row">
+            <div class="col-lg-3 col-6">
+              <img class="w-100 border-radius-lg shadow mt-0 mt-lg-7" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/desire.jpg" alt="">
+            </div>
+            <div class="col-lg-3 col-6">
+              <img class="w-100 border-radius-lg shadow" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/chair.jpg" alt="">
+              <img class="w-100 border-radius-lg shadow mt-4" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/facade.jpg" alt="">
+            </div>
+            <div class="col-lg-3 col-6">
+              <img class="w-100 border-radius-lg shadow mt-0 mt-lg-5" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/architecture.jpg" alt="">
+              <img class="w-100 border-radius-lg shadow mt-4" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/baloon.jpg" alt="">
+            </div>
+            <div class="col-lg-3 col-6">
+              <img class="w-100 border-radius-lg shadow mt-3" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/seaside.jpg" alt="">
+              <img class="w-100 border-radius-lg shadow mt-4" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/medusa.jpg" alt="">
+            </div>
           </div>
-
+          
+          <div id="quiz-card-container" class="card shadow-none border bg-light h-100 overflow-hidden border-0 p-4" style="display:none;">
           <!-- QUIZ -->
           <div id="quiz-section" style="display:none;">
             <!-- Progreso -->
@@ -141,47 +134,99 @@
             <!-- Navegación -->
             <div class="d-flex justify-content-between">
               <button id="prev-btn" class="btn btn-outline-primary btn-lg" onclick="previousQuestion()" style="display:none;">
-                <i class="fas fa-arrow-left me-2"></i>Back
+                <i class="fas fa-arrow-left me-2"></i>Previous
               </button>
-              <button id="next-btn" class="btn btn-primary btn-lg" onclick="nextQuestion()" disabled>
-                Next<i class="fas fa-chevron-right ms-2"></i>
+              <button id="next-btn-en" class="btn btn-primary btn-lg" onclick="nextQuestion()" disabled>
+                Next<i class="fas fa-arrow-right ms-2"></i>
               </button>
             </div>
           </div>
 
           <!-- POST-QUIZ FORM -->
           <div id="results-form-section" style="display:none;">
-            <h2 class="text-gradient text-primary mb-0 text-center">Almost there!</h2>
-            <p class="text-center text-dark mb-4">Complete your details to see your results and receive your personalized report.</p>
+            <h2 class="text-gradient text-primary mb-0 text-center">¡Almost Done!</h2>
+            <p class="text-center text-dark mb-4">Complete this info to see the results and receive your personalized report.</p>
             <div id="postquiz-form" class="mb-3 col-lg-8 mx-auto">
-                <input id="user-name" type="text" class="form-control mb-2" placeholder="Full Name" required />
-                <input id="user-company" type="text" class="form-control mb-2" placeholder="Company" required />
-                <input id="user-email" type="email" class="form-control mb-2" placeholder="Email address" required />
-                <select id="user-role" class="form-select mb-2" required>
-                  <option value="" disabled selected>Role</option>
-                  <option value="Chief Innovation Officer">Chief Innovation Officer</option>
-                  <option value="Innovation Analyst">Innovation Analyst</option>
-                  <option value="Senior Management">Senior Management</option>
-                  <option value="Consultant">Consultant</option>
-                  <option value="Intern">Intern</option>
-                  <option value="Other">Other</option>
-                </select>
-                <div class="text-danger small" id="results-form-error" style="display:none;"></div>
-                <div class="text-center mt-3">
-                    <button id="postquiz-submit-btn" class="btn btn-primary btn-lg px-5" onclick="submitResultsAndRedirect()">
-                        See my results
-                    </button>
-                </div>
+              <input id="user-name" type="text" class="form-control mb-2" placeholder="Nombre Completo" required />
+              <input id="user-company" type="text" class="form-control mb-2" placeholder="Empresa" required />
+              <input id="user-email" type="email" class="form-control mb-2" placeholder="Correo electrónico" required />
+              <select id="user-role" class="form-select mb-2" required>
+                <option value="" disabled selected>Role</option>
+                <option value="Director / Líder de innovación">Chief Innovation Officer</option>
+                <option value="Analista / Coordinador de innovación">Innovation Analyst</option>
+                <option value="Gerente">Senior Management</option>
+                <option value="Consultor">Consultant</option>
+                <option value="Practicante">Intern</option>
+                <option value="Otro">Other</option>
+              </select>
+              <div class="text-danger small" id="results-form-error" style="display:none;"></div>
+              <div class="text-center mt-3">
+                  <button id="postquiz-submit-btn" class="btn btn-primary btn-lg px-5" onclick="submitResultsAndRedirect()">
+                      Go to my creative profile
+                  </button>
+              </div>
             </div>
           </div>
-
+          </div>
         </div>
       </div>
     </div>
   </div>
+</header>
+<!-- -------- END HEADER 5 w/ text and illustration ------- -->
+
+<!-- ---- START FOOTER 10 white w/ bg image 5 cols & subscribe area & social---- -->
+<footer id="footer" class="footer py-5 position-relative overflow-hidden bg-light">
+  <div class="position-absolute w-100 bottom-0">
+      <div class="row">
+        <div class="col-lg-12 my-auto text-center">
+          <p class="mb-0 text-dark">
+            Copyright © <script>document.write(new Date().getFullYear())</script> Made with <i class="fa fa-heart" aria-hidden="true"></i> in Ibagué, Colombia
+          </p>
+        </div>
+      </div>
+  </div>
+</footer>
+<!-- ---- END FOOTER 10 white w/ bg image 5 cols & subscribe area & social---- -->  
 
   <!-- Lógica (data + shared core) -->
   <script src="quiz-data-en.js"></script>
   <script src="quiz-core.js"></script>
+    <script>
+    function startQuizCustom() {
+      // Ocultar imágenes
+      document.getElementById('images-section').style.display = 'none';
+      // Mostrar contenedor del quiz
+      document.getElementById('quiz-card-container').style.display = 'block';
+      // Deshabilitar botón
+      document.getElementById('start-btn').style.display = 'none';
+      // Iniciar lógica del quiz
+      if (typeof startQuiz === 'function') startQuiz();
+    }
+
+    // Script para mostrar imágenes aleatorias de los perfiles en el header
+    document.addEventListener("DOMContentLoaded", function() {
+      if (window.perfilesCombinados) {
+        // Extraer todas las imágenes disponibles en los perfiles
+        const profileImages = Object.values(window.perfilesCombinados)
+          .map(p => p.imagen)
+          .filter(img => img);
+
+        // Mezclar aleatoriamente (Fisher-Yates shuffle)
+        for (let i = profileImages.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [profileImages[i], profileImages[j]] = [profileImages[j], profileImages[i]];
+        }
+
+        // Seleccionar las imágenes del header y reemplazar su src
+        const headerImages = document.querySelectorAll('.page-header .col-lg-8 img');
+        headerImages.forEach((img, index) => {
+          if (profileImages[index]) {
+            img.src = profileImages[index];
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>

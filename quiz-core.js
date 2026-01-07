@@ -161,17 +161,24 @@ function displayQuestion() {
       onEnd: () => {
         const orderedItems = [...list.querySelectorAll('li')].map(li => li.textContent);
         answers[question.id] = orderedItems;
-        const nextBtn = document.getElementById('next-btn');
+        const nextBtn = document.getElementById('next-btn') || document.getElementById('next-btn-en');
         if (nextBtn) nextBtn.disabled = false;
       }
     });
   }
 
   const prevBtn = document.getElementById('prev-btn');
-  const nextBtn = document.getElementById('next-btn');
+  const nextBtn = document.getElementById('next-btn') || document.getElementById('next-btn-en');
+
   if (prevBtn) prevBtn.style.display = currentQuestionIndex === 0 ? 'none' : 'inline-block';
-  if (nextBtn) nextBtn.textContent = currentQuestionIndex === allQuestions.length - 1 ? 'Finalizar' : 'Siguiente';
-  if (nextBtn) nextBtn.disabled = answers[question.id] === undefined;
+  
+  if (nextBtn) {
+    const isEnglish = document.documentElement.lang.startsWith('en');
+    const finishText = isEnglish ? 'Done' : 'Finalizar';
+    const nextText = isEnglish ? 'Next' : 'Siguiente';
+    nextBtn.innerHTML = (currentQuestionIndex === allQuestions.length - 1 ? finishText : nextText) + '<i class="fas fa-arrow-right ms-2"></i>';
+    nextBtn.disabled = answers[question.id] === undefined;
+  }
 }
 
 function selectOption(questionId, optionIdx) {
@@ -180,7 +187,7 @@ function selectOption(questionId, optionIdx) {
   [...container.querySelectorAll('button')].forEach((btn, idx) => {
     btn.classList.toggle('active', idx === optionIdx);
   });
-  const nextBtn = document.getElementById('next-btn');
+  const nextBtn = document.getElementById('next-btn') || document.getElementById('next-btn-en');
   if (nextBtn) nextBtn.disabled = false;
 }
 
