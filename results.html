@@ -19,6 +19,8 @@
 
   <!-- SortableJS (drag & drop) -->
   <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="assets/css/soft-design-system.css">
 </head>
 <body>
@@ -64,6 +66,82 @@
 </section>
 <!-- END Section with four info areas left & one card right with image and waves -->
 
+<!-- Pantalla de Resultados -->
+<section class="py-6 bg-light position-relative z-index-2" style="margin-top: -80px;">
+  <div class="container">
+    <div class="row">
+      <!-- Nivel de Madurez -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-body p-3">
+            <div class="row">
+              <div class="col-8">
+                <div class="numbers">
+                  <p class="text-sm mb-0 text-capitalize font-weight-bold">Nivel de Madurez</p>
+                  <h5 id="res-madurez-score" class="font-weight-bolder mb-0 text-primary">0.0</h5>
+                  <p id="res-madurez-title" class="mb-0 text-sm"></p>
+                </div>
+              </div>
+              <div class="col-4 text-end">
+                <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
+                  <i class="fa-solid fa-chart-line text-lg opacity-10" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+            <p id="res-madurez-desc" class="mb-0 text-sm mt-2"></p>
+          </div>
+        </div>
+      </div>
+      <!-- Arquetipo Dominante -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-body p-3">
+            <div class="row">
+              <div class="col-8">
+                <div class="numbers">
+                  <p class="text-sm mb-0 text-capitalize font-weight-bold">Arquetipo (Unsworth)</p>
+                  <h5 id="res-arquetipo-title" class="font-weight-bolder mb-0 text-info">Arquetipo</h5>
+                </div>
+              </div>
+              <div class="col-4 text-end">
+                <div class="icon icon-shape bg-gradient-info shadow text-center border-radius-md">
+                  <i class="fa-solid fa-lightbulb text-lg opacity-10" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+            <p id="res-arquetipo-desc" class="mb-0 text-sm mt-2"></p>
+          </div>
+        </div>
+      </div>
+      <!-- Afinidad Principal -->
+      <div class="col-lg-4 col-md-12 mb-4">
+        <div class="card h-100">
+          <div class="card-body p-3">
+            <div class="row">
+              <div class="col-8">
+                <div class="numbers">
+                  <p class="text-sm mb-0 text-capitalize font-weight-bold">Foco de Innovación</p>
+                  <h5 id="res-afinidad-title" class="font-weight-bolder mb-0 text-success">Afinidad</h5>
+                </div>
+              </div>
+              <div class="col-4 text-end">
+                <div class="icon icon-shape bg-gradient-success shadow text-center border-radius-md">
+                  <i class="fa-solid fa-gears text-lg opacity-10" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+            <p id="res-afinidad-desc" class="mb-0 text-sm mt-2"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</section>
+<!-- END Pantalla de Resultados -->
+
   <section class="pt-3 pt-md-5 pb-md-5 pt-lg-7 bg-light">
     <div class="container">
       <div class="row">
@@ -78,31 +156,19 @@
             <li class="nav-item">
               <a class="nav-link text-dark" data-scroll href="#tipo">
                 <i class="fa-solid fa-palette me-2"></i>
-                Tipo de Creatividad
+                ADN Creativo
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-dark" data-scroll href="#sistema">
                 <i class="fa-solid fa-gears me-2"></i>
-                Sistema de Innovación
+                Alineación
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-dark" data-scroll href="#capacidades">
                 <i class="fa-solid fa-cubes me-2"></i>
-                Capacidades
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark" data-scroll href="#ideas">
-                <i class="fa-solid fa-satellite-dish me-2"></i>
-                Generación de Ideas
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark" data-scroll href="#programas">
-                <i class="fa-solid fa-arrows-to-dot me-2"></i>
-                Programas Recomendados
+                Auditoría al SGI
               </a>
             </li>
             <a href="index.html" class="btn btn-primary mt-2">Volver al inicio</a>
@@ -132,46 +198,57 @@
                 <div id="result-content">
                   <section id="perfil" class="mb-4">
                     <div class="d-flex align-items-start">
-                      <img id="perfil-imagen" src="" alt="perfil image" style="width:120px;height:120px;object-fit:cover;border-radius:8px;margin-right:16px;display:none" />
                       <div>
                         <p class="lead" id="perfil-descripcion"></p>
                       </div>
                     </div>
                     <!-- radar de perfiles (reemplaza los dos radares anteriores) -->
                     <div class="mt-3">
-                        <canvas id="radar-profiles-canvas" width="900" height="520" style="max-width:100%;height:auto;border:1px solid #eee;background:#fff;"></canvas>
+                        <canvas id="radar-profiles-canvas" width="900" height="240" style="max-width:100%;height:auto;border:1px solid #eee;background:#fff;"></canvas>
                     </div>
-                    <p class="text-center">Radar de perfiles de innovación</p>
+                    <p class="text-center">Ranking de afinidad por perfil</p>
+                    <p class="lead">Tu fortaleza principal: <span id="fortaleza-principal"></span></p>
+                    <p class="lead">En dónde enfrentas mayores desafíos: <span id="debilidad-principal"></span></p>
                   </section>
 
                   <section id="tipo" class="mb-4">
-                    <h3>Tipo de Creatividad</h3>
-                    <h5 id="tipo-titulo"></h5>
+                    <h3>Tu Arquetipo Creativo</h3>
+                    <div class="mt-3" style="height: 350px;">
+                    <canvas id="radar-archetype-fixed"></canvas>
+                    </div>
+                    <p class="lead"> Tu polo dominanante es se encuentra en la creatividad  <span id="tipo-titulo"></span></p>
                     <p class="lead" id="tipo-desc"></p>
+                    <p class="lead"> Sin embargo cuentas con un polo pasivo que es la creatividad  <span id="tipo-titulo"></span></p>
+                    <p class="lead" id="tipo-desc"></p>
+                    <p class="lead" id="insight"></p>
                   </section>
 
                   <section id="sistema" class="mb-4">
-                    <h3>Sistema de Innovación Recomendado</h3>
+                    <h3>Tu motor de la innovación</h3>
                     <h5 id="sistema-titulo"></h5>
+                    <div class="mt-3" style="height: 300px;">
+                        <canvas id="chart-foco-fixed"></canvas>
+                    </div>
                     <p class="lead" id="sistema-desc"></p>
+                    <p class="lead" id="sistema-ajuste"></p>
                   </section>
 
                   <section id="capacidades" class="mb-4">
-                    <h3>Capacidades</h3>
+                    <h3>Auditoría Express a tu SGI</h3>
+                    <div class="chart-container" style="height: 300px;">
+                      <canvas id="chart-madurez-fixed"></canvas>
+                    </div>
                     <p class="lead">Tu perfil específico tiene ciertas características únicas, que lo hacen brillar y sobresalir en la gestión de proyectos de innovación. Tus mayores fortalezas son las siguientes:</p>
-                    <ul class="lead" id="capacidades-list"></ul>
-                  </section>
-
-                  <section id="ideas" class="mb-4">
-                    <h3>Generación de Ideas</h3>
+                    <p class="lead" id="nivel-desc"></p>
+                    <h5>Fortalezas</h5>
                     <p class="lead">Uno de los pilares del embudo de innovación es de dónde sacar las ideas que vamos a convertir en proyectos en la empresa. Es por eso que es de vital importancia conocer cuáles son las actividades que mejor se acoplan a tu forma de trabajar la innovación. Acá te muestro algunas de ellas para que puedas aplicar hoy mismo:</p>
-                    <ul class="lead" id="ideas-list"></ul>
-                  </section>
-
-                  <section id="programas" class="mb-4">
-                    <h3>Programas Recomendados</h3>
+                    <ul class="lead" id="fortalezas-list"></ul>
+                    <h5>Brechas</h5>
                     <p class="lead">Finalmente, la innovación viene también a traves de programas organizacionales de alto valor en los qe podamos resolver los retos que nos planteamos día a día. Algunos programas ideales según tu perfil de innovación son:</p>
-                    <ul class="lead" id="programas-list"></ul>
+                    <ul class="lead" id="brechas-list"></ul>
+                    <h5>Plan de Acción</h5>
+                    <p class="lead">Finalmente, la innovación viene también a traves de programas organizacionales de alto valor en los qe podamos resolver los retos que nos planteamos día a día. Algunos programas ideales según tu perfil de innovación son:</p>
+                    <ul class="lead" id="acciones-list"></ul>
                   </section>
                 </div>
               </div>
@@ -383,263 +460,154 @@
 
       function initResults(){
         try {
-          let raw = null;
-          try { raw = localStorage.getItem('quiz_result'); } catch(e) { raw = null; }
-          if (!raw) { try { raw = sessionStorage.getItem('quiz_result'); } catch(e) { raw = null; } }
+          const raw = localStorage.getItem('quiz_result') || sessionStorage.getItem('quiz_result');
           if (!raw) {
             document.getElementById('perfil-nombre').textContent = 'No hay resultados disponibles';
             return;
           }
-          const data = JSON.parse(raw || '{}');
+          const data = JSON.parse(raw);
+          const scores = data.results.scores;
+          const comboKey = `${data.results.creativity}_${data.results.system}`;
+          const perfilData = window.perfilesCombinados[comboKey];
 
-            // populate detailed sections using perfilesCombinados
-          try {
-            const comboKey = data.results && data.results.creativity && data.results.system ? `${data.results.creativity}_${data.results.system}` : null;
-            let perfilData = comboKey && window.perfilesCombinados && window.perfilesCombinados[comboKey] ? window.perfilesCombinados[comboKey] : null;
-            if (!perfilData && window.perfilesCombinados) {
-              // fallback: match by nombre
-              const entries = Object.values(window.perfilesCombinados);
-              perfilData = entries.find(e => e.nombre && e.nombre.toLowerCase() === (data.perfilNombre||'').toLowerCase());
+          if (perfilData) {
+            // 1. Poblar Textos e Imágenes
+            document.querySelectorAll('.perfil-nombre-repeat').forEach(el => el.textContent = perfilData.nombre);
+            document.getElementById('perfil-frase').textContent = perfilData.frase;
+            document.getElementById('perfil-descripcion').textContent = perfilData.descripcion;
+            document.getElementById('perfil-imagen').src = perfilData.imagen;
+            
+            document.getElementById('tipo-titulo').textContent = perfilData.creatividadTipo[0];
+            document.getElementById('tipo-desc').textContent = perfilData.creatividadTipo[1];
+            document.getElementById('sistema-titulo').textContent = perfilData.sistemaTipo[0];
+            document.getElementById('sistema-desc').textContent = perfilData.sistemaTipo[1];
+
+            const populateList = (id, items) => {
+              const el = document.getElementById(id);
+              if (!el) return;
+              el.innerHTML = '';
+              (items || []).forEach(text => {
+                const li = document.createElement('li');
+                li.textContent = text;
+                el.appendChild(li);
+              });
+            };
+            populateList('capacidades-list', perfilData.capacidades);
+            populateList('fortalezas-list', perfilData.generaciónIdeas || perfilData.generacionIdeas);
+            populateList('brechas-list', perfilData.programasRecomendados);
+
+            // 2. Poblar Dashboard Summary
+            const mScore = data.results.madurez || 0;
+            document.getElementById('res-madurez-score').textContent = mScore.toFixed(1);
+            
+            let madurezTitle = 'Nivel Inicial';
+            let madurezDesc = 'Tu organización está comenzando a estructurar sus procesos de innovación.';
+            if (mScore >= 3.8) {
+              madurezTitle = 'Nivel Líder';
+              madurezDesc = 'La innovación es un motor estratégico maduro con procesos optimizados y resultados consistentes.';
+            } else if (mScore >= 2.5) {
+              madurezTitle = 'Nivel en Desarrollo';
+              madurezDesc = 'Se han implementado estructuras básicas y hay un compromiso creciente.';
             }
-            if (perfilData) {
-              // perfil
-              if (perfilData.imagen) {
-                const img = document.getElementById('perfil-imagen');
-                img.src = perfilData.imagen;
-                img.style.display = '';
+            document.getElementById('res-madurez-title').textContent = madurezTitle;
+            document.getElementById('res-madurez-desc').textContent = madurezDesc;
+
+            document.getElementById('res-arquetipo-title').textContent = perfilData.creatividadTipo[0];
+            document.getElementById('res-arquetipo-desc').textContent = perfilData.creatividadTipo[1].split('.')[0] + '.';
+            document.getElementById('res-afinidad-title').textContent = perfilData.sistemaTipo[0];
+            document.getElementById('res-afinidad-desc').textContent = perfilData.sistemaTipo[1].split('.')[0] + '.';
+
+            // 3. Gráfico Fijo: Ranking de Perfiles (Lollipop)
+            const profileRanking = Object.keys(window.perfilesCombinados).map(key => {
+              const p = key.split('_');
+              return { label: window.perfilesCombinados[key].nombre, value: Number(scores.creativity[p[0]] || 0) + Number(scores.system[p[1]] || 0) };
+            }).sort((a, b) => b.value - a.value).slice(0, 4);
+
+            new Chart(document.getElementById('radar-profiles-canvas'), {
+              type: 'bar',
+              data: {
+                labels: profileRanking.map(d => d.label),
+                datasets: [{
+                  data: profileRanking.map(d => d.value),
+                  backgroundColor: profileRanking.map((_, i) => `rgba(203, 12, 159, ${i===0?1:i===1?0.5:i===2?0.15:0})`),
+                  borderRadius: 50, barThickness: 12
+                }]
+              },
+              options: {
+                indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+                plugins: { legend: { display: false }, tooltip: { enabled: true, filter: (item) => item.index < 3 } },
+                scales: { x: { display: false }, y: { grid: { display: false }, ticks: { callback: (v, i) => i === 0 ? profileRanking[i].label : i < 3 ? '?' : '' } } }
               }
-              const perfilNombre = perfilData.nombre || data.perfilNombre || '';
-              // set all places that should show the perfil name
-              document.querySelectorAll('.perfil-nombre-repeat').forEach(el => { el.textContent = perfilNombre; });
-              document.getElementById('perfil-frase').textContent = perfilData.frase || '';
-              document.getElementById('perfil-descripcion').textContent = perfilData.descripcion || data.perfilDescripcion || '';
+            });
 
-              // tipo
-              if (Array.isArray(perfilData.creatividadTipo)) {
-                document.getElementById('tipo-titulo').textContent = perfilData.creatividadTipo[0] || '';
-                document.getElementById('tipo-desc').textContent = perfilData.creatividadTipo[1] || '';
-              }
-
-              // sistema
-              if (Array.isArray(perfilData.sistemaTipo)) {
-                document.getElementById('sistema-titulo').textContent = perfilData.sistemaTipo[0] || '';
-                document.getElementById('sistema-desc').textContent = perfilData.sistemaTipo[1] || '';
-              }
-
-              // capacidades
-              const capList = document.getElementById('capacidades-list');
-              capList.innerHTML = '';
-              (perfilData.capacidades || []).forEach(item => { const li = document.createElement('li'); li.textContent = item; capList.appendChild(li); });
-
-              // generación de ideas
-              const genList = document.getElementById('ideas-list');
-              genList.innerHTML = '';
-              (perfilData.generaciónIdeas || perfilData.generacionIdeas || []).forEach(item => { const li = document.createElement('li'); li.textContent = item; genList.appendChild(li); });
-
-              // programas
-              const progList = document.getElementById('programas-list');
-              progList.innerHTML = '';
-              (perfilData.programasRecomendados || []).forEach(item => { const li = document.createElement('li'); li.textContent = item; progList.appendChild(li); });
-            }
-          } catch (e) { console.warn('Failed populating perfil data:', e); }
-
-            // draw single radar with 12 profile scores (no axis labels; show name on hover)
-            try {
-              const canvas = document.getElementById('radar-profiles-canvas');
-              if (canvas && window.perfilesCombinados && data.results && data.results.scores) {
-                const scores = data.results.scores;
-                const creativityScores = scores.creativity || {};
-                const systemScores = scores.system || {};
-                const comboKeys = Object.keys(window.perfilesCombinados || {});
-                const labels = [];
-                const values = [];
-                comboKeys.forEach(key => {
-                  const parts = key.split('_');
-                  const cKey = parts[0];
-                  const sKey = parts[1];
-                  const cVal = (creativityScores[cKey] != null) ? Number(creativityScores[cKey]) : 0;
-                  const sVal = (systemScores[sKey] != null) ? Number(systemScores[sKey]) : 0;
-                  const total = cVal + sVal;
-                  const perfilObj = window.perfilesCombinados[key] || {};
-                  labels.push(perfilObj.nombre || key);
-                  values.push(total);
-                });
-
-                const ctx = canvas.getContext('2d');
-                const w = canvas.width; const h = canvas.height; ctx.clearRect(0,0,w,h); ctx.fillStyle='#fff'; ctx.fillRect(0,0,w,h);
-                const cx = w/2, cy = h/2; const margin = 80; const radius = Math.min(w,h)/2 - margin; const n = labels.length || 1; const angleStep = (Math.PI*2)/n;
-                // compute theoretical maximums from quizData so radar limit equals max possible profile score
-                function computeMaxPossibleScores(quizData){
-                  const maxCreat = {}; const maxSys = {};
-                  if (!quizData || !Array.isArray(quizData.preguntas)) return {creativity: maxCreat, system: maxSys};
-                  quizData.preguntas.forEach(section => {
-                    (section.preguntas || []).forEach(q => {
-                      if (!q.scoring) return;
-                      // creatividad
-                      if (q.scoring.creatividad) {
-                        Object.keys(q.scoring.creatividad).forEach(type => {
-                          if (!maxCreat[type]) maxCreat[type] = 0;
-                          if (q.tipo === 'seleccion') {
-                            const arr = q.scoring.creatividad[type] || [];
-                            const mx = arr.length ? Math.max.apply(null, arr.map(n=>Number(n)||0)) : 0;
-                            maxCreat[type] += mx;
-                          } else if (q.tipo === 'ordenamiento') {
-                            const itemScores = q.scoring.creatividad[type] || {};
-                            const vals = Object.keys(itemScores).map(k => Number(itemScores[k])||0);
-                            const mx = vals.length ? Math.max.apply(null, vals) : 0;
-                            // ordering allows a max weight of 1 for the top item
-                            maxCreat[type] += mx;
-                          }
-                        });
-                      }
-                      // sistema
-                      if (q.scoring.sistema) {
-                        Object.keys(q.scoring.sistema).forEach(type => {
-                          if (!maxSys[type]) maxSys[type] = 0;
-                          if (q.tipo === 'seleccion') {
-                            const arr = q.scoring.sistema[type] || [];
-                            const mx = arr.length ? Math.max.apply(null, arr.map(n=>Number(n)||0)) : 0;
-                            maxSys[type] += mx;
-                          } else if (q.tipo === 'ordenamiento') {
-                            const itemScores = q.scoring.sistema[type] || {};
-                            const vals = Object.keys(itemScores).map(k => Number(itemScores[k])||0);
-                            const mx = vals.length ? Math.max.apply(null, vals) : 0;
-                            maxSys[type] += mx;
-                          }
-                        });
-                      }
-                    });
-                  });
-                  return {creativity: maxCreat, system: maxSys};
-                }
-                const all = values.map(Number).filter(n=>!isNaN(n)); const rawMax = all.length ? Math.max(...all) : 1;
-                const maxPossible = computeMaxPossibleScores(window.quizData || window.quizData);
-                // compute per-profile theoretical max and use the global maximum as radar limit
-                const profileMaxes = comboKeys.map(key => {
-                  const parts = key.split('_'); const cKey = parts[0]; const sKey = parts[1];
-                  const mc = (maxPossible.creativity && maxPossible.creativity[cKey]) ? Number(maxPossible.creativity[cKey]) : 0;
-                  const ms = (maxPossible.system && maxPossible.system[sKey]) ? Number(maxPossible.system[sKey]) : 0;
-                  return mc + ms;
-                });
-                const profileMax = profileMaxes.length ? Math.max(...profileMaxes) : (rawMax + 10);
-                // add 10% padding for visual breathing room
-                const maxVal = Math.ceil((profileMax || (rawMax + 10)) * 1.10);
-
-                // draw grid
-                const levels = 4; ctx.strokeStyle='#ddd'; ctx.lineWidth=1;
-                for (let lvl=1; lvl<=levels; lvl++){
-                  const r = radius * (lvl/levels);
-                  ctx.beginPath();
-                  for (let i=0;i<n;i++){
-                    const a = -Math.PI/2 + i*angleStep;
-                    const x = cx + r * Math.cos(a);
-                    const y = cy + r * Math.sin(a);
-                    if (i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+            // 4. Gráfico Fijo: Radar de Arquetipos
+            new Chart(document.getElementById('radar-archetype-fixed'), {
+              type: 'radar',
+              data: {
+                labels: ['Responsiva', 'Esperada', 'Contributiva', 'Proactiva'],
+                datasets: [{
+                  data: [scores.creativity.responsiva, scores.creativity.esperada, scores.creativity.contributiva, scores.creativity.proactiva],
+                  backgroundColor: 'rgba(203, 12, 159, 0.2)', borderColor: 'rgba(203, 12, 159)', borderWidth: 3
+                }],
+              },
+              options: { 
+                responsive: true, 
+                maintainAspectRatio: false, 
+                plugins: { legend: { display: false } },
+                scales: {
+                  r: {
+                    ticks: { display: false }
                   }
-                  ctx.closePath(); ctx.stroke();
                 }
-
-                // draw axes (no labels)
-                ctx.strokeStyle='#f5f5f5';
-                for (let i=0;i<n;i++){
-                  const a = -Math.PI/2 + i*angleStep;
-                  const x = cx + radius * Math.cos(a);
-                  const y = cy + radius * Math.sin(a);
-                  ctx.beginPath(); ctx.moveTo(cx,cy); ctx.lineTo(x,y); ctx.stroke();
-                }
-
-                // compute points for hover
-                const radarPoints = [];
-                for (let i=0;i<n;i++){
-                  const v = (values[i] != null) ? Number(values[i]) : 0;
-                  const r = maxVal ? (v/maxVal)*radius : 0;
-                  const a = -Math.PI/2 + i*angleStep;
-                  const x = cx + r*Math.cos(a);
-                  const y = cy + r*Math.sin(a);
-                  radarPoints.push({x, y, label: labels[i], value: v});
-                }
-
-                // polygon
-                ctx.beginPath();
-                for (let i=0;i<n;i++){
-                  const p = radarPoints[i];
-                  if (i===0) ctx.moveTo(p.x,p.y); else ctx.lineTo(p.x,p.y);
-                }
-                ctx.closePath(); ctx.strokeStyle='#007bff'; ctx.lineWidth=2; ctx.stroke(); ctx.fillStyle='#007bff'; ctx.globalAlpha=0.14; ctx.fill(); ctx.globalAlpha=1;
-
-                // points and numeric values
-                for (let i=0;i<n;i++){
-                  const p = radarPoints[i];
-                  ctx.beginPath(); ctx.fillStyle='#007bff'; ctx.arc(p.x,p.y,4,0,Math.PI*2); ctx.fill();
-                  ctx.fillStyle='#111'; ctx.font='11px sans-serif'; ctx.textAlign='center'; ctx.fillText(String(p.value), p.x, p.y - 8);
-                }
-
-                // tooltip element
-                let tooltip = document.getElementById('radar-tooltip');
-                if (!tooltip) {
-                  tooltip = document.createElement('div');
-                  tooltip.id = 'radar-tooltip';
-                  tooltip.style.position = 'absolute';
-                  tooltip.style.pointerEvents = 'none';
-                  tooltip.style.padding = '6px 8px';
-                  tooltip.style.background = 'rgba(0,0,0,0.78)';
-                  tooltip.style.color = '#fff';
-                  tooltip.style.borderRadius = '4px';
-                  tooltip.style.fontSize = '13px';
-                  tooltip.style.transition = 'opacity 120ms ease';
-                  tooltip.style.opacity = '0';
-                  tooltip.style.zIndex = 9999;
-                  document.body.appendChild(tooltip);
-                }
-
-                function showTooltip(text, clientX, clientY){
-                  tooltip.textContent = text;
-                  const pad = 10;
-                  // convert viewport (clientX/Y) to document coordinates so absolute positioning is correct
-                  const docLeft = (window.scrollX || window.pageXOffset || 0) + clientX + pad;
-                  const docTop = (window.scrollY || window.pageYOffset || 0) + clientY + pad;
-                  tooltip.style.left = docLeft + 'px';
-                  tooltip.style.top = docTop + 'px';
-                  tooltip.style.opacity = '1';
-                }
-                function hideTooltip(){ tooltip.style.opacity = '0'; }
-
-                // hit testing on mousemove
-                function getMousePos(evt){
-                  const rect = canvas.getBoundingClientRect();
-                  return { x: (evt.clientX - rect.left) * (canvas.width / rect.width), y: (evt.clientY - rect.top) * (canvas.height / rect.height), clientX: evt.clientX, clientY: evt.clientY };
-                }
-
-                canvas.addEventListener('mousemove', function(evt){
-                  // use client-space hit testing for reliability when canvas is scaled
-                  const rect = canvas.getBoundingClientRect();
-                  let found = null;
-                  const thresholdClient = 12; // px in screen coords
-                  for (let i=0;i<radarPoints.length;i++){
-                    const p = radarPoints[i];
-                    const pointClientX = rect.left + (p.x * (rect.width / canvas.width));
-                    const pointClientY = rect.top + (p.y * (rect.height / canvas.height));
-                    const dx = evt.clientX - pointClientX; const dy = evt.clientY - pointClientY; const dist = Math.sqrt(dx*dx + dy*dy);
-                    if (dist <= thresholdClient){ found = {point: p, clientX: pointClientX, clientY: pointClientY}; break; }
-                  }
-                  if (found){
-                    // show tooltip near the graph point (use point client coords)
-                    showTooltip(found.point.label + ' — ' + found.point.value, found.clientX, found.clientY);
-                    // optional debug
-                    if (window && window.console && console.debug) console.debug('radar hover', found.point.label, found.point.value);
-                  } else {
-                    hideTooltip();
-                  }
-                });
-                canvas.addEventListener('mouseleave', function(){ hideTooltip(); });
               }
-            } catch(e){ console.warn('Failed drawing profiles radar:', e); }
+            });
 
+            // 5. Gráfico Fijo: Foco de Innovación (Lollipop)
+            new Chart(document.getElementById('chart-foco-fixed'), {
+              type: 'bar',
+              data: {
+                labels: ['Mercadeo', 'Talento', 'I+D'],
+                datasets: [{
+                  data: [scores.system.mercadeo, scores.system.talento, scores.system.id],
+                  backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'], borderRadius: 50, barThickness: 15
+                }]
+              },
+              options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+            });
+
+            // 6. Gráfico Fijo: Madurez (Gauge)
+            const gaugeNeedle = {
+              id: 'gaugeNeedle',
+              afterDatasetDraw(chart) {
+                const { ctx, data, chartArea: { left, width, bottom, height } } = chart;
+                ctx.save();
+                const needleValue = data.datasets[0].needleValue;
+                const angle = Math.PI + (1 / 5 * needleValue * Math.PI);
+                const cx = width / 2 + left; const cy = bottom;
+                ctx.translate(cx, cy); ctx.rotate(angle); ctx.beginPath(); ctx.moveTo(0, -3); ctx.lineTo(height * 1.1, 0); ctx.lineTo(0, 3);
+                ctx.fillStyle = '#444'; ctx.fill(); ctx.rotate(-angle); ctx.translate(-cx, -cy);
+                ctx.beginPath(); ctx.arc(cx, cy, 8, 0, Math.PI * 2); ctx.fill(); ctx.restore();
+              }
+            };
+            new Chart(document.getElementById('chart-madurez-fixed'), {
+              type: 'doughnut',
+              data: {
+                datasets: [{
+                  data: [2.4, 1.3, 1.3],
+                  backgroundColor: ['#e74a3b', '#f6c23e', '#1cc88a'],
+                  needleValue: mScore, circumference: 180, rotation: 270, cutout: '75%'
+                }]
+              },
+              options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } },
+              plugins: [gaugeNeedle]
+            });
+          }
         } catch (e) {
           console.warn('Failed to read quiz_result:', e);
         }
 
-        document.getElementById('clear-btn').addEventListener('click', function(){
+        const clearBtn = document.getElementById('clear-btn');
+        if (clearBtn) clearBtn.addEventListener('click', function(){
           try { localStorage.removeItem('quiz_result'); } catch(e) { /* ignore */ }
           try { sessionStorage.removeItem('quiz_result'); } catch(e) { /* ignore */ }
           location.href = 'quiz.html';

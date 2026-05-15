@@ -124,7 +124,8 @@ function displayQuestion() {
   container.innerHTML = '';
   if (currentSortable) { currentSortable.destroy(); currentSortable = null; }
 
-  if (question.tipo === 'seleccion') {
+  const qType = question.tipo || 'seleccion';
+  if (qType === 'seleccion') {
     const questionTitle = document.createElement('h4');
     questionTitle.className = 'mb-4 text-dark';
     questionTitle.textContent = question.pregunta;
@@ -133,12 +134,12 @@ function displayQuestion() {
     question.opciones.forEach((opt, idx) => {
       const btn = document.createElement('button');
       btn.className = 'btn btn-outline-dark btn-lg w-100 mb-3';
-      btn.textContent = opt;
+      btn.textContent = typeof opt === 'object' ? opt.texto : opt;
       btn.onclick = () => selectOption(question.id, idx);
       if (answers[question.id] === idx) btn.classList.add('active');
       container.appendChild(btn);
     });
-  } else if (question.tipo === 'ordenamiento') {
+  } else if (qType === 'ordenamiento') {
     const questionTitle = document.createElement('h4');
     questionTitle.className = 'mb-4';
     questionTitle.textContent = question.pregunta;
@@ -199,11 +200,37 @@ function validateCurrentAnswer() {
 function calculateResults() {
   const creativityScores = { responsiva: 0, esperada: 0, contributiva: 0, proactiva: 0 };
   const systemScores = { mercadeo: 0, talento: 0, id: 0 };
+  let totalMadurez = 0;
+  let madurezQuestions = 0;
 
   allQuestions.forEach(question => {
-    const answer = answers[question.id];
-    if (answer === undefined) return;
-    if (question.scoring) {
+    const answerIndex = answers[question.id];
+    if (answerIndex === undefined) return;
+
+    // Nueva logica para formato de pesos en opciones (quiz-data-es.js)
+    if (question.opciones && typeof question.opciones[answerIndex] === 'object') {
+      const pesos = question.opciones[answerIndex].pesos || {};
+      
+      // Afinidades (Sistema)
+      if (pesos.mkt) systemScores.mercadeo += pesos.mkt;
+      if (pesos.tal) systemScores.talento += pesos.tal;
+      if (pesos.id) systemScores.id += pesos.id;
+
+      // Arquetipos (Creatividad)
+      if (pesos.resp) creativityScores.responsiva += pesos.resp;
+      if (pesos.esp) creativityScores.esperada += pesos.esp;
+      if (pesos.cont) creativityScores.contributiva += pesos.cont;
+      if (pesos.pro) creativityScores.proactiva += pesos.pro;
+
+      // Madurez
+      if (pesos.madurez !== undefined) {
+        totalMadurez += pesos.madurez;
+        madurezQuestions++;
+      }
+    } 
+    // Compatibilidad con formato antiguo de scoring (quiz-data-en.js)
+    else if (question.scoring) {
+      const answer = answers[question.id];
       if (question.scoring.creatividad) {
         if (question.tipo === 'seleccion') {
           Object.keys(question.scoring.creatividad).forEach(type => {
@@ -253,10 +280,12 @@ function calculateResults() {
 
   const dominantCreativity = Object.keys(roundedCreativity).reduce((a, b) => roundedCreativity[a] > roundedCreativity[b] ? a : b);
   const dominantSystem = Object.keys(roundedSystem).reduce((a, b) => roundedSystem[a] > roundedSystem[b] ? a : b);
+  const maturityLevel = madurezQuestions > 0 ? Math.round((totalMadurez / madurezQuestions) * 10) / 10 : 0;
 
   return {
     creativity: dominantCreativity,
     system: dominantSystem,
+    madurez: maturityLevel,
     scores: { creativity: roundedCreativity, system: roundedSystem }
   };
 }
@@ -328,7 +357,7 @@ async function submitResultsAndRedirect() {
     await sendToBaserow(name, company, email, role, perfil.nombre, results);
   } catch (e) { console.warn('Baserow submission failed:', e); }
 
-  const payload = { perfilNombre: perfil.nombre, perfilDescripcion: perfil.descripcion, results: results };
+  const payload = { perfilNombre: perfil.nombre, perfilDescripcion: perfil.descripcion, results: results, madurez: results.madurez };
   try { localStorage.setItem('quiz_result', JSON.stringify(payload)); } catch (e) { console.warn('Failed saving quiz result to localStorage:', e); }
   try { sessionStorage.setItem('quiz_result', JSON.stringify(payload)); } catch (e) { /* ignore */ }
 
@@ -360,7 +389,8 @@ async function sendToBaserow(name, company, email, role, creativityName, results
     role: role,
     creativity_type: creativityName || '',
     creativity_scores: JSON.stringify(results.scores.creativity || {}),
-    system_scores: JSON.stringify(results.scores.system || {})
+    system_scores: JSON.stringify(results.scores.system || {}),
+    maturity: results.madurez || 0
   };
   
   // Check if user exists

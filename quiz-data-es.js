@@ -1,439 +1,253 @@
-// Spanish quiz data (defines `quizData` and `perfilesCombinados` used by quiz-core.js)
+/**
+
+MOTOR DE DIAGNÓSTICO DE INNOVACIÓN - VERSIÓN CONSULTORÍA
+
+Estructura: 20 preguntas situacionales de selección única.
+
+Sistema de Puntuación: Cada opción impacta en múltiples dimensiones:
+
+Afinidades: Mercadeo (mkt), Talento (tal), I+D (id)
+
+Arquetipos de Unsworth: Responsivo (resp), Esperado (esp), Contributivo (cont), Proactivo (pro)
+
+Nivel de Madurez: Escala 1-5 basada en procesos organizacionales.
+*/
+
+
 window.quizData = {
+
   "preguntas": [
     {
       "seccion": 1,
-      "titulo": "Motivación para la Creatividad",
+      "titulo": "Estrategia y Origen de la Innovación",
       "preguntas": [
         {
           "id": 1,
-          "tipo": "seleccion",
-          "pregunta": "¿En su organización, las ideas surgen más por retos del entorno o por iniciativa interna?",
+          "pregunta": "Ante una tecnología disruptiva en el sector, la reacción natural de la empresa es:",
           "opciones": [
-            "Solo por retos externos",
-            "Más por retos externos",
-            "Más por iniciativa interna",
-            "Solo por iniciativa interna"
-          ],
-          "categoria": "motivacion",
-          "scoring": {
-            "creatividad": {
-              "responsiva": [3, 2, 1, 0],
-              "esperada": [2, 3, 1, 0],
-              "contributiva": [1, 1, 2, 3],
-              "proactiva": [0, 1, 2, 3]
-            }
-          }
+            { "texto": "Esperar a que los clientes la pidan formalmente", "pesos": { "mkt": 5, "resp": 5, "madurez": 1 } },
+            { "texto": "Consultar con el equipo interno sobre el impacto operativo", "pesos": { "tal": 5, "esp": 4, "madurez": 2 } },
+            { "texto": "Estudiar los fundamentos técnicos para buscar exclusividad", "pesos": { "id": 5, "pro": 5, "madurez": 4 } },
+            { "texto": "Prototipar un nuevo modelo de negocio basado en ella", "pesos": { "mkt": 4, "pro": 5, "madurez": 5 } }
+          ]
         },
         {
           "id": 2,
-          "tipo": "ordenamiento",
-          "pregunta": "Arrastra para ordenar de mayor a menor importancia las fuentes de ideas en tu empresa:",
-          "items": [
-            "Feedback de clientes",
-            "Iniciativas de empleados",
-            "Investigación de mercado",
-            "Análisis de competencia",
-            "Colaboraciones externas"
-          ],
-          "categoria": "fuentes_ideas",
-          "scoring": {
-            "creatividad": {
-              "responsiva": {"Feedback de clientes": 3, "Análisis de competencia": 2},
-              "esperada": {"Investigación de mercado": 3, "Feedback de clientes": 2},
-              "contributiva": {"Iniciativas de empleados": 3, "Colaboraciones externas": 2},
-              "proactiva": {"Iniciativas de empleados": 3, "Colaboraciones externas": 3}
-            },
-            "sistema": {
-              "mercadeo": {"Feedback de clientes": 3, "Investigación de mercado": 2},
-              "talento": {"Iniciativas de empleados": 3, "Colaboraciones externas": 2},
-              "id": {"Análisis de competencia": 2, "Colaboraciones externas": 3}
-            }
-          }
+          "pregunta": "¿De dónde vienen las mejores ideas que se han implementado con éxito?",
+          "opciones": [
+            { "texto": "Del feedback directo y solicitudes de clientes", "pesos": { "mkt": 5, "resp": 5, "madurez": 2 } },
+            { "texto": "De las sugerencias espontáneas de los empleados", "pesos": { "tal": 5, "cont": 5, "madurez": 1 } },
+            { "texto": "De laboratorios o vigilancia tecnológica", "pesos": { "id": 5, "pro": 5, "madurez": 4 } },
+            { "texto": "De un análisis estratégico de tendencias futuras", "pesos": { "esp": 5, "pro": 4, "madurez": 5 } }
+          ]
         },
         {
           "id": 3,
-          "tipo": "seleccion",
-          "pregunta": "¿Cómo describiría el origen de las mejores ideas en su organización?",
+          "pregunta": "El presupuesto de innovación se asigna basándose en:",
           "opciones": [
-            "Surgen de presiones externas",
-            "Emergen de problemas específicos",
-            "Nacen de curiosidad interna",
-            "Aparecen espontáneamente"
-          ],
-          "categoria": "origen_ideas",
-          "scoring": {
-            "creatividad": {
-              "responsiva": [3, 2, 1, 0],
-              "esperada": [2, 3, 1, 1],
-              "contributiva": [1, 2, 3, 2],
-              "proactiva": [0, 1, 2, 3]
-            }
-          }
+            { "texto": "Emergencias cuando surge una oportunidad comercial", "pesos": { "mkt": 5, "resp": 5, "madurez": 1 } },
+            { "texto": "Programas de formación e incentivos al personal", "pesos": { "tal": 5, "cont": 5, "madurez": 3 } },
+            { "texto": "Activos técnicos, software o investigación aplicada", "pesos": { "id": 5, "pro": 5, "madurez": 4 } },
+            { "texto": "Una partida fija anual alineada al plan maestro", "pesos": { "esp": 5, "madurez": 5 } }
+          ]
         },
         {
           "id": 4,
-          "tipo": "seleccion",
-          "pregunta": "¿Qué motiva más la generación de ideas en su equipo?",
+          "pregunta": "¿Qué sucede con las ideas que no generan ROI en los primeros meses?",
           "opciones": [
-            "Cumplir objetivos asignados",
-            "Resolver problemas urgentes",
-            "Mejorar procesos existentes",
-            "Explorar nuevas oportunidades"
-          ],
-          "categoria": "motivacion_equipo",
-          "scoring": {
-            "creatividad": {
-              "responsiva": [3, 2, 1, 0],
-              "esperada": [2, 3, 2, 1],
-              "contributiva": [1, 2, 3, 2],
-              "proactiva": [0, 1, 2, 3]
-            }
-          }
-        },
-        {
-          "id": 5,
-          "tipo": "ordenamiento",
-          "pregunta": "Ordena según la frecuencia con que ocurren en tu organización:",
-          "items": [
-            "Ideas por demanda del mercado",
-            "Ideas por iniciativa personal",
-            "Ideas por problemas operativos",
-            "Ideas por exploración libre",
-            "Ideas por competencia"
-          ],
-          "categoria": "frecuencia_ideas",
-          "scoring": {
-            "creatividad": {
-              "responsiva": {"Ideas por demanda del mercado": 3, "Ideas por competencia": 2},
-              "esperada": {"Ideas por problemas operativos": 3, "Ideas por demanda del mercado": 2},
-              "contributiva": {"Ideas por iniciativa personal": 3, "Ideas por problemas operativos": 2},
-              "proactiva": {"Ideas por exploración libre": 3, "Ideas por iniciativa personal": 3}
-            }
-          }
+            { "texto": "Se descartan de inmediato para no perder enfoque", "pesos": { "mkt": 5, "resp": 5, "madurez": 2 } },
+            { "texto": "Se mantienen si el equipo está muy comprometido", "pesos": { "tal": 5, "cont": 5, "madurez": 2 } },
+            { "texto": "Se analizan como aprendizaje para el I+D", "pesos": { "id": 5, "pro": 5, "madurez": 4 } },
+            { "texto": "Se evalúan según los hitos del plan original", "pesos": { "esp": 5, "madurez": 5 } }
+          ]
         }
       ]
     },
     {
       "seccion": 2,
-      "titulo": "Naturaleza de los Problemas",
+      "titulo": "Procesos y Gestión Operativa",
       "preguntas": [
         {
-          "id": 6,
-          "tipo": "seleccion",
-          "pregunta": "¿Cómo prefiere su organización abordar los desafíos?",
+          "id": 5,
+          "pregunta": "La principal fuente de datos para decidir qué innovar es:",
           "opciones": [
-            "Con metodologías probadas",
-            "Con enfoques estructurados",
-            "Con exploración creativa",
-            "Con experimentación libre"
-          ],
-          "categoria": "abordaje_problemas",
-          "scoring": {
-            "creatividad": {
-              "responsiva": [3, 2, 1, 0],
-              "esperada": [2, 3, 2, 1],
-              "contributiva": [2, 2, 3, 2],
-              "proactiva": [1, 1, 2, 3]
-            }
-          }
+            { "texto": "Movimientos de la competencia y precios de mercado", "pesos": { "mkt": 5, "resp": 5, "madurez": 2 } },
+            { "texto": "Encuestas de clima y dolores del equipo interno", "pesos": { "tal": 5, "cont": 5, "madurez": 2 } },
+            { "texto": "Publicaciones científicas y vigilancia de patentes", "pesos": { "id": 5, "pro": 5, "madurez": 4 } },
+            { "texto": "El plan estratégico definido a largo plazo", "pesos": { "esp": 5, "madurez": 5 } }
+          ]
+        },
+        {
+          "id": 6,
+          "pregunta": "¿Cómo es el proceso de filtrado de ideas (funnel)?",
+          "opciones": [
+            { "texto": "Informal; sobrevive la idea que el jefe comercial apoya", "pesos": { "mkt": 5, "resp": 5, "madurez": 1 } },
+            { "texto": "Democrático; los equipos votan las mejores", "pesos": { "tal": 5, "cont": 5, "madurez": 3 } },
+            { "texto": "Técnico; basado en pruebas de concepto y laboratorio", "pesos": { "id": 5, "pro": 5, "madurez": 4 } },
+            { "texto": "Sistémico; con etapas claras (Stage-Gate)", "pesos": { "esp": 5, "madurez": 5 } }
+          ]
         },
         {
           "id": 7,
-          "tipo": "seleccion",
-          "pregunta": "¿Qué tipo de problemas motiva más a su equipo?",
+          "pregunta": "Ante un fallo en un experimento, la empresa:",
           "opciones": [
-            "Problemas claramente definidos",
-            "Desafíos con soluciones conocidas",
-            "Situaciones que requieren creatividad",
-            "Problemas completamente abiertos"
-          ],
-          "categoria": "tipo_problemas",
-          "scoring": {
-            "creatividad": {
-              "responsiva": [3, 2, 1, 0],
-              "esperada": [2, 2, 3, 1],
-              "contributiva": [3, 2, 2, 1],
-              "proactiva": [1, 1, 2, 3]
-            }
-          }
+            { "texto": "Se preocupa por la imagen frente al cliente", "pesos": { "mkt": 5, "resp": 5, "madurez": 2 } },
+            { "texto": "Prioriza que el equipo no se desmotive", "pesos": { "tal": 5, "cont": 5, "madurez": 3 } },
+            { "texto": "Ajusta la hipótesis técnica con los datos obtenidos", "pesos": { "id": 5, "pro": 5, "madurez": 4 } },
+            { "texto": "Busca la falla en el proceso para evitar repetición", "pesos": { "esp": 5, "madurez": 5 } }
+          ]
         },
         {
           "id": 8,
-          "tipo": "ordenamiento",
-          "pregunta": "Ordena según el nivel de comodidad de tu equipo con estos tipos de desafíos:",
-          "items": [
-            "Problemas con solución única",
-            "Desafíos con múltiples soluciones",
-            "Situaciones ambiguas",
-            "Problemas sin precedentes",
-            "Desafíos exploratorios"
-          ],
-          "categoria": "comodidad_problemas",
-          "scoring": {
-            "creatividad": {
-              "responsiva": {"Problemas con solución única": 3, "Desafíos con múltiples soluciones": 2},
-              "esperada": {"Desafíos con múltiples soluciones": 3, "Situaciones ambiguas": 2},
-              "contributiva": {"Problemas con solución única": 2, "Desafíos con múltiples soluciones": 3},
-              "proactiva": {"Problemas sin precedentes": 3, "Desafíos exploratorios": 3}
-            }
-          }
-        },
-        {
-          "id": 9,
-          "tipo": "seleccion",
-          "pregunta": "¿Cómo reacciona su organización ante la incertidumbre?",
+          "pregunta": "¿Qué herramientas digitales utilizan para gestionar la innovación?",
           "opciones": [
-            "Busca claridad inmediata",
-            "Aplica métodos conocidos",
-            "Abraza la ambigüedad",
-            "Disfruta la exploración"
-          ],
-          "categoria": "reaccion_incertidumbre",
-          "scoring": {
-            "creatividad": {
-              "responsiva": [3, 2, 1, 0],
-              "esperada": [2, 3, 2, 1],
-              "contributiva": [2, 2, 3, 2],
-              "proactiva": [1, 1, 2, 3]
-            }
-          }
-        },
-        {
-          "id": 10,
-          "tipo": "seleccion",
-          "pregunta": "¿Qué define mejor los proyectos de innovación en su empresa?",
-          "opciones": [
-            "Objetivos claros y específicos",
-            "Mejoras incrementales",
-            "Exploración de posibilidades",
-            "Descubrimiento de oportunidades"
-          ],
-          "categoria": "definicion_proyectos",
-          "scoring": {
-            "creatividad": {
-              "responsiva": [3, 2, 1, 0],
-              "esperada": [2, 3, 2, 1],
-              "contributiva": [2, 2, 3, 2],
-              "proactiva": [1, 1, 2, 3]
-            }
-          }
+            { "texto": "CRM y herramientas de escucha de redes sociales", "pesos": { "mkt": 5, "resp": 4, "madurez": 3 } },
+            { "texto": "Plataformas de colaboración y buzón de sugerencias", "pesos": { "tal": 5, "cont": 5, "madurez": 2 } },
+            { "texto": "Software de simulación, diseño 3D o data science", "pesos": { "id": 5, "pro": 5, "madurez": 4 } },
+            { "texto": "Software de gestión de proyectos y hojas de ruta", "pesos": { "esp": 5, "madurez": 5 } }
+          ]
         }
       ]
     },
     {
-      "seccion": 3,
-      "titulo": "Sistema de Gestión",
+      "seccion": 3, 
+      "titulo": "Cultura Organizacional y Talento",
       "preguntas": [
         {
-          "id": 11,
-          "tipo": "seleccion",
-          "pregunta": "¿Cuál es el enfoque principal de su sistema de gestión de innovación?",
+          "id": 9,
+          "pregunta": "El principal incentivo para quien propone algo nuevo es:",
           "opciones": [
-            "Satisfacción del cliente",
-            "Desarrollo del talento",
-            "Investigación y desarrollo",
-            "Mejora de procesos"
-          ],
-          "categoria": "enfoque_sistema",
-          "scoring": {
-            "sistema": {
-              "mercadeo": [3, 1, 0, 2],
-              "talento": [2, 3, 1, 2],
-              "id": [1, 2, 3, 1]
-            }
-          }
+            { "texto": "Comisiones por ventas o bonos comerciales", "pesos": { "mkt": 5, "resp": 5, "madurez": 2 } },
+            { "texto": "Reconocimiento público y tiempo para crear", "pesos": { "tal": 5, "cont": 5, "madurez": 3 } },
+            { "texto": "Acceso a mejores herramientas o presupuesto técnico", "pesos": { "id": 5, "pro": 5, "madurez": 4 } },
+            { "texto": "Cumplir con su evaluación de desempeño anual", "pesos": { "esp": 5, "madurez": 5 } }
+          ]
+        },
+        {
+          "id": 10,
+          "pregunta": "¿Qué tan autónomos son los equipos para experimentar?",
+          "opciones": [
+            { "texto": "Baja; todo requiere aprobación comercial", "pesos": { "mkt": 5, "resp": 5, "madurez": 1 } },
+            { "texto": "Alta; se fomenta que cada quien pruebe sus ideas", "pesos": { "tal": 5, "cont": 5, "madurez": 2 } },
+            { "texto": "Técnica; libertad dentro de los límites del lab", "pesos": { "id": 5, "pro": 5, "madurez": 4 } },
+            { "texto": "Estructurada; según el marco de la estrategia", "pesos": { "esp": 5, "madurez": 5 } }
+          ]
+        },
+        {
+          "id": 11,
+          "pregunta": "La comunicación de la innovación busca principalmente:",
+          "opciones": [
+            { "texto": "Posicionarnos como líderes ante el mercado", "pesos": { "mkt": 5, "resp": 5, "madurez": 3 } },
+            { "texto": "Atraer y retener talento (Marca Empleadora)", "pesos": { "tal": 5, "cont": 5, "madurez": 3 } },
+            { "texto": "Compartir descubrimientos técnicos o patentes", "pesos": { "id": 5, "pro": 5, "madurez": 4 } },
+            { "texto": "Mantener informados a socios y accionistas", "pesos": { "esp": 5, "madurez": 5 } }
+          ]
         },
         {
           "id": 12,
-          "tipo": "ordenamiento",
-          "pregunta": "Ordena según la inversión actual de recursos en tu empresa:",
-          "items": [
-            "Marketing y ventas",
-            "Capacitación de personal",
-            "Investigación y desarrollo",
-            "Mejora de procesos",
-            "Tecnología e infraestructura"
-          ],
-          "categoria": "inversion_recursos",
-          "scoring": {
-            "sistema": {
-              "mercadeo": {"Marketing y ventas": 3, "Mejora de procesos": 2},
-              "talento": {"Capacitación de personal": 3, "Mejora de procesos": 2},
-              "id": {"Investigación y desarrollo": 3, "Tecnología e infraestructura": 2}
-            }
-          }
-        },
-        {
-          "id": 13,
-          "tipo": "seleccion",
-          "pregunta": "¿Cómo mide su organización el retorno de inversión en innovación?",
+          "pregunta": "¿Cómo se define el 'éxito' de una iniciativa de innovación?",
           "opciones": [
-            "Satisfacción del cliente",
-            "Productividad del equipo",
-            "Avances tecnológicos",
-            "Eficiencia operativa"
-          ],
-          "categoria": "medicion_roi",
-          "scoring": {
-            "sistema": {
-              "mercadeo": [3, 1, 0, 2],
-              "talento": [2, 3, 1, 2],
-              "id": [1, 2, 3, 1]
-            }
-          }
-        },
-        {
-          "id": 14,
-          "tipo": "ordenamiento",
-          "pregunta": "Ordena según prioridad en tu estrategia de innovación:",
-          "items": [
-            "Mejora de experiencia del cliente",
-            "Desarrollo de capacidades internas",
-            "Investigación de tecnologías emergentes",
-            "Optimización de procesos",
-            "Exploración de nuevos mercados"
-          ],
-          "categoria": "prioridad_estrategia",
-          "scoring": {
-            "sistema": {
-              "mercadeo": {"Mejora de experiencia del cliente": 3, "Exploración de nuevos mercados": 2},
-              "talento": {"Desarrollo de capacidades internas": 3, "Optimización de procesos": 2},
-              "id": {"Investigación de tecnologías emergentes": 3, "Exploración de nuevos mercados": 2}
-            }
-          }
-        },
-        {
-          "id": 15,
-          "tipo": "seleccion",
-          "pregunta": "¿Qué caracteriza mejor su proceso de evaluación de ideas?",
-          "opciones": [
-            "Impacto en el cliente",
-            "Participación del equipo",
-            "Potencial disruptivo",
-            "Viabilidad técnica"
-          ],
-          "categoria": "evaluacion_ideas",
-          "scoring": {
-            "sistema": {
-              "mercadeo": [3, 1, 2, 1],
-              "talento": [2, 3, 1, 2],
-              "id": [1, 2, 3, 2]
-            }
-          }
+            { "texto": "Por el incremento inmediato en ventas", "pesos": { "mkt": 5, "resp": 5, "madurez": 2 } },
+            { "texto": "Por la mejora en el compromiso de los empleados", "pesos": { "tal": 5, "cont": 5, "madurez": 3 } },
+            { "texto": "Por el avance tecnológico o registro de propiedad", "pesos": { "id": 5, "pro": 5, "madurez": 4 } },
+            { "texto": "Por el cumplimiento de los KPIs estratégicos", "pesos": { "esp": 5, "madurez": 5 } }
+          ]
         }
       ]
     },
     {
       "seccion": 4,
-      "titulo": "Cultura Organizacional",
+      "titulo": "Alianzas y Ecosistema Externo",
       "preguntas": [
         {
-          "id": 16,
-          "tipo": "seleccion",
-          "pregunta": "¿Cómo describe la cultura de innovación en su organización?",
+          "id": 13,
+          "pregunta": "¿Con quién prefiere aliarse la empresa para innovar?",
           "opciones": [
-            "Orientada al cliente",
-            "Centrada en las personas",
-            "Basada en investigación",
-            "Enfocada en mejora continua"
-          ],
-          "categoria": "cultura_innovacion",
-          "scoring": {
-            "sistema": {
-              "mercadeo": [3, 1, 0, 2],
-              "talento": [2, 3, 1, 2],
-              "id": [1, 2, 3, 1]
-            }
-          }
+            { "texto": "Con agencias de marketing o influencers", "pesos": { "mkt": 5, "resp": 4, "madurez": 3 } },
+            { "texto": "Con consultores de cultura o coaching", "pesos": { "tal": 5, "cont": 5, "madurez": 2 } },
+            { "texto": "Con universidades o centros de investigación", "pesos": { "id": 5, "pro": 5, "madurez": 4 } },
+            { "texto": "Con startups o socios de la cadena de valor", "pesos": { "esp": 5, "madurez": 5 } }
+          ]
         },
         {
+          "id": 14,
+          "pregunta": "¿Cómo perciben el riesgo en nuevos proyectos?",
+          "opciones": [
+            { "texto": "Como una amenaza a la reputación comercial", "pesos": { "mkt": 5, "resp": 5, "madurez": 2 } },
+            { "texto": "Como una oportunidad para aprender en equipo", "pesos": { "tal": 5, "cont": 5, "madurez": 3 } },
+            { "texto": "Como una variable técnica controlable", "pesos": { "id": 5, "pro": 5, "madurez": 4 } },
+            { "texto": "Como una inversión calculada en el portafolio", "pesos": { "esp": 5, "madurez": 5 } }
+          ]
+        },
+        {
+          "id": 15,
+          "pregunta": "La vigilancia tecnológica se realiza mayormente:",
+          "opciones": [
+            { "texto": "Observando lo que hace el líder del mercado", "pesos": { "mkt": 5, "resp": 5, "madurez": 2 } },
+            { "texto": "Escuchando ideas en conferencias y redes", "pesos": { "tal": 5, "cont": 5, "madurez": 3 } },
+            { "texto": "Mediante analítica de patentes y papers técnicos", "pesos": { "id": 5, "pro": 5, "madurez": 4 } },
+            { "texto": "A través de un comité de inteligencia competitiva", "pesos": { "esp": 5, "madurez": 5 } }
+          ]
+        },
+        {
+          "id": 16,
+          "pregunta": "¿Qué tan rápido se toman decisiones de inversión?",
+          "opciones": [
+            { "texto": "Muy rápido si hay presión del cliente", "pesos": { "mkt": 5, "resp": 5, "madurez": 1 } },
+            { "texto": "Depende del entusiasmo del líder del equipo", "pesos": { "tal": 5, "cont": 5, "madurez": 2 } },
+            { "texto": "Lento; requiere validación técnica exhaustiva", "pesos": { "id": 5, "pro": 5, "madurez": 4 } },
+            { "texto": "Según los ciclos de revisión estratégica", "pesos": { "esp": 5, "madurez": 5 } }
+          ]
+        }
+      ]
+    },
+    {
+      "seccion": 5,
+      "titulo": "Impacto y Visión de Futuro",
+      "preguntas": [
+        {
           "id": 17,
-          "tipo": "ordenamiento",
-          "pregunta": "Ordena según importancia en tu cultura organizacional:",
-          "items": [
-            "Orientación al cliente",
-            "Desarrollo del talento",
-            "Excelencia técnica",
-            "Eficiencia operativa",
-            "Innovación disruptiva"
-          ],
-          "categoria": "importancia_cultura",
-          "scoring": {
-            "sistema": {
-              "mercadeo": {"Orientación al cliente": 3, "Eficiencia operativa": 2},
-              "talento": {"Desarrollo del talento": 3, "Eficiencia operativa": 2},
-              "id": {"Excelencia técnica": 3, "Innovación disruptiva": 3}
-            }
-          }
+          "pregunta": "¿Cuál es la actitud ante la Propiedad Intelectual?",
+          "opciones": [
+            { "texto": "Se usa como herramienta de marketing", "pesos": { "mkt": 5, "resp": 4, "madurez": 3 } },
+            { "texto": "Se fomenta el 'Open Source' y co-creación", "pesos": { "tal": 5, "cont": 5, "madurez": 3 } },
+            { "texto": "Es vital patentar todo lo que sale del lab", "pesos": { "id": 5, "pro": 5, "madurez": 4 } },
+            { "texto": "Se gestiona según la política de activos", "pesos": { "esp": 5, "madurez": 5 } }
+          ]
         },
         {
           "id": 18,
-          "tipo": "seleccion",
-          "pregunta": "¿Qué valora más su organización en los empleados?",
+          "pregunta": "En las reuniones de dirección, la innovación se trata como:",
           "opciones": [
-            "Orientación al servicio",
-            "Colaboración y trabajo en equipo",
-            "Capacidades técnicas",
-            "Iniciativa e innovación"
-          ],
-          "categoria": "valores_empleados",
-          "scoring": {
-            "sistema": {
-              "mercadeo": [3, 2, 1, 2],
-              "talento": [2, 3, 2, 2],
-              "id": [1, 2, 3, 2]
-            }
-          }
+            { "texto": "Un tema de 'Otros asuntos' al final", "pesos": { "mkt": 5, "resp": 5, "madurez": 1 } },
+            { "texto": "Una historia de éxito de los equipos", "pesos": { "tal": 5, "cont": 5, "madurez": 3 } },
+            { "texto": "Un reporte técnico de avances y bloqueos", "pesos": { "id": 5, "pro": 5, "madurez": 4 } },
+            { "texto": "El primer punto de la agenda estratégica", "pesos": { "esp": 5, "madurez": 5 } }
+          ]
         },
         {
           "id": 19,
-          "tipo": "ordenamiento",
-          "pregunta": "Ordena según lo que más celebra tu organización:",
-          "items": [
-            "Logros en satisfacción del cliente",
-            "Éxitos en desarrollo de talento",
-            "Avances en investigación",
-            "Mejoras en procesos",
-            "Innovaciones disruptivas"
-          ],
-          "categoria": "celebraciones",
-          "scoring": {
-            "sistema": {
-              "mercadeo": {"Logros en satisfacción del cliente": 3, "Mejoras en procesos": 2},
-              "talento": {"Éxitos en desarrollo de talento": 3, "Mejoras en procesos": 2},
-              "id": {"Avances en investigación": 3, "Innovaciones disruptivas": 3}
-            }
-          }
+          "pregunta": "¿Qué impacto busca la empresa en la sociedad?",
+          "opciones": [
+            { "texto": "Ser reconocida como la marca favorita", "pesos": { "mkt": 5, "resp": 5, "madurez": 3 } },
+            { "texto": "Ser el mejor lugar para trabajar", "pesos": { "tal": 5, "cont": 5, "madurez": 3 } },
+            { "texto": "Resolver problemas técnicos complejos", "pesos": { "id": 5, "pro": 5, "madurez": 4 } },
+            { "texto": "Cumplir con un propósito superior definido", "pesos": { "esp": 5, "madurez": 5 } }
+          ]
         },
         {
           "id": 20,
-          "tipo": "seleccion",
-          "pregunta": "¿Qué mejor define el ADN de su empresa?",
+          "pregunta": "Si pudieras mejorar algo del sistema hoy, sería:",
           "opciones": [
-            "Obsesión por el cliente",
-            "Pasión por el desarrollo humano",
-            "Compromiso con la investigación",
-            "Búsqueda de la excelencia operativa"
-          ],
-          "categoria": "adn_empresa",
-          "scoring": {
-            "sistema": {
-              "mercadeo": [3, 1, 0, 2],
-              "talento": [2, 3, 1, 2],
-              "id": [1, 2, 3, 1]
-            }
-          }
+            { "texto": "Más presupuesto para marketing y ventas", "pesos": { "mkt": 5, "resp": 5, "madurez": 2 } },
+            { "texto": "Que la gente tuviera tiempo libre para crear", "pesos": { "tal": 5, "cont": 5, "madurez": 2 } },
+            { "texto": "Mejor tecnología y capacidades técnicas", "pesos": { "id": 5, "pro": 5, "madurez": 3 } },
+            { "texto": "Que el proceso fuera claro y profesionalizado", "pesos": { "esp": 5, "madurez": 5 } }
+          ]
         }
       ]
     }
-  ],
-  "creatividadTipos": {
-    "responsiva": { "nombre": "Responsiva", "descripcion": "Responde a problemas presentados externamente, generalmente con control limitado sobre la definición del problema." },
-    "esperada": { "nombre": "Esperada", "descripcion": "Aborda problemas abiertos definidos por metas externas; requiere exploración pero con expectativas externas claras." },
-    "contributiva": { "nombre": "Contributiva", "descripcion": "El empleado elige voluntariamente resolver problemas claros, usualmente para ayudar o colaborar." },
-    "proactiva": { "nombre": "Proactiva", "descripcion": "El empleado identifica y resuelve problemas no solicitados y abiertos, motivados por la iniciativa propia." }
-  }
+  ]
 };
 
 window.perfilesCombinados = {
