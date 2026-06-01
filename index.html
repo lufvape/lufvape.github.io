@@ -143,36 +143,30 @@ Coded by www.creative-tim.com
 <body class="index-page">
 
 
-<!-- -------- START HEADER 7 w/ card over right bg image ------- -->
-<header id="hero">
-  <div class="page-header min-vh-100">
-    <div class="position-absolute fixed-top ms-auto w-50 h-100 z-index-0 d-none d-sm-none d-md-block" style="background-image: url(./assets/img/IMG_3946.HEIC); background-size:cover;"></div>
+<!-- -------- START HEADER 9 w/ floating img and bg  ------- -->
+<header class="position-relative">
+  <div class="page-header min-vh-100" style="background-image: url('./assets/img/hero.png')">
+    <span class="mask bg-gradient-primary"></span>
     <div class="container">
       <div class="row">
-        <div class="col-lg-7 d-flex justify-content-center flex-column">
-          <div class="card card-body blur d-flex justify-content-center shadow-lg p-5 mt-5">
-            <a href="english.html" class="mb-lg-0 mb-2 mt-2 text-secondary"><i class="fa-solid fa-globe me-2"></i>English</a>
-            <h1 class="text-gradient text-primary">Entiende ISO 56000 de una vez por todas</h1>
-            <p class="lead pe-5 me-5">Y ejecuta actividades que sí funcionen de acuerdo a tu perfil creativo. </p>
-            <div class="row text-center">
-              <div class="col-lg-6 col-md-12">
-                <a href="#Programa" class="btn btn-lg mb-lg-0 mb-2 mx-4 bg-primary mt-2 text-white">
-                  <i class="fa-solid fa-graduation-cap me-2"></i> Curso 
-                </a>
-              </div>
-              <div class="col-lg-6 col-md-12">
-                <a href="#diy" class="btn btn-lg mb-lg-0 mb-2 mx-4 bg-primary mt-2 text-white">
-                  <i class="fa-solid fa-handshake me-2"></i> Asesoría
-                </a>
-              </div>
-            </div>
-          </div>
+        <div class="col-lg-12 text-center mx-auto mt-n7">
+          <a href="english.html" class="mb-lg-0 mb-2 mt-2 text-dark"><i class="fa-solid fa-globe me-2"></i>English</a>
+          <h1 class="text-gradient text-primary">Sincroniza la innovación con el ADN de tu equipo</h1>
+          <p class="lead mb-5 text-light">La mayoría de programas de innovación fracasan porque no entienden el perfil creativo de su organización. Descubre el tuyo y diseñemos juntos un sistema basado en tus fortalezas, para que innovar sea un hábito natural, no una tarea extra.</p>
+          <a href="quiz.html" class="btn btn-lg btn-light mt-2">Conocer mi perfil creativo</a>
         </div>
       </div>
     </div>
   </div>
+  <div class="position-relative overflow-hidden" style="height:36px;margin-top:-35px;">
+    <div class="w-full absolute bottom-0 start-0 end-0" style="transform: scale(2);transform-origin: top center;color: #fff;">
+      <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+      </svg>
+    </div>
+  </div>
 </header>
-<!-- -------- END HEADER 8 w/ card over right bg image ------- -->
+<!-- -------- END HEADER 10 w/ floating img and bg  ------- -->
 
 <!-- -------   START PRE-FOOTER 6 - title & description and input    -------- -->
 <section id="cursos-conjuntos" class="py-8">
@@ -204,24 +198,50 @@ Coded by www.creative-tim.com
 <!-- -------   END PRE-FOOTER 6 - title & description and input    -------- -->
 
 <!-- START Section Content W/ 2 images aside of icon title description -->
-<section id="about-me" class="py-7">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 col-md-8 order-2 order-md-2 order-lg-1">
-        <div class="position-relative ms-md-5 mb-0 mb-md-7 mb-lg-0 d-none d-md-block d-lg-block d-xl-block h-75">
-          <div class="bg-gradient-info w-100 h-100 border-radius-xl position-absolute" alt=""></div>
-          <img src="/assets/img/prueba.jpeg" class="w-100 border-radius-xl mt-6 ms-5 position-absolute" alt="">
+<section id="about-me"">
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-md-8 mb-md-0 mb-4">
+        <h3 class="text-gradient text-primary mb-0">Sincronización Creativa</h3>
+        <p class="lead mb-md-5 mb-4">
+          ¿Por qué una empresa logra sacar un producto exitoso a través de un grupo focal, mientras que a otra le genera un silencio incómodo y un buzón de ideas vacío? <br>
+          La respuesta no es que tu equipo "no sea lo suficientemente creativo". El problema es un "Rechazo de Trasplante Corporativo". <br>
+          Intentar forzar un programa de innovación diseñado para un equipo altamente científico y proactivo, en una cultura cuya fortaleza innata es la agilidad comercial, es como intentarle poner un motor de yate a un Fórmula 1.
+        </p>
+      </div>
+      <div class="col-md-4">
+        <div class="blur-shadow-image text-center">
+          <img src="../assets/img/avatars/metodologia.png" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg max-height-600">
         </div>
       </div>
-      <div class="col-lg-5 col-md-12 ms-auto order-1 order-md-1 order-lg-1">
-        <div class="p-3 pt-0">
-            <h3 class="text-dark mb-0">Luis Felipe Vargas Perilla</h3><br><br>
-            <p>Cuando mi papá me preguntó por primera vez qué quería ser de grande, le dije profesor de matemáticas, eso a mis 8 años. Fascinado por mi pasión por los números. Sin embargo, mi camino profesional fue llevando mi vocación mucho más allá del aula tradicional, permitiéndome <strong class="text-dark">trasladar mi conocimiento</strong>  a través de la consultoría y liderando programas de <strong class="text-dark">transferencia de conocimiento</strong> para distintos equipos y organizaciones.<br>En cada paso, descubrí que enseñar es escuchar y adaptar, <strong class="text-dark">creando conexiones genuinas e impulsando el crecimiento de otros.</strong> Así, desarrollé mi propia metodología, la cual es la base de este programa sobre gestion de innovación.</p>
-            <a href="https://www.linkedin.com/in/lufvape/" type="button" class="btn btn-icon" style="background-color: #0E76A8">
-            <span class="btn-inner--icon text-white me-2"><i class="fab fa-linkedin"></i>           </span>
-            <span class="btn-inner--text text-white" >LinkedIn</span>
-            </a>
+    </div>
+    <div class="row mt-5">
+      <div class="col-lg-4 col-md-6">
+        <div class="p-3 text-center">
+          <div class="icon icon-shape bg-primary shadow mx-auto">
+            <i class="fa-solid fa-lightbulb text-lg opacity-10 text-light" aria-hidden="true"></i>
           </div>
+          <h5 class="mt-4">Arquetipo Creativo</h5>
+          <p>Son 4 perfiles, dependiendo del tipo de problemas y la naturaleza de la solución</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="p-3 text-center">
+          <div class="icon icon-shape bg-primary shadow mx-auto">
+            <i class="fa-solid fa-gears text-lg opacity-10 text-light" aria-hidden="true"></i>
+          </div>
+          <h5 class="mt-4">Motor de Innovación</h5>
+          <p>Dependiendo de qué impulsa tu empresa, si el mercadeo, la investigación o el talento humano</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mx-md-auto">
+        <div class="p-3 text-center">
+          <div class="icon icon-shape bg-primary shadow mx-auto">
+            <i class="fa-solid fa-chart-line text-lg opacity-10 text-light" aria-hidden="true"></i>
+          </div>
+          <h5 class="mt-4">Nivel de Madurez</h5>
+          <p>Cada perfil puede estar en un nivel artesanal, industrial, o ágil</p>
+        </div>
       </div>
     </div>
   </div>
@@ -229,12 +249,12 @@ Coded by www.creative-tim.com
 <!-- END Section Content -->
 
 <!-- -------- START PRE-FOOTER 7 w/ TEXT AND 2 BUTTONS ------- -->
-<section class=" py-5 bg-success position-relative overflow-hidden">
+<section class=" py-5 bg-primary position-relative overflow-hidden">
   <div class="container position-relative z-index-2">
     <div class="row">
       <div class="col-lg-8 col-md-8 m-auto text-start">
         <p class="text-dark mb-lg-0 mb-5 lead">
-          Comienza gratis conociendo tu perfil creativo, así sabrás cuáles actividades y programas son los más adecuados para ti y por qué otros (así sean muy populares), no te funcionan.
+          Comienza gratis conociendo tu perfil creativo, así sabrás cuáles programas son los más adecuados para ti y por qué otros (así sean muy populares), no te funcionan.
         </p>
       </div>
       <div class="col-md-4 m-auto">
@@ -245,442 +265,134 @@ Coded by www.creative-tim.com
 </section>
 <!-- -------- END PRE-FOOTER 7 w/ TEXT AND 2 BUTTONS ------- -->
 
-<!-- Section with four info areas left & one card right with image and waves -->
-<section id="Programa" class="py-6 bg-light">
+<section class="py-lg-5 bg-light">
   <div class="container">
-    <div class="row align-items-center">
-      <h2 class="text-gradient text-primary mb-0">Programa Grupal en Gestión de Innovación</h2>
-      <h4 class="text-dark mb-4">Crea un SGI a tu medida, en base a la familia de normas ISO 56000</h4>
-      <div class="d-flex align-items-center justify-content-md-start justify-content-center">
-        <div class="position-relative d-flex align-items-center">
-          <i class="fa-solid fa-clock text-gradient text-primary me-2"></i>
-          <span class=" me-3">6 Semanas</span>
-          <hr class="vertical dark my-1">
-        </div>
-        <div class="position-relative d-flex align-items-center">
-          <i class="fa-solid fa-chalkboard-user text-gradient text-primary  me-2"></i>
-          <span class=" me-3">4 Módulos</span>
-        </div>
-        <div class="position-relative d-flex align-items-center">
-          <i class="fa-solid fa-champagne-glasses text-gradient text-primary me-2"></i>
-          <span class=" me-3">Tu propio evento de innovación</span>
-        </div>
-        <div class="position-relative d-flex align-items-center ms-3">
-          <i class="fa-solid fa-face-smile text-gradient text-primary me-2"></i>
-          <span class="me-3">250+ sistemas creados</span>
-        </div>
+    <div class="row">
+      <div class="col-md-12 mx-auto text-center mb-5">
+        <h2>Quieres un reporte a fondo</h2>
+        <p class="lead">Si quieres ir más allá de conocer tu perfil creativo, y desarrollar un sistema de gestión de innovación que se ajuste a tu forma de trabajar, accede hoy mismo al reporte premium.</p>
       </div>
-      <div class="col-lg-8">
-        <div class="row justify-content-start">
-          <div class="col-md-6">
-            <div class="info">
-              <i class="fa-solid fa-video fa-2xl text-dark"></i>
-              <h5 class="text-dark mt-4">Curso base pre grabado</h5>
-              <p>Curso base pre grabado para que realices en cualquier momento y a tu ritmo</p>
-            </div>
+    </div>
+    <div class="row">
+      <div class="card">
+       <div class="row">
+          <div class="col-lg-12">
+             <div class="card-body">
+                <h3 class="text-gradient text-primary">Reporte Premium</h3>
+                <p>Accede a una sesión de consultoría conmigo, además de plantillas y un diagnóstico profundo para que comprendas tu perfil creativo y la innovación florezca en tu emppresa.</p>
+                <div class="row mt-5 mb-2">
+                   <div class="col-lg-3 col-12">
+                      <h6 class="text-dark tet-uppercase">Lo que trae</h6>
+                   </div>
+                   <div class="col-6">
+                      <hr class="horizontal dark">
+                   </div>
+                </div>
+                <div class="row">
+                   <div class="col-lg-8 col-sm-12 ps-0">
+                      <div class="info d-flex align-items-center p-2">
+                         <div class="icon icon-shape icon-xs rounded-circle bg-gradient-info opacity-6 shadow text-center">
+                            <i class="fas fa-check opacity-10"></i>
+                         </div>
+                         <div>
+                            <span class="ps-2">Diagnóstico a fondo del perfil creativo de tu organización, y sus matices</span>
+                         </div>
+                      </div>
+                      <div class="info d-flex align-items-center p-2">
+                         <div class="icon icon-shape icon-xs rounded-circle bg-gradient-info opacity-6 shadow text-center">
+                            <i class="fas fa-check opacity-10"></i>
+                         </div>
+                         <div>
+                            <span class="ps-2">3 Plantillas en Mural para desarrollar tu sistema</span>
+                         </div>
+                      </div>
+                      <div class="info d-flex align-items-center p-2">
+                         <div class="icon icon-shape icon-xs rounded-circle bg-gradient-info opacity-6 shadow text-center">
+                            <i class="fas fa-check opacity-10"></i>
+                         </div>
+                         <div>
+                            <span class="ps-2">Documento en Notion para gestionar y comunicar tu innovación</span>
+                         </div>
+                      </div>
+                      <div class="info d-flex align-items-center p-2">
+                         <div class="icon icon-shape icon-xs rounded-circle bg-gradient-info opacity-6 shadow text-center">
+                            <i class="fas fa-check opacity-10"></i>
+                         </div>
+                         <div>
+                            <span class="ps-2">Sesión de 90 min conmigo para validar y ajustar tu sistema</span>
+                         </div>
+                      </div>
+                   </div>
+                    <div class="col-lg-4 col-sm-12 my-auto">
+                    <div class="card-body text-center">
+                        <h1 class="mt-0">
+                          185 <small class="text-sm text-dark font-weight-bold">USD </small>
+                        </h1>
+                        <button type="button" class="btn bg-primary text-white btn-lg mt-2">Get Access</button>
+                        <p><a href="quiz.html" class="text-sm">Comienza gratis</a></p>
+                    </div>
+                  </div>
+                </div>
+             </div>
           </div>
-          <div class="col-md-6">
-            <div class="info">
-              <i class="fa-solid fa-headset fa-2xl text-dark"></i>
-              <h5 class="text-dark mt-4">Acompañamiento en vivo</h5>
-              <p>Todas las semanas tendremos espacios en vivo de resolución de dudas y muestra de avances</p>
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-start">
-          <div class="col-md-6 mt-5">
-            <div class="info">
-              <i class="fa-solid fa-brain fa-2xl text-dark"></i>
-              <h5 class="text-dark mt-4">Comunidad de ejecución</h5>
-              <p>Un espacio abierto 24/7 para que puedas resolver todas tus preguntas</p>
-            </div>
-          </div>
-          <div class="col-md-6 mt-5">
-            <div class="info">
-              <i class="fa-solid fa-face-grin-stars fa-2xl text-dark"></i>
-              <h5 class="text-dark mt-4">VIP</h5>
-              <p>Tres momentos para personalizar aún más tu experiencia en el curso</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 ms-auto">
-        <div class="card shadow-none border bg-dark h-100 overflow-hidden">
-          <div class="card-header bg-transparent text-sm-start text-center pt-4 pb-3 px-4">
-            <h4 class="mb-1 text-light">Programa Grupal SGI</h4>
-            <p class="mb-3 text-sm text-white">Diseña un modelo totalmente personalizado a tu forma de trabajo</p>
-            <small class="text-sm text-white font-weight-bold"><s>$2750 USD</s></small>
-            <h3 class="font-weight-bolder text-white">
-              $1200 <small class="text-sm text-white font-weight-bold">USD</small>
-            </h3>
-            <a href="javascript:;" class="btn btn-lg bg-primary text-white w-100 border-radius-md mt-4 mb-2">unirme ahora</a>
-          </div>
-          <hr class="horizontal light my-0">
-          <div class="card-body">
-            <div class="d-flex pb-3">
-              <div>
-                <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
-              </div>
-              <div class="ps-3">
-                <span class="text-sm text-white">Manual de innovación basado en la familia ISO 56000</span>
-              </div>
-            </div>
-
-            <div class="d-flex pb-3">
-              <div>
-                <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
-              </div>
-              <div class="ps-3">
-                <span class="text-sm text-white">Estructura organizacional para fomentar innovación</span>
-              </div>
-            </div>
-
-            <div class="d-flex pb-3">
-              <div>
-                <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
-              </div>
-              <div class="ps-3">
-                <span class="text-sm text-white">1 Evento de innovación diseñado para tu empresa</span>
-              </div>
-            </div>
-
-            <div class="d-flex pb-3">
-              <div>
-                <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
-              </div>
-              <div class="ps-3">
-                <span class="text-sm text-white">3 espacios de personalización</span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
+       </div>
+     </div>
     </div>
   </div>
 </section>
-<!-- END Section with four info areas left & one card right with image and waves -->
 
-<section id="deep-dive"  class="pt-3 pb-5 bg-light">
+<section class="py-3 bg-light">
   <div class="container">
-      <div class="row my-5">
-          <div class="col-md-6 mx-auto text-center">
-          <h3 class="text-dark">Déjame mostrarte el programa por dentro</h3>
-          <p class="mb-0"> </p>
+    <div class="row">
+      <div class="col-lg-12 mx-auto">
+        <div class="p-3 text-center mb-5">
+          <div class="icon icon-shape icon-lg bg-primary shadow mx-auto">
+            <i class="fa-regular fa-comment fa-2xl"></i>
           </div>
-      </div>
-      <div class="row mb-5">
-          <div class="col-md-10 mx-auto">
-            <div class="accordion p-3 bg-light" id="accordionPricing">
-              <div class="accordion-item mb-3">
-              <h4 class="accordion-header" id="headingOne">
-              <button class="accordion-button border-bottom font-weight-bold text-start text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Curso Base
-              <i class="collapse-close fa-solid fa-angle-down text-xs pt-1 position-absolute end-0 me-3 text-dark"></i>
-              </button>
-              </h4>
-                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionPricing">
-                    <div class="container py-6">
-                      <div class="row">
-                        <div class="col-lg-10 mx-auto text-center pb-4">
-                          <h4 class="text-dark">Curso base pre grabado</h4>
-                          <p class="text-dark">Para que lo realices en tu propio tiempo. Consta de dos partes: la primera te enseñará a crear un sistema de gestión de la innovación en tu empresa, totalmente alineado con la norma ISO 56001 en la segunda parte te guiaré para que generes un evento de innovación a tu medida, en base a las fortalezas y necesidades de tu organización. </p>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-lg-6 col-md-12">
-                          <div class="p-3 text-center">
-                            <div class="icon icon-shape bg-gradient-secondary shadow mx-auto">
-                              <i class="fa-solid fa-gears"></i>
-                            </div>
-                            <h5 class="mt-4 text-dark">Creando el SGI</h5>
-                            <div class="d-flex pb-3">
-                              <div>
-                                <i class="fas fa-check text-dark text-sm" aria-hidden="true"></i>
-                              </div>
-                              <div class="ps-3">
-                                <span class="text-sm text-dark">El ADN e intención de innovar.</span>
-                              </div>
-                            </div>
-                            <div class="d-flex pb-3">
-                              <div>
-                                <i class="fas fa-check text-dark text-sm" aria-hidden="true"></i>
-                              </div>
-                              <div class="ps-3">
-                                <span class="text-sm text-dark">Plataformas de crecimiento a partir de tendencias</span>
-                              </div>
-                            </div>                            
-                            <div class="d-flex pb-3">
-                              <div>
-                                <i class="fas fa-check text-dark text-sm" aria-hidden="true"></i>
-                              </div>
-                              <div class="ps-3">
-                                <span class="text-sm text-dark">Inteligencia y visión de futuro</span>
-                              </div>
-                            </div>
-                            <div class="d-flex pb-3">
-                              <div>
-                                <i class="fas fa-check text-dark text-sm" aria-hidden="true"></i>
-                              </div>
-                              <div class="ps-3">
-                                <span class="text-sm text-dark">Proceso y paisaje de innovación</span>
-                              </div>
-                            </div>    
-                            <div class="d-flex pb-3">
-                              <div>
-                                <i class="fas fa-check text-dark text-sm" aria-hidden="true"></i>
-                              </div>
-                              <div class="ps-3">
-                                <span class="text-sm text-dark">Ejecución, medición y gobernanza</span>
-                              </div>
-                            </div>                        
-                          </div>
-                          
-                        </div>
-                        <div class="col-lg-6 col-md-12">
-                          <div class="p-3 text-center">
-                            <div class="icon icon-shape bg-gradient-secondary shadow mx-auto">
-                              <i class="fa-solid fa-cake-candles"></i>
-                            </div>
-                            <h5 class="mt-4 text-dark">Evento de innovación</h5>
-                            <div class="d-flex pb-3">
-                              <div>
-                                <i class="fas fa-check text-dark text-sm" aria-hidden="true"></i>
-                              </div>
-                              <div class="ps-3">
-                                <span class="text-sm text-dark">Selección de evento según perfil</span>
-                              </div>
-                            </div>
-                            <div class="d-flex pb-3">
-                              <div>
-                                <i class="fas fa-check text-dark text-sm" aria-hidden="true"></i>
-                              </div>
-                              <div class="ps-3">
-                                <span class="text-sm text-dark">Diseño del paso a paso del evento y su logística</span>
-                              </div>
-                            </div>    
-                            <div class="d-flex pb-3">
-                              <div>
-                                <i class="fas fa-check text-dark text-sm" aria-hidden="true"></i>
-                              </div>
-                              <div class="ps-3">
-                                <span class="text-sm text-dark">Roles y responsabilidades para el equipo del evento</span>
-                              </div>
-                            </div>                
-                            <div class="d-flex pb-3">
-                              <div>
-                                <i class="fas fa-check text-dark text-sm" aria-hidden="true"></i>
-                              </div>
-                              <div class="ps-3">
-                                <span class="text-sm text-dark">Comunicación y lanzamiento del evento</span>
-                              </div>
-                            </div>                                                                
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-              <div class="accordion-item mb-3">
-                  <h6 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button border-bottom font-weight-bold text-star text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Acompañamiento en vivo
-                  <i class="collapse-close fa-solid fa-angle-down text-xs pt-1 position-absolute end-0 me-3 text-dark"></i>
-                  </button>
-                  </h6>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionPricing">
-                    <div class="container py-6">
-                      <div class="row">
-                        <div class="col-lg-10 mx-auto text-center pb-4">
-                          <h4 class="text-dark">Sesiones de trabajo conmigo en vivo</h4>
-                          <p class="text-dark">Acompañamiento total de mi parte durante toda la duración del programa. El acompañamiento tiene tres partes escenciales: en la que nos veremos cara a cara será en las sesiones de check-in, destinadasa a resolver dudas y mostrar avances.; luego está el soporte de la comunidad, tenemos un espacio en slack pensado exclusivamente para el programa; finalmente tendremos sesiones de comunidad, en las cuales estaré presente para responder en tiempo real dudas en slack.</p>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-lg-6 col-md-12">
-                          <div class="p-3 text-center">
-                            <div class="icon icon-shape bg-gradient-secondary shadow mx-auto">
-                              <i class="fa-solid fa-user-check"></i>
-                            </div>
-                            <h5 class="mt-4 text-dark">Check-in de progreso</h5>
-                            <div class="d-flex pb-3">
-                              <div>
-                                <i class="fas fa-check text-dark text-sm" aria-hidden="true"></i>
-                              </div>
-                              <div class="ps-3">
-                                <span class="text-sm text-dark">Sesiones a través de CalVideo</span>
-                              </div>
-                            </div>
-                            <div class="d-flex pb-3">
-                              <div>
-                                <i class="fas fa-check text-dark text-sm" aria-hidden="true"></i>
-                              </div>
-                              <div class="ps-3">
-                                <span class="text-sm text-dark">Sesiones de 2 horas cada  semana</span>
-                              </div>
-                            </div>                            
-                            <div class="d-flex pb-3">
-                              <div>
-                                <i class="fas fa-check text-dark text-sm" aria-hidden="true"></i>
-                              </div>
-                              <div class="ps-3">
-                                <span class="text-sm text-dark">Grabaciones disponibles al finalizar</span>
-                              </div>
-                            </div>                
-                          </div>
-                          
-                        </div>
-                        <div class="col-lg-6 col-md-12">
-                          <div class="p-3 text-center">
-                            <div class="icon icon-shape bg-gradient-secondary shadow mx-auto">
-                              <i class="fa-regular fa-comments"></i>
-                            </div>
-                            <h5 class="mt-4 text-dark">Comunidad en Slack</h5>
-                            <div class="d-flex pb-3">
-                              <div>
-                                <i class="fas fa-check text-dark text-sm" aria-hidden="true"></i>
-                              </div>
-                              <div class="ps-3">
-                                <span class="text-sm text-dark">Soporte 24/7 por parte de la comunidad, incluyéndome</span>
-                              </div>
-                            </div>
-                            <div class="d-flex pb-3">
-                              <div>
-                                <i class="fas fa-check text-dark text-sm" aria-hidden="true"></i>
-                              </div>
-                              <div class="ps-3">
-                                <span class="text-sm text-dark">Sesiones de 2 horas cada semana en tiempo real</span>
-                              </div>
-                            </div>    
-                            <div class="d-flex pb-3">
-                              <div>
-                                <i class="fas fa-check text-dark text-sm" aria-hidden="true"></i>
-                              </div>
-                              <div class="ps-3">
-                                <span class="text-sm text-dark">Networking con otros empresarios de la comunidad</span>
-                              </div>
-                            </div>                                                                             
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-              </div>
-              </div>
-              <div class="accordion-item mb-3">
-                  <h6 class="accordion-header" id="headingThree">
-                  <button class="accordion-button border-bottom font-weight-bold text-start text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Addons VIP
-                  <i class="collapse-close fa-solid fa-angle-down text-xs pt-1 position-absolute end-0 me-3 text-dark"></i>
-                  </button>
-                  </h6>
-                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionPricing">
-                    <div class="container py-6">
-                      <div class="row">
-                        <div class="col-lg-10 mx-auto text-center pb-4">
-                          <h4 class="text-dark">Personaliza mucho más tu aprendizaje</h4>
-                          <p class="text-dark">Durante las 6 semanas de duración existirán 3 paquetes adicionales, que podrás adquirir para personalizar mucho más tu experiencia, estos están pensados para acompañarte en sesiones uno a uno, bien sea en forma de consultoría o de talleres. No son obligatorios, pero te darán una mirada mucho más profunda sobre tu perfil creativo.</p>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-lg-6 col-md-12">
-                          <div class="p-3 text-center">
-                            <div class="icon icon-shape bg-gradient-secondary shadow mx-auto">
-                              <i class="fa-solid fa-brain"></i>
-                            </div>
-                            <h5 class="mt-4 text-dark">Consultoría</h5>
-                            <div class="d-flex pb-3">
-                              <div>
-                                <i class="fas fa-check text-dark text-sm" aria-hidden="true"></i>
-                              </div>
-                              <div class="ps-3">
-                                <span class="text-sm text-dark">Semana 1: Diagnóstico en profundidad del perfil creativo de la empresa</span>
-                              </div>
-                            </div>
-                            <div class="d-flex pb-3">
-                              <div>
-                                <i class="fas fa-check text-dark text-sm" aria-hidden="true"></i>
-                              </div>
-                              <div class="ps-3">
-                                <span class="text-sm text-dark">Semana 6: Paquete de acompañamiento adicional en puesta en marcha del sistema y ejecución del evento de innovación</span>
-                              </div>
-                            </div>                                           
-                          </div>
-                          
-                        </div>
-                        <div class="col-lg-6 col-md-12">
-                          <div class="p-3 text-center">
-                            <div class="icon icon-shape bg-gradient-secondary shadow mx-auto">
-                              <i class="fa-solid fa-flask"></i>
-                            </div>
-                            <h5 class="mt-4 text-dark">Talleres</h5>
-                            <div class="d-flex pb-3">
-                              <div>
-                                <i class="fas fa-check text-dark text-sm" aria-hidden="true"></i>
-                              </div>
-                              <div class="ps-3">
-                                <span class="text-sm text-dark">Semana 4: Taller de embudo de innovación, con el que podrás llenar tu portafolio de innovación con diversos proyectos y tener hojas de ruta accionables para cada uno de ellos</span>
-                              </div>
-                            </div>                                                                            
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-          </div>
+          <h2 class="text-gradient text-primary mb-0 text-center">Aún con dudas</h2>
+          <div class="d-flex align-items-center justify-content-center">
+            <div class="position-relative d-flex align-items-center">
+              <i class="fa-solid fa-chalkboard-user text-dark me-2"></i>
+              <span class=" me-3">30 minutos 1-1 conmigo</span>
+            </div>
+            <div class="position-relative d-flex align-items-center">
+              <i class="fa-solid fa-lightbulb text-dark me-2"></i>
+              <span class=" me-3">Descubramos juntos tu perfil creativo</span>
+            </div>
+          </div>                    
         </div>
       </div>
+    </div>
+    <div class="row align-items-start mb-5">
+      <div class="col-md-12">
+        <!-- Cal inline embed code begins -->
+          <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-perfilextendido"></div>
+          <script type="text/javascript">
+            (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+          Cal("init", "perfilextendido", {origin:"https://app.cal.com"});
+
+            Cal.ns.perfilextendido("inline", {
+              elementOrSelector:"#my-cal-inline-perfilextendido",
+              config: {"layout":"month_view"},
+              calLink: "lufvape/perfilextendido",
+            });
+
+            Cal.ns.perfilextendido("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#ffba09"}},"hideEventTypeDetails":true,"layout":"month_view"});
+          </script>
+        <!-- Cal inline embed code ends -->
+      </div>
+    </div>
+  </div>
 </section>
 
 <section id="diy" class="py-5 bg-dark">
   <div class="container">
     <div class="row">
       <div class="col-md-8 mx-auto text-center">
-        <h3 class="text-light">¿No eres una persona de mentorías grupales?</h3>
-        <p class="text-white">Para algunos no es fácil aprender en comunidad, o simplemente prefieren un acompañamiento mucho más personalizado. Si eres de esos, estas opciones pueden ser ideales para ti.</p>
+        <h3 class="text-light">O déjame involucrar de lleno con tu equipo y juntos desarrollaremos tu SGI</h3>
       </div>
     </div>
     <div class="row mt-5">
-      <div class="col-lg-4 col-sm-12 mb-lg-0 mb-4">
-        <div class="card shadow-none border bg-dark h-100 overflow-hidden">
-          <div class="card-header bg-transparent text-sm-start text-center pt-4 pb-3 px-4">
-            <h4 class="mb-1 text-light">Diagnóstico Creativo</h4>
-            <p class="mb-3 text-sm text-white">Actividades de innovación a la medida</p>
-            <h3 class="font-weight-bolder text-white">
-              $185 <small class="text-sm text-white font-weight-bold">USD</small>
-            </h3>
-            <a class="btn btn-lg bg-primary text-white w-100 border-radius-md mt-4 mb-2" data-cal-link="lufvape/perfilextendido" data-cal-namespace="perfilextendido" data-cal-config='{"layout":"month_view"}'>Comienza Ahora</a>
-          </div>
-          <hr class="horizontal light my-0">
-          <div class="card-body">
-            <div class="d-flex pb-3">
-              <div>
-                <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
-              </div>
-              <div class="ps-3">
-                <span class="text-sm text-white">Diagnóstico en profundidad del perfil creativo de tu empresa</span>
-              </div>
-            </div>
-            <div class="d-flex pb-3">
-              <div>
-                <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
-              </div>
-              <div class="ps-3">
-                <span class="text-sm text-white">Sesión de trabajo de 90min uno a uno</span>
-              </div>
-            </div>
-            <div class="d-flex pb-3">
-              <div>
-                <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
-              </div>
-              <div class="ps-3">
-                <span class="text-sm text-white">Reporte detallado sobre los programas y actividades que funcionan según tus formas de trabajar</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div class="col-lg-4 col-sm-12 mb-lg-0 mb-4">
         <div class="card shadow-none border bg-dark h-100 overflow-hidden">
           <div class="card-header bg-transparent text-sm-start text-center pt-4 pb-3 px-4">
@@ -738,12 +450,12 @@ Coded by www.creative-tim.com
       <div class="col-lg-4 col-sm-12 mb-lg-0 mb-4">
         <div class="card shadow-none border bg-dark h-100 overflow-hidden">
           <div class="card-header bg-transparent text-sm-start text-center pt-4 pb-3 px-4">
-            <h4 class="mb-1 text-light">Acompañamiento 3 meses</h4>
-            <p class="mb-3 text-sm text-white">Crea, ajusta, mejora tu sistema de gestión</p>
+            <h4 class="mb-1 text-light">Programa Vivencial SGI</h4>
+            <p class="mb-3 text-sm text-white">Sistema personalizado a tu forma de trabajo.</p>
             <h3 class="font-weight-bolder text-white">
-              $1811 <small class="text-sm text-white font-weight-bold">USD</small>
+              $1800 <small class="text-sm text-white font-weight-bold">USD</small>
             </h3>
-            <a href="javascript:;" class="btn btn-lg bg-primary text-white w-100 border-radius-md mt-4 mb-2" data-cal-link="lufvape/acompanamiento-3-meses" data-cal-namespace="acompanamiento-3-meses" data-cal-config='{"layout":"month_view"}'>Start Now</a>
+            <a href="javascript:;" class="btn btn-lg bg-primary text-white w-100 border-radius-md mt-4 mb-2">Lo quiero</a>
           </div>
           <hr class="horizontal light my-0">
           <div class="card-body">
@@ -752,7 +464,7 @@ Coded by www.creative-tim.com
                 <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
               </div>
               <div class="ps-3">
-                <span class="text-sm text-white">Hasta 5 sesiones de consultoría (90minc/u)</span>
+                <span class="text-sm text-white">3 Talleres para alinear estrategia, procesos y cultura</span>
               </div>
             </div>
 
@@ -761,7 +473,7 @@ Coded by www.creative-tim.com
                 <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
               </div>
               <div class="ps-3">
-                <span class="text-sm text-white">2 Talleres prácticos para desarrollar cultura</span>
+                <span class="text-sm text-white">Manual de innovación basado en la familia ISO 56000</span>
               </div>
             </div>
 
@@ -770,7 +482,7 @@ Coded by www.creative-tim.com
                 <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
               </div>
               <div class="ps-3">
-                <span class="text-sm text-white">Playbook de herramientas según mi metodología</span>
+                <span class="text-sm text-white">Estructura organizacional para fomentar innovación</span>
               </div>
             </div>
 
@@ -779,12 +491,63 @@ Coded by www.creative-tim.com
                 <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
               </div>
               <div class="ps-3">
-                <span class="text-sm text-white">Soporte asíncrono ilimitado durante los 3 meses</span>
+                <span class="text-sm text-white">1 Evento de innovación diseñado para tu empresa</span>
+              </div>
+            </div>
+
+            <div class="d-flex pb-3">
+              <div>
+                <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
+              </div>
+              <div class="ps-3">
+                <span class="text-sm text-white">Reporte sobre cómo incrementar tu nivel de madurez</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-sm-12 mb-lg-0 mb-4">
+        <div class="card shadow-none border bg-dark h-100 overflow-hidden">
+          <div class="card-header bg-transparent text-sm-start text-center pt-4 pb-3 px-4">
+            <h4 class="mb-1 text-light">Acompañamiento Continuo</h4>
+            <p class="mb-3 text-sm text-white">Seguimiento total a tu SGI</p>
+            <h3 class="font-weight-bolder text-white">
+              $250 <small class="text-sm text-white font-weight-bold">USD / mes</small>
+            </h3>
+            <a class="btn btn-lg bg-primary text-white w-100 border-radius-md mt-4 mb-2" data-cal-link="lufvape/perfilextendido" data-cal-namespace="perfilextendido" data-cal-config='{"layout":"month_view"}'>Suscribirme</a>
+          </div>
+          <hr class="horizontal light my-0">
+          <div class="card-body">
+            <div class="d-flex pb-3">
+              <div>
+                <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
+              </div>
+              <div class="ps-3">
+                <span class="text-sm text-white">Seguimiento asíncrono 24/7</span>
+              </div>
+            </div>
+            <div class="d-flex pb-3">
+              <div>
+                <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
+              </div>
+              <div class="ps-3">
+                <span class="text-sm text-white">Sesiones de trabajo de 90min uno a uno ilimitadas</span>
+              </div>
+            </div>
+            <div class="d-flex pb-3">
+              <div>
+                <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
+              </div>
+              <div class="ps-3">
+                <span class="text-sm text-white">Auditoría constante + reportes de tu SGI</span>
               </div>
             </div>
           </div>
         </div>
       </div>
+
     </div>
     <a class="btn btn-lg bg-dark btn-outline-light w-100 border-radius-md mt-4 mb-2" data-cal-link="lufvape/consultoria" data-cal-namespace="consultoria" data-cal-config='{"layout":"month_view"}'>O simplemente programa una sesión de 90 minutos</a>
   </div>

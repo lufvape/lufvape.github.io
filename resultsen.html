@@ -26,19 +26,44 @@
 <body>
 
 <!-- Section with four info areas left & one card right with image and waves -->
-<section class="py-6 bg-light">
+<!-- -------- START HEADER 4 w/ search book a ticket form ------- -->
+<header>
+  <div class="page-header min-vh-100" style="background-image: url(../assets/img/fondo.png);">
+    <span class="mask bg-gradient-primary"></span>
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-8">
         <div class="row justify-content-start">
-            <blockquote class="blockquote">
-            <h2 id="perfil-frase" class="mb-0 ps-2"></h2>
-            </blockquote>
+          <h1 class="mb-4 perfil-nombre-repeat text-gradient text-primary"></h1>
+          <p id="perfil-frase" class="lead pe-5 me-5 text-dark"></p>
+
         </div>
-        <div class="row mt-5">
+      </div>
+      <div class="col-lg-4 ms-auto">
+        <div class="card card-blog card-plain">
+          <div class="position-relative">
+            <a class="d-block blur-shadow-image">
+              <img id="perfil-imagen" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/pool.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+              </a>
+          </div>
+        </div>        
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="position-relative overflow-hidden" style="height:36px;margin-top:-35px;">
+    <div class="w-full absolute bottom-0 start-0 end-0" style="transform: scale(2);transform-origin: top center;color: #fff;">
+      <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+      </svg>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row  mt-n6 border-radius-md pb-4 p-3 mx-sm-0 mx-1 position-relative">
       <!-- Maturity Level -->
         <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card bg-dark h-100">
+          <div class="card bg-dark shadow-lg">
             <div class="card-body p-3">
               <div class="row">
                 <div class="col-8">
@@ -58,7 +83,7 @@
         </div>
       <!-- Dominant Archetype -->
         <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card bg-dark h-100">
+          <div class="card bg-dark shadow-lg">
             <div class="card-body p-3">
               <div class="row">
                 <div class="col-8">
@@ -78,7 +103,7 @@
         </div>
         <!-- Main Affinity -->
         <div class="col-lg-4 col-md-12 mb-4">
-          <div class="card bg-dark h-100">
+          <div class="card bg-dark shadow-lg">
             <div class="card-body p-3">
               <div class="row">
                 <div class="col-8">
@@ -96,56 +121,18 @@
             </div>
           </div>
         </div>
-      </div>
-      </div>
-      <div class="col-lg-4 ms-auto">
-        <div class="card">
-          <img id="perfil-imagen" src="" alt="profile image" class="card-img-top">
-          <div class="position-relative overflow-hidden" style="height:50px;margin-top:-50px;">
-            <div class="position-absolute w-100 top-0 z-index-1">
-                <svg class="waves waves-sm" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto">
-                  <defs><path id="card-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path></defs>
-                  <g class="moving-waves">
-                    <use xlink:href="#card-wave" x="48" y="-1" fill="rgba(255,255,255,0.30"></use>
-                    <use xlink:href="#card-wave" x="48" y="3" fill="rgba(255,255,255,0.35)"></use>
-                    <use xlink:href="#card-wave" x="48" y="5" fill="rgba(255,255,255,0.25)"></use>
-                    <use xlink:href="#card-wave" x="48" y="8" fill="rgba(255,255,255,0.20)"></use>
-                    <use xlink:href="#card-wave" x="48" y="13" fill="rgba(255,255,255,0.15)"></use>
-                    <use xlink:href="#card-wave" x="48" y="16" fill="rgba(255,255,255,0.99)"></use>
-                  </g>
-                </svg>
-              </div>
-          </div>
-          <div class="card-body text-center">
-            <h4 class="perfil-nombre-repeat"></h4>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
-</section>
+</header>
+<!-- -------- END HEADER 4 w/ search book a ticket form ------- -->
 
-<section class="pt-3 pt-md-5 pb-md-5 pt-lg-7 bg-light">
+<!-- Pantalla de Resultados -->
+
+  <section class="mt-5">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
           <div class="card shadow-lg mb-5">
-            <div class="card-header bg-gradient-secondary p-5 position-relative">
-              <h1 id="perfil-nombre" class="text-white mb-5 perfil-nombre-repeat"></h1>
-              <div class="position-absolute w-100 z-index-1 bottom-0 ms-n5">
-                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto" style="height:7vh;min-height:50px;">
-                  <defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path></defs>
-                  <g class="moving-waves">
-                    <use xlink:href="#gentle-wave" x="48" y="-1" fill="rgba(255,255,255,0.40"></use>
-                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.35)"></use>
-                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.25)"></use>
-                    <use xlink:href="#gentle-wave" x="48" y="8" fill="rgba(255,255,255,0.20)"></use>
-                    <use xlink:href="#gentle-wave" x="48" y="13" fill="rgba(255,255,255,0.15)"></use>
-                    <use xlink:href="#gentle-wave" x="48" y="16" fill="rgba(255,255,255,0.95"></use>
-                  </g>
-                </svg>
-              </div>
-            </div>
             <div class="card-body p-5">
                 <div id="result-content">
                   <section id="perfil" class="mb-4">
@@ -177,7 +164,7 @@
                   <section id="sistema" class="mb-4">
                     <h3>Your innovation engine</h3>
                     <h5 id="sistema-titulo"></h5>
-                    <div class="mt-3" style="height: 300px;">
+                    <div class="mt-3 mb-5" style="height: 300px;">
                         <canvas id="chart-foco-fixed"></canvas>
                     </div>
                     <p class="lead" id="sistema-desc"></p>
@@ -187,10 +174,14 @@
 
                   <section id="capacidades" class="mb-4">
                     <h3>Express Audit of your IMS</h3>
-                    <h5 id="nivel-titulo"></h5>
                     <div class="chart-container mb-5" style="height: 300px;">
                       <canvas id="chart-madurez-fixed"></canvas>
                     </div>
+                    <div class="row">
+                    <div class="col-2 mx-auto text-center mb-5">
+                      <h5 class="text-secondary shadow rounded-pill" id="nivel-titulo"></h5>
+                    </div>
+                  </div>
                     <p id="nivel-riesgo" class="lead"></p>
                     <div class="card mt-5">
                       <div class="table-responsive">
@@ -301,6 +292,84 @@
   
 <!-- -------- END HEADER 12 w/ mobile ------- -->
 
+<section class="py-lg-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mx-auto text-center mb-5">
+          <div class="icon icon-shape icon-lg bg-primary shadow mx-auto">
+          <i class="fa-regular fa-file-lines fa-2xl"></i>
+          </div>
+        <h2 class="text-dark mb-0 text-center">Do you want an in-depth report?</h2>
+        <p class="lead">If you want to go beyond knowing your creative profile and develop an innovation management system that fits your way of working, access the premium report today.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card">
+       <div class="row">
+          <div class="col-lg-12">
+             <div class="card-body">
+                <h3 class="text-gradient text-primary">Premium Report</h3>
+                <p>Access a consulting session with me, along with templates and an in-depth diagnosis so you can understand your creative profile and let innovation flourish in your company.</p>
+                <div class="row mt-5 mb-2">
+                   <div class="col-lg-3 col-12">
+                      <h6 class="text-dark tet-uppercase">What's included</h6>
+                   </div>
+                   <div class="col-6">
+                      <hr class="horizontal dark">
+                   </div>
+                </div>
+                <div class="row">
+                   <div class="col-lg-8 col-sm-12 ps-0">
+                      <div class="info d-flex align-items-center p-2">
+                         <div class="icon icon-shape icon-xs rounded-circle bg-gradient-info opacity-6 shadow text-center">
+                            <i class="fas fa-check opacity-10"></i>
+                         </div>
+                         <div>
+                            <span class="ps-2">In-depth diagnosis of your organization's creative profile and its nuances</span>
+                         </div>
+                      </div>
+                      <div class="info d-flex align-items-center p-2">
+                         <div class="icon icon-shape icon-xs rounded-circle bg-gradient-info opacity-6 shadow text-center">
+                            <i class="fas fa-check opacity-10"></i>
+                         </div>
+                         <div>
+                            <span class="ps-2">3 Mural templates to develop your system</span>
+                         </div>
+                      </div>
+                      <div class="info d-flex align-items-center p-2">
+                         <div class="icon icon-shape icon-xs rounded-circle bg-gradient-info opacity-6 shadow text-center">
+                            <i class="fas fa-check opacity-10"></i>
+                         </div>
+                         <div>
+                            <span class="ps-2">Notion document to manage and communicate your innovation</span>
+                         </div>
+                      </div>
+                      <div class="info d-flex align-items-center p-2">
+                         <div class="icon icon-shape icon-xs rounded-circle bg-gradient-info opacity-6 shadow text-center">
+                            <i class="fas fa-check opacity-10"></i>
+                         </div>
+                         <div>
+                            <span class="ps-2">90-minute session with me to validate and adjust your system</span>
+                         </div>
+                      </div>
+                   </div>
+                    <div class="col-lg-4 col-sm-12 my-auto">
+                    <div class="card-body text-center">
+                        <h1 class="mt-0">
+                          185 <small class="text-sm text-dark font-weight-bold">USD </small>
+                        </h1>
+                        <button type="button" class="btn bg-primary text-white btn-lg mt-2">Get Access</button>
+                    </div>
+                  </div>
+                </div>
+             </div>
+          </div>
+       </div>
+     </div>
+    </div>
+  </div>
+</section>
+
 <section class="py-3 bg-light">
   <div class="container">
     <div class="row">
@@ -309,7 +378,7 @@
           <div class="icon icon-shape icon-lg bg-primary shadow mx-auto">
             <i class="fa-regular fa-comment fa-2xl"></i>
           </div>
-          <h2 class="text-gradient text-primary mb-0 text-center">Let's talk about your results</h2>
+          <h2 class="text-dark mb-0 text-center">Let's talk about your results</h2>
           <div class="d-flex align-items-center justify-content-center">
             <div class="position-relative d-flex align-items-center">
               <i class="fa-solid fa-chalkboard-user text-dark me-2"></i>
@@ -346,70 +415,76 @@
 </section>
 
 
-
 <!-- Section with four info areas left & one card right with image and waves -->
-<section id="Programa" class="py-6 bg-dark">
+<section id="diy" class="py-5 bg-dark">
   <div class="container">
-    <div class="row align-items-center">
-      <h2 class="text-light mb-0">Or let me get fully involved with your team and together we will develop your IMS</h2>
-      <div class="d-flex align-items-center justify-content-md-start justify-content-center">
-        <div class="position-relative d-flex align-items-center">
-          <i class="fa-solid fa-clock text-light me-2"></i>
-          <span class=" me-3">6 Workshops</span>
-          <hr class="vertical dark my-1">
-        </div>
-        <div class="position-relative d-flex align-items-center">
-          <i class="fa-solid fa-champagne-glasses text-light me-2"></i>
-          <span class=" me-3">Your own innovation event</span>
-        </div>
-        <div class="position-relative d-flex align-items-center ms-3">
-          <i class="fa-solid fa-face-smile text-light me-2"></i>
-          <span class="me-3">250+ systems created</span>
+    <div class="row">
+      <div class="col-md-8 mx-auto text-center">
+        <h3 class="text-light">Or let me get fully involved with your team and together we will develop your IMS</h3>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-lg-4 col-sm-12 mb-lg-0 mb-4">
+        <div class="card shadow-none border bg-dark h-100 overflow-hidden">
+          <div class="card-header bg-transparent text-sm-start text-center pt-4 pb-3 px-4">
+            <h4 class="mb-1 text-light">Workshops</h4>
+            <p class="mb-3 text-sm text-white">Pick one of my workshops</p>
+            <h3 class="font-weight-bolder text-white">
+              $515 <small class="text-sm text-white font-weight-bold">USD</small>
+            </h3>
+            <a href="javascript:;" class="btn btn-lg bg-primary text-white w-100 border-radius-md mt-4 mb-2" data-cal-link="lufvape/sprint-innovacion" data-cal-namespace="sprint-innovacion" data-cal-config='{"layout":"month_view"}'>Start Now</a>
+          </div>
+          <hr class="horizontal light my-0">
+          <div class="card-body">
+            <div class="d-flex pb-3">
+              <div>
+                <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
+              </div>
+              <div class="ps-3">
+                <span class="text-sm text-white">On-site* or Virtual, as you prefer</span>
+              </div>
+            </div>
+
+            <div class="d-flex pb-3">
+              <div>
+                <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
+              </div>
+              <div class="ps-3">
+                <span class="text-sm text-white">Strategy and Culture</span>
+              </div>
+            </div>
+            <div class="d-flex pb-3">
+              <div>
+                <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
+              </div>
+              <div class="ps-3">
+                <span class="text-sm text-white">Futures Design</span>
+              </div>
+            </div>
+            <div class="d-flex pb-3">
+              <div>
+                <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
+              </div>
+              <div class="ps-3">
+                <span class="text-sm text-white">Opportunity Development</span>
+              </div>
+            </div>
+            <div class="d-flex pb-3">
+              <div class="ps-3">
+                <span class="text-sm text-white">* On-site sessions may carry additional costs depending on the location</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row mt-5">
-      <div class="col-lg-8">
-        <div class="row justify-content-start">
-          <div class="col-md-6">
-            <div class="info">
-              <i class="fa-solid fa-chalkboard fa-2xl text-light"></i>
-              <h5 class="text-light mt-4">Innovation workshops</h5>
-              <p>Joint creation of strategy, processes, and innovation culture. Your wisdom + my methodology.</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="info">
-              <i class="fa-regular fa-file-lines fa-2xl text-light"></i>
-              <h5 class="text-light mt-4">Detailed report</h5>
-              <p>Deep analysis of your current state and actions to improve your innovation management system in the future.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-start">
-          <div class="col-md-6 mt-5">
-            <div class="info">
-              <i class="fa-solid fa-calendar-day fa-2xl text-light"></i>
-              <h5 class="text-light mt-4">Innovation event</h5>
-              <p>Development and launch of an innovation event for your company to show itself to the world.</p>
-            </div>
-          </div>
-          <div class="col-md-6 mt-5">
-            <div class="info">
-              <i class="fa-solid fa-handshake fa-2xl text-light"></i>
-              <h5 class="text-light mt-4">Consulting</h5>
-              <p>Unlimited follow-up sessions for the duration of the program + Innovation management manual</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 ms-auto">
+
+      <div class="col-lg-4 col-sm-12 mb-lg-0 mb-4">
         <div class="card shadow-none border bg-dark h-100 overflow-hidden">
           <div class="card-header bg-transparent text-sm-start text-center pt-4 pb-3 px-4">
             <h4 class="mb-1 text-light">Experiential IMS Program</h4>
-            <p class="mb-3 text-sm text-white">Design a fully customized model for your way of working.</p>
-            <small class="text-sm text-white font-weight-bold">Starting at</small>
+            <p class="mb-3 text-sm text-white">Custom system for your way of working.</p>
             <h3 class="font-weight-bolder text-white">
-              $4200 <small class="text-sm text-white font-weight-bold">USD</small>
+              $1800 <small class="text-sm text-white font-weight-bold">USD</small>
             </h3>
             <a href="javascript:;" class="btn btn-lg bg-primary text-white w-100 border-radius-md mt-4 mb-2">I want it</a>
           </div>
@@ -417,44 +492,98 @@
           <div class="card-body">
             <div class="d-flex pb-3">
               <div>
-                <i class="fas fa-check text-white text-sm" aria-hidden="true"></i>
+                <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
+              </div>
+              <div class="ps-3">
+                <span class="text-sm text-white">3 Workshops to align strategy, processes, and culture</span>
+              </div>
+            </div>
+
+            <div class="d-flex pb-3">
+              <div>
+                <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
               </div>
               <div class="ps-3">
                 <span class="text-sm text-white">Innovation manual based on the ISO 56000 family</span>
               </div>
             </div>
+
             <div class="d-flex pb-3">
               <div>
-                <i class="fas fa-check text-white text-sm" aria-hidden="true"></i>
+                <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
               </div>
               <div class="ps-3">
                 <span class="text-sm text-white">Organizational structure to foster innovation</span>
               </div>
             </div>
+
             <div class="d-flex pb-3">
               <div>
-                <i class="fas fa-check text-white text-sm" aria-hidden="true"></i>
+                <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
               </div>
               <div class="ps-3">
                 <span class="text-sm text-white">1 Innovation event designed for your company</span>
               </div>
             </div>
+
             <div class="d-flex pb-3">
               <div>
-                <i class="fas fa-check text-white text-sm" aria-hidden="true"></i>
+                <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
               </div>
               <div class="ps-3">
-                <span class="text-sm text-white">Continuous support</span>
+                <span class="text-sm text-white">Report on how to increase your maturity level</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-sm-12 mb-lg-0 mb-4">
+        <div class="card shadow-none border bg-dark h-100 overflow-hidden">
+          <div class="card-header bg-transparent text-sm-start text-center pt-4 pb-3 px-4">
+            <h4 class="mb-1 text-light">Continuous Support</h4>
+            <p class="mb-3 text-sm text-white">Total follow-up on your IMS</p>
+            <h3 class="font-weight-bolder text-white">
+              $250 <small class="text-sm text-white font-weight-bold">USD / month</small>
+            </h3>
+            <a class="btn btn-lg bg-primary text-white w-100 border-radius-md mt-4 mb-2" data-cal-link="lufvape/perfilextendido" data-cal-namespace="perfilextendido" data-cal-config='{"layout":"month_view"}'>Subscribe</a>
+          </div>
+          <hr class="horizontal light my-0">
+          <div class="card-body">
+            <div class="d-flex pb-3">
+              <div>
+                <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
+              </div>
+              <div class="ps-3">
+                <span class="text-sm text-white">24/7 asynchronous follow-up</span>
+              </div>
+            </div>
+            <div class="d-flex pb-3">
+              <div>
+                <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
+              </div>
+              <div class="ps-3">
+                <span class="text-sm text-white">Unlimited 90-minute 1-on-1 sessions</span>
+              </div>
+            </div>
+            <div class="d-flex pb-3">
+              <div>
+                <i class="fas fa-check text-success text-sm" aria-hidden="true"></i>
+              </div>
+              <div class="ps-3">
+                <span class="text-sm text-white">Constant audit + IMS reports</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-      </div>
+
     </div>
+    <a class="btn btn-lg bg-dark btn-outline-light w-100 border-radius-md mt-4 mb-2" data-cal-link="lufvape/consultoria" data-cal-namespace="consultoria" data-cal-config='{"layout":"month_view"}'>Or simply schedule a 90-minute session</a>
   </div>
 </section>
-
+<!-- END Section with four info areas left & one card right with image and waves -->
 
 <!-- ---- START FOOTER 10 white w/ bg image 5 cols & subscribe area & social---- -->
 <footer id="footer" class="footer py-5 position-relative overflow-hidden bg-dark">

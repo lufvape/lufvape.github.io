@@ -195,14 +195,14 @@
           new Chart(canvasProfiles, {
             type: 'bar',
             data: {
-              labels: profileRanking.map(d => d.label),
+              labels: profileRanking.map((d, i) => i === 0 ? d.label : '?'),
               datasets: [{
                 data: profileRanking.map(d => d.value),
                 backgroundColor: profileRanking.map((_, i) => `rgba(203, 12, 159, ${i===0?1:i===1?0.5:i===2?0.15:0})`),
                 borderRadius: 50, barThickness: 12
               }]
             },
-            options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+            options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { enabled: false } } }
           });
         }
 
@@ -218,7 +218,7 @@
                   backgroundColor: 'rgba(203, 12, 159, 0.2)', borderColor: 'rgba(203, 12, 159)', borderWidth: 3
                 }],
               },
-              options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+              options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { enabled: false } } }
             });
         }
         
@@ -234,7 +234,7 @@
                   backgroundColor: 'rgba(203, 12, 159, 1)', borderRadius: 50, barThickness: 15
                 }]
               },
-              options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+              options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { enabled: false } } }
             });
         }
 
@@ -262,7 +262,7 @@
                   needleValue: mScore, circumference: 180, rotation: 270, cutout: '75%'
                 }]
               },
-              options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } },
+              options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { enabled: false } } },
               plugins: [gaugeNeedle]
             });
         }
