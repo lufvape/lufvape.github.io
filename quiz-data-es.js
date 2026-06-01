@@ -334,7 +334,7 @@ window.perfilesCombinados = {
   responsiva_mercadeo: 
   { 
     nombre: 'El Vigilante', 
-    imagen: './assets/img/avatars/El Vigilante.png',
+    imagen: './assets/img/Avatars/El Vigilante.png',
     frase: '"El mercado acaba de cambiar de rumbo; adaptemos nuestra propuesta de valor ahora mismo para seguir siendo la mejor opción para nuestros clientes."',
     descripcion: 'Tú eres el radar comercial y el protector de nuestra relevancia en el mercado. Destacas por tu extraordinaria sensibilidad para escuchar el entorno y tu velocidad para reaccionar ante las demandas urgentes de los clientes. Cuando la competencia se mueve o el cliente cambia de opinión, tú eres quien moviliza de inmediato los recursos de mercadeo y ventas para ajustar el rumbo. Tu enfoque es reactivo, sumamente oportuno y centrado en proteger nuestra cuota de mercado con soluciones ágiles y pragmáticas.',
   
@@ -386,7 +386,7 @@ window.perfilesCombinados = {
   responsiva_talento: 
   { 
     nombre: 'La Coordinadora', 
-    imagen: './assets/img/avatars/La Coordinadora.png',
+    imagen: './assets/img/Avatars/La Coordinadora.png',
     frase: 'Ha surgido un obstáculo en el camino de nuestro equipo; unámonos ahora mismo, cuidemos el bienestar de todos y reorganicemos el flujo para solucionarlo."',
     descripcion: 'Tú eres el corazón de la colaboración y el puente que une los esfuerzos de nuestra gente ante cualquier tormenta. Destacas por tu empatía inmensa y tu habilidad para resolver fricciones internas bajo presión, logrando que las personas se ayuden mutuamente con una sonrisa. Ante un imprevisto operativo, tú no buscas culpables; reorganizas las cargas de trabajo de forma humana, cuidando el clima laboral y asegurando que nadie se sienta solo o abrumado mientras superamos el reto.',
     
@@ -437,7 +437,7 @@ window.perfilesCombinados = {
   },
   responsiva_id: 
   { nombre: 'El Investigador', 
-    imagen: './assets/img/avatars/El Investigador.png',
+    imagen: './assets/img/Avatars/El Investigador.png',
     frase: '"Ha ocurrido una falla técnica crítica; analicemos los datos con rigor metodológico, encontremos la causa raíz y diseñemos el parche definitivo."',
     descripcion: 'Tú eres el guardián de la excelencia técnica y el científico que acude al rescate de nuestra infraestructura ante cualquier fallo de producto o sistema. Destacas por tu profundo rigor analítico y tu capacidad de aplicar el método experimental bajo presión. No te conformas con arreglos superficiales; estudias los datos, diagnosticas el origen del problema y diseñas soluciones correctivas sólidas que no solo apagan el fuego técnico actual, sino que previenen fallos similares en el futuro de la empresa.',
     
@@ -489,7 +489,7 @@ window.perfilesCombinados = {
 
   esperada_mercadeo: 
   { nombre: 'El Implementador', 
-    imagen: './assets/img/avatars/El Implementador.png',
+    imagen: './assets/img/Avatars/El Implementador.png',
     arquetipo: 'Esperada',
     sistema: 'Mercadeo',
     frase: '"Cada pequeña optimización estructurada en nuestro embudo de ventas actual se traduce en un crecimiento predecible y medible para el negocio."',
@@ -542,7 +542,7 @@ window.perfilesCombinados = {
   },
   esperada_talento:
   { nombre: 'La Facilitadora', 
-    imagen: './assets/img/avatars/La Facilitadora.png',
+    imagen: './assets/img/Avatars/La Facilitadora.png',
     arquetipo: 'Esperada',
     sistema: 'Talento Humano',
     frase: '"Garantizar que la mejora continua de procesos y el desarrollo humano sean parte ordenada de la rutina diaria de cada colaborador es el camino seguro para construir una empresa sana y eficiente."',
@@ -595,7 +595,7 @@ window.perfilesCombinados = {
   },
   esperada_id: 
   { nombre: 'El Visionario Técnico', 
-    imagen: './assets/img/avatars/El Visionario Tecnico.png',
+    imagen: './assets/img/Avatars/El Visionario Tecnico.png',
     arquetipo: 'Esperada',
     sistema: 'Investigación y Desarrollo',
     frase: '"Documentar y patentar de manera estricta cada una de nuestras innovaciones es el camino seguro para consolidar y blindar el liderazgo de nuestra ingeniería en el mercado a largo plazo."',
@@ -649,7 +649,7 @@ window.perfilesCombinados = {
 
   contributiva_talento: 
   { nombre: 'La Inspiradora', 
-    imagen: './assets/img/avatars/La Inspiradora.png',
+    imagen: './assets/img/Avatars/La Inspiradora.png',
     arquetipo: 'Contributiva',
     sistema: 'Talento Humano',
     frase: 'Si abrimos las puertas de la confianza mutua y empoderamos a nuestro equipo, las mejores ideas para mejorar nuestra empresa surgirán de ellos de forma natural."',
@@ -702,7 +702,7 @@ window.perfilesCombinados = {
   },
   contributiva_mercadeo: 
   { nombre: 'La Mercado Creativo', 
-    imagen: './assets/img/avatars/La Mercado Creativo.png',
+    imagen: './assets/img/Avatars/La Mercado Creativo.png',
     arquetipo: 'Contributiva',  
     sistema: 'Mercadeo',
     frase: '"Lancemos un desafío a nuestra comunidad de usuarios y colaboradores internos; abramos el espacio para que sus mejores ideas co-creen nuestra próxima campaña comercial."',
@@ -755,7 +755,7 @@ window.perfilesCombinados = {
   },
   contributiva_id: 
   { nombre: 'El Innovador Disruptivo', 
-    imagen: './assets/img/avatars/El Innovador Disruptivo.png',
+    imagen: './assets/img/Avatars/El Innovador Disruptivo.png',
     arquetipo: 'Contributiva',
     sistema: 'Investigación y Desarrollo',
     frase: '"Abramos nuestra infraestructura técnica y facilitemos la colaboración de especialistas; sumando conocimientos técnicos resolveremos los desafíos de ingeniería más complejos."',
@@ -809,7 +809,7 @@ window.perfilesCombinados = {
 
   proactiva_mercadeo: 
   { nombre: 'El Explorador', 
-    imagen: './assets/img/avatars/El Explorador.png',
+    imagen: './assets/img/Avatars/El Explorador.png',
     arquetipo: 'Proactiva',
     sistema: 'Mercadeo',
     frase: '"No esperemos a que los clientes nos digan qué necesitan; investiguemos las megatendencias del mañana y diseñemos de forma proactiva el próximo océano azul de la industria."',
@@ -862,7 +862,7 @@ window.perfilesCombinados = {
   },
   proactiva_talento: 
   { nombre: 'La Agente de Cambio', 
-    imagen: './assets/img/avatars/La Agente de Cambio.png',
+    imagen: './assets/img/Avatars/La Agente de Cambio.png',
     arquetipo: 'Proactiva',
     sistema: 'Talento Humano',
     frase: '"Diseñemos hoy la cultura y el liderazgo ágiles que nuestra organización necesitará para inspirar a nuestro equipo y prosperar en la próxima década."',
@@ -915,7 +915,7 @@ window.perfilesCombinados = {
   },
   proactiva_id: 
   { nombre: 'La Pionera Científica', 
-    imagen: './assets/img/avatars/La Pionera Cientifica.png',
+    imagen: './assets/img/Avatars/La Pionera Cientifica.png',
     arquetipo: 'Proactiva',
     sistema: 'Investigación y Desarrollo',
     frase: '"Exploremos las fronteras del conocimiento científico y diseñemos hoy las tecnologías y patentes que redefinirán los estándares de nuestra industria en la próxima década."',
